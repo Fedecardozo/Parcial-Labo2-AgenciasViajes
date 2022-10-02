@@ -81,7 +81,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.btnHistorial.TabIndex = 8;
             this.btnHistorial.Text = "Historial viajes";
             this.btnHistorial.UseVisualStyleBackColor = true;
-           
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // FrmSecundario
             // 

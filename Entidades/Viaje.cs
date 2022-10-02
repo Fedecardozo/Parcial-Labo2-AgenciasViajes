@@ -69,7 +69,8 @@ namespace Entidades
             return $"Clase turista: {this.cantidadClaseTurista} " +
                 $"\nCantidad Premium: {this.cantidClasePremium} " +
                 $"\nDuracion Viaje: {this.duracionViaje}" +
-                $"\nNombre Crucero: {this.crucero.Nombre}";
+                $"\nNombre Crucero: {this.crucero.Nombre}" +
+                $"\nMatricula Crucero: {this.crucero.Matricula}";
         }
     
         public static void HarcodeoPasajeros(Pasajero[] pasajeros, Viaje viaje)

@@ -60,6 +60,8 @@ namespace Entidades
 
         public string Nombre { get { return this.nombre; } }
 
+        public string Matricula { get { return this.matricula; } }
+
         private string Mostrar()
         {
             return $"";

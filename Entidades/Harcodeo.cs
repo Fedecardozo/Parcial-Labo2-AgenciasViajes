@@ -59,5 +59,43 @@ namespace Entidades
 
             return passangers;
         }
+
+        public static Crucero[] HarcodeoCrucero()
+        {
+            Crucero[] crucero = { new Crucero("EWK264", "Corsel", 10, 10, 1, 10000, true, true),
+            new Crucero("EWK265", "Corsel2", 10, 10, 2, 10000, true, true),
+            new Crucero("EWK266", "Corsel3", 10, 10, 1, 10000, true, false),
+            new Crucero("EWK267", "Corsel4", 10, 10, 2, 10000, true, true),
+            new Crucero("EWK268", "Corsel5", 10, 10, 1, 10000, false, true),
+            new Crucero("EWK269", "Corsel6", 10, 10, 3, 10000, true, true),
+            new Crucero("EWK270", "Corsel7", 10, 10, 1, 10000, true, false)};
+
+            return crucero;
+        }
+
+        public static Viaje[] HarcodeoViaje()
+        {
+            DateTime fecha = new DateTime();     
+
+            Viaje[] viajesito = { new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
+            };
+
+            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[0]);
+            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[1]);
+            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[2]);
+            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[3]);
+            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[4]);
+            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[5]);
+            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[6]);
+
+            return viajesito;
+        }
+
     }
 }
