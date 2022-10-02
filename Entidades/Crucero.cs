@@ -14,6 +14,8 @@ namespace Entidades
         private int cantidadSalones;
         private int cantidadCasino;
         private float capacidadBodega;
+        private bool piscina;
+        private bool gimnasio;
 
     }
 }

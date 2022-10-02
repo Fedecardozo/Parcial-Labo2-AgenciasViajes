@@ -12,5 +12,7 @@ namespace Entidades
         Puerto_Madryn, Rio_de_Janeiro,Cartagena };
 
         public enum EextraRegional {La_Habana, Venecia, Acapulco, Miami, Nueva_York, Bangkok, Taipei, Atenas };
+
+       
     }
 }

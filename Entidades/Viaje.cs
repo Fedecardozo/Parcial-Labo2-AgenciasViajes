@@ -19,7 +19,11 @@ namespace Entidades
         private int cantidadClaseTurista;
         private Random duracionViaje;
 
-        
+        public Viaje(Ciudad ciudadPartida, Ciudad ciudadDestino)
+        {
+            this.ciudadPartida = ciudadPartida;
+            this.ciudadDestino = ciudadDestino;
+        }
 
         public string mostrarCiudad()
         {
