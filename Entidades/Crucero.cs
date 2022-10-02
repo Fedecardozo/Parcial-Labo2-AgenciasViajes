@@ -17,5 +17,32 @@ namespace Entidades
         private bool piscina;
         private bool gimnasio;
 
+        public string Gymnsaio 
+        { 
+            get
+            {
+                string retorno = "no";
+
+                if (this.gimnasio)
+                    retorno = "si";
+
+                return retorno;
+            }
+        
+        }
+
+        public string Piscina
+        {
+            get
+            {
+                string retorno = "no";
+
+                if (this.piscina)
+                    retorno = "si";
+
+                return retorno;
+            }
+
+        }
     }
 }

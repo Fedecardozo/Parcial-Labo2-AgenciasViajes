@@ -34,14 +34,24 @@ namespace Parcial_Labo2_AgenciasViajes
              MessageBox.Show(Validacion.ValidarUsuario(user).ToString());
             if(Validacion.ValidarUsuario(user) == true)
             {
-                if(!flag)
+                if(!FrmLogin.flag)
                 {
+                    //this.WindowState = FormWindowState.Minimized;
+                    //this.Opacity = 0;
+                    //this.Enabled = false;
                     FrmSecundario form2 = new FrmSecundario();
-                    form2.Show();
+                    form2.ShowDialog();
                     FrmLogin.flag = true;
+                    
                 }
+                
             }
             
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

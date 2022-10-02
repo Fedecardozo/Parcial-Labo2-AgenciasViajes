@@ -29,7 +29,7 @@ namespace Entidades
             this.fechaNacimiento = fechaNacimiento;
         }
 
-        private string Mostrar()
+        protected virtual string Mostrar()
         {
             return $"\nNombre: {this.nombre} \nApellido: {this.apellido} \nDNI: {this.dni} -" +
                 $" \nFecha Nacimiento: {this.fechaNacimiento.Date.ToString()}";

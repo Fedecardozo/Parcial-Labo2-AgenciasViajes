@@ -21,7 +21,7 @@ namespace Entidades
             this.sexo = sexo;
         }
 
-        private string Mostrar()
+        protected override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 

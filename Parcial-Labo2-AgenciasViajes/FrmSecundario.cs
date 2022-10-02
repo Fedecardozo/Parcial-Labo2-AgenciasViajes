@@ -15,6 +15,8 @@ namespace Parcial_Labo2_AgenciasViajes
         public FrmSecundario()
         {
             InitializeComponent();
+            //this.CenterToParent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }

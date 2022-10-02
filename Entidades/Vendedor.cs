@@ -15,7 +15,7 @@ namespace Entidades
             this.usuario = user;
         }
 
-        private string Mostrar()
+        protected override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
