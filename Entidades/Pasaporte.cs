@@ -25,7 +25,7 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append($"{base.ToString()}");
+            sb.AppendLine($"{base.Mostrar()}");
             sb.AppendLine($"Sexo: {this.sexo}");
             sb.AppendLine($"Nacionalidad: {this.nacionalidad}");
             sb.AppendLine($"Numero Pasaporte: {this.numeroPasaporte}");

@@ -17,13 +17,12 @@ namespace Entidades
             this.equipaje = equipaje;
         }
 
-        private string Mostrar()
+        private new string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.Append($"{base.ToString()}");
-            sb.AppendLine($"Equipaje: ");
-            sb.AppendLine($"{this.equipaje.ToString()}");
+            sb.AppendLine($"Equipaje: {this.equipaje.Mostrar()}");
             
             return sb.ToString();
 

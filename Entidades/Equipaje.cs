@@ -24,6 +24,12 @@ namespace Entidades
             this.bolsoMano = bolsoMano;
         }
 
+        public Equipaje(bool bolsoMano,float totalKg, int cantidadValijas) : this(bolsoMano)
+        {
+            this.cantidadValijas = cantidadValijas;
+            this.totalKg = totalKg;
+        }
+
         public int Valijas 
         {
             set 
@@ -55,7 +61,7 @@ namespace Entidades
             }
             get
             {
-                return this.cantidadValijas;
+                return this.totalKg;
             }
         }
 
@@ -72,7 +78,7 @@ namespace Entidades
         
         }
 
-        private string Mostrar()
+        public string Mostrar()
         {
             return $"Cantidad valijas: {this.Valijas} - Total Kg: {this.Kilosgramos} - Bolso de mano: {this.BolsoMano} ";
         }

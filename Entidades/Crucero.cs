@@ -13,9 +13,22 @@ namespace Entidades
         private int cantidadCamarotes;
         private int cantidadSalones;
         private int cantidadCasino;
-        private float capacidadBodega;
+        private double capacidadBodega;
         private bool piscina;
         private bool gimnasio;
+
+        public Crucero(string matricula, string nombre, int cantidadCamarotes,
+            int cantidadSalones,int cantidadCasino, float capacidadBodega, bool piscina, bool gimnasio)
+        {
+            this.matricula = matricula;
+            this.nombre = nombre;
+            this.cantidadCamarotes = cantidadCamarotes;
+            this.cantidadSalones = cantidadSalones;
+            this.cantidadCasino = cantidadCasino;
+            this.capacidadBodega = capacidadBodega;
+            this.piscina = piscina;
+            this.gimnasio = gimnasio;
+        }
 
         public string Gymnsaio 
         { 
@@ -43,6 +56,13 @@ namespace Entidades
                 return retorno;
             }
 
+        }
+
+        public string Nombre { get { return this.nombre; } }
+
+        private string Mostrar()
+        {
+            return $"";
         }
     }
 }

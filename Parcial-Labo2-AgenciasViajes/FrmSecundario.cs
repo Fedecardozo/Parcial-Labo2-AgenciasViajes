@@ -18,5 +18,12 @@ namespace Parcial_Labo2_AgenciasViajes
             //this.CenterToParent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+      
     }
 }

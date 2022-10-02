@@ -31,7 +31,7 @@ namespace Parcial_Labo2_AgenciasViajes
         {
             Usuario user = new Usuario(this.textBoxUser.Text,this.textBoxPassword.Text);
 
-             MessageBox.Show(Validacion.ValidarUsuario(user).ToString());
+             //MessageBox.Show(Validacion.ValidarUsuario(user).ToString());
             if(Validacion.ValidarUsuario(user) == true)
             {
                 if(!FrmLogin.flag)
