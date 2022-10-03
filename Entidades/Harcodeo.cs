@@ -77,13 +77,13 @@ namespace Entidades
         {
             DateTime fecha = new DateTime();     
 
-            Viaje[] viajesito = { new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
+            Viaje[] viajesito = { new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[6], 10, 10),
                 new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[1], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[2], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[3], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[4], 10, 10),
+                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[5], 10, 10),
             };
 
             Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[0]);

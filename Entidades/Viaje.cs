@@ -39,6 +39,15 @@ namespace Entidades
             
         }
 
+       // public string CiudadPartida { get { return this.ciudadPartida.ToString(); } }
+       // public string CiudadDestino { get { return this.ciudadDestino.ToString(); } }
+        public int CantidadTurista { get { return this.cantidadClaseTurista; } }
+        public int CantidadPremium { get { return this.cantidClasePremium; } }
+        public int DuracionViaje { get { return this.duracionViaje; } }
+        public DateTime FechaInicioViaje { get { return this.fechaInicioViaje.Date; } }
+        public string NombreCrucero { get { return this.crucero.Nombre; } }
+        public string MatriculaCrucero { get { return this.crucero.Matricula; } }
+
         public void AgregarPasajero(Pasajero passanger)
         {
             if(passanger is not null)
@@ -66,11 +75,16 @@ namespace Entidades
 
         public string Mostrar()
         {
-            return $"Clase turista: {this.cantidadClaseTurista} " +
-                $"\nCantidad Premium: {this.cantidClasePremium} " +
-                $"\nDuracion Viaje: {this.duracionViaje}" +
-                $"\nNombre Crucero: {this.crucero.Nombre}" +
-                $"\nMatricula Crucero: {this.crucero.Matricula}";
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Clase turista: {this.cantidadClaseTurista} ");
+            sb.AppendLine($"Cantidad Premium: {this.cantidClasePremium} ");
+            sb.AppendLine($"Duracion Viaje: {this.duracionViaje} ");
+            sb.AppendLine($"Nombre Crucero: {this.crucero.Nombre} ");
+            sb.AppendLine($"Matricula Crucero: {this.crucero.Matricula} ");
+
+            return sb.ToString();
+                 
         }
     
         public static void HarcodeoPasajeros(Pasajero[] pasajeros, Viaje viaje)

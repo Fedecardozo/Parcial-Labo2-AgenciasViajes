@@ -39,6 +39,8 @@ namespace Parcial_Labo2_AgenciasViajes
                     //this.WindowState = FormWindowState.Minimized;
                     //this.Opacity = 0;
                     //this.Enabled = false;
+                    this.textBoxUser.Clear();
+                    this.textBoxPassword.Clear();
                     FrmSecundario form2 = new FrmSecundario();
                     form2.ShowDialog();
                     FrmLogin.flag = true;

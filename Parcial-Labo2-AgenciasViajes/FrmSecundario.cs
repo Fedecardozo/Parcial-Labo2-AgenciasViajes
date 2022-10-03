@@ -27,7 +27,10 @@ namespace Parcial_Labo2_AgenciasViajes
 
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            
+            FrmHistorial frmHistorial = new FrmHistorial();
+
+            frmHistorial.ShowDialog();
+
         }
     }
 }
