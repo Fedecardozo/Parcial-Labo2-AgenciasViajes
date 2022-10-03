@@ -17,6 +17,12 @@ namespace Entidades
             this.equipaje = equipaje;
         }
 
+        public string Nacionalidad { get { return base.nacionalidad.ToString(); } }
+        public string Sexo { get { return base.sexo.ToString(); } }
+        public string Pasaporte { get { return base.numeroPasaporte.ToString(); } }
+        public Equipaje Equipaje { get { return this.equipaje; } }
+
+
         private new string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

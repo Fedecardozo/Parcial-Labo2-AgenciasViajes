@@ -40,5 +40,10 @@ namespace Entidades
             return this.Mostrar();
         }
 
+        public string Nombre{ get { return this.nombre; } }
+        public string Apellido { get { return this.apellido; } }
+        public long Dni { get { return this.dni; } }
+        public DateTime FechaNacimiento { get { return this.fechaNacimiento.Date; } }
+
     }
 }

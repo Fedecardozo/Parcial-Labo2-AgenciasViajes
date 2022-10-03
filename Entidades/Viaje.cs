@@ -45,9 +45,9 @@ namespace Entidades
         public int CantidadPremium { get { return this.cantidClasePremium; } }
         public int DuracionViaje { get { return this.duracionViaje; } }
         public DateTime FechaInicioViaje { get { return this.fechaInicioViaje.Date; } }
-        public string NombreCrucero { get { return this.crucero.Nombre; } }
-        public string MatriculaCrucero { get { return this.crucero.Matricula; } }
+        public Crucero Crucero { get { return this.crucero; } }
 
+        public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
         public void AgregarPasajero(Pasajero passanger)
         {
             if(passanger is not null)
@@ -97,6 +97,18 @@ namespace Entidades
 
         }
 
+        public static void HarcodeoPasajeros(Viaje viaje,int tipoHarcodeo)
+        {
+
+            switch(tipoHarcodeo)
+            {
+                case 1: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(),viaje); break;
+                case 2: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros2(),viaje); break;
+                default: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros3(),viaje); break;
+            
+            }
+
+        }
 
     }
 }

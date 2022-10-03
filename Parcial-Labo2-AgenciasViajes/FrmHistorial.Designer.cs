@@ -112,6 +112,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.dataGridViajes.RowTemplate.Height = 29;
             this.dataGridViajes.Size = new System.Drawing.Size(1433, 294);
             this.dataGridViajes.TabIndex = 4;
+            
             // 
             // ciudadPartida
             // 

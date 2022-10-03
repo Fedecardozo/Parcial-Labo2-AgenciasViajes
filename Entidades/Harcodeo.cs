@@ -60,6 +60,42 @@ namespace Entidades
             return passangers;
         }
 
+        public static Pasajero[] HarcodeoPasajeros2()
+        {
+            DateTime fecha = new DateTime();
+
+            Pasajero[] passangers =
+            {
+                new Pasajero("Fede2","Cardozo",40812362,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
+                new Pasajero("Lea2","Cardozo",54546645,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,25f,1)),
+                new Pasajero("Marcos2","Paez",112311321,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
+                new Pasajero("Carina2","Jaure",16156161,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,35f,2)),
+                new Pasajero("Carmen2","Benvidez",1161566,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,1)),
+                new Pasajero("Toby2","Perrito",161523213,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,15f,2)),
+                new Pasajero("Evelio2","Paez",23133212,fecha.Date,ENacionalidad.Paraguaya,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
+                new Pasajero("Clarisa2","Alvarez",123131654,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,2))};
+
+            return passangers;
+        }
+
+        public static Pasajero[] HarcodeoPasajeros3()
+        {
+            DateTime fecha = new DateTime();
+
+            Pasajero[] passangers =
+            {
+                new Pasajero("Fede3","Cardozo",40812362,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
+                new Pasajero("Lea3","Cardozo",54546645,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,25f,1)),
+                new Pasajero("Marcos3","Paez",112311321,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
+                new Pasajero("Carina3","Jaure",16156161,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,35f,2)),
+                new Pasajero("Carmen3","Benvidez",1161566,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,1)),
+                new Pasajero("Toby3","Perrito",161523213,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,15f,2)),
+                new Pasajero("Evelio3","Paez",23133212,fecha.Date,ENacionalidad.Paraguaya,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
+                new Pasajero("Clarisa3","Alvarez",123131654,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,2))};
+
+            return passangers;
+        }
+
         public static Crucero[] HarcodeoCrucero()
         {
             Crucero[] crucero = { new Crucero("EWK264", "Corsel", 10, 10, 1, 10000, true, true),
@@ -86,9 +122,9 @@ namespace Entidades
                 new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[5], 10, 10),
             };
 
-            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[0]);
-            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[1]);
-            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[2]);
+            Viaje.HarcodeoPasajeros(viajesito[0],1);
+            Viaje.HarcodeoPasajeros(viajesito[1],2);
+            Viaje.HarcodeoPasajeros(viajesito[2],3);
             Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[3]);
             Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[4]);
             Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[5]);
