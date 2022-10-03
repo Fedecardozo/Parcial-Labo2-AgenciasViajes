@@ -35,6 +35,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnVisualizarPasajero = new System.Windows.Forms.Button();
             this.dataGridViajes = new System.Windows.Forms.DataGridView();
+            this.idViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicioViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +82,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.dataGridViajes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViajes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idViaje,
             this.ciudadPartida,
             this.ciudadDestino,
             this.fechaInicioViaje,
@@ -97,7 +99,7 @@ namespace Parcial_Labo2_AgenciasViajes
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViajes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViajes.Location = new System.Drawing.Point(12, 26);
+            this.dataGridViajes.Location = new System.Drawing.Point(12, 24);
             this.dataGridViajes.Name = "dataGridViajes";
             this.dataGridViajes.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -110,9 +112,16 @@ namespace Parcial_Labo2_AgenciasViajes
             this.dataGridViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViajes.RowHeadersWidth = 51;
             this.dataGridViajes.RowTemplate.Height = 29;
-            this.dataGridViajes.Size = new System.Drawing.Size(1433, 294);
+            this.dataGridViajes.Size = new System.Drawing.Size(1504, 294);
             this.dataGridViajes.TabIndex = 4;
-            
+            // 
+            // idViaje
+            // 
+            this.idViaje.HeaderText = "ID";
+            this.idViaje.MinimumWidth = 6;
+            this.idViaje.Name = "idViaje";
+            this.idViaje.ReadOnly = true;
+            this.idViaje.Width = 70;
             // 
             // ciudadPartida
             // 
@@ -182,7 +191,7 @@ namespace Parcial_Labo2_AgenciasViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1460, 429);
+            this.ClientSize = new System.Drawing.Size(1655, 429);
             this.Controls.Add(this.dataGridViajes);
             this.Controls.Add(this.btnVisualizarPasajero);
             this.Controls.Add(this.btnAtras);
@@ -199,6 +208,7 @@ namespace Parcial_Labo2_AgenciasViajes
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnVisualizarPasajero;
         private System.Windows.Forms.DataGridView dataGridViajes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idViaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDestino;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioViaje;

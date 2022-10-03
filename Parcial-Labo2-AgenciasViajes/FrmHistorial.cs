@@ -13,7 +13,7 @@ namespace Parcial_Labo2_AgenciasViajes
 {
     public partial class FrmHistorial : Form
     {
-        public HistorialViajes historial = new HistorialViajes();
+        private HistorialViajes historial = new HistorialViajes();
          
 
         public FrmHistorial()
@@ -25,22 +25,33 @@ namespace Parcial_Labo2_AgenciasViajes
         private void FrmHistorial_Load(object sender, EventArgs e)
         {
             HistorialViajes.HarcodeoViajes(historial, Harcodeo.HarcodeoViaje());
+            int i = 1;
+
             foreach (Viaje viaje in historial.Viajes)
             {
-                this.dataGridViajes.Rows.Add("Buenos Aires",EextraRegional.Nueva_York,viaje.FechaInicioViaje,viaje.Crucero.Nombre,viaje.Crucero.Matricula,viaje.CantidadTurista,viaje.CantidadPremium,viaje.DuracionViaje);
+                this.dataGridViajes.Rows.Add(i++,"Buenos Aires",EextraRegional.Nueva_York,viaje.FechaInicioViaje,viaje.Crucero.Nombre,viaje.Crucero.Matricula,
+                    viaje.CantidadTurista,viaje.CantidadPremium,viaje.DuracionViaje);
             }
         }
 
         private void btnVisualizarPasajero_Click(object sender, EventArgs e)
         {
-            FrmListaPasajeros frmPasajeros = new FrmListaPasajeros();
 
             if(this.dataGridViajes.Rows.Count > 0)
             {
+                FrmListaPasajeros frmPasajeros = new FrmListaPasajeros();
+
                 int obtenerIndex = this.dataGridViajes.CurrentRow.Index;
-                FrmListaPasajeros.cargaPasajero(frmPasajeros,historial.Viajes[obtenerIndex].Pasajeros);
+                int obtenerIdIndex = int.Parse(this.dataGridViajes.Rows[obtenerIndex].Cells[0].Value.ToString());
+                //MessageBox.Show($"{obtenerId}");
+                
+                FrmListaPasajeros.cargaPasajero(frmPasajeros,historial.Viajes[obtenerIdIndex-1].Pasajeros);
                 frmPasajeros.ShowDialog();
                 //MessageBox.Show(this.dataGridViajes.CurrentRow.Index.ToString());
+            }
+            else 
+            {
+                MessageBox.Show("NO tenes cargado nada Pa!");
             }
 
         }
@@ -50,6 +61,6 @@ namespace Parcial_Labo2_AgenciasViajes
             this.Close();
         }
 
-       
+
     }
 }

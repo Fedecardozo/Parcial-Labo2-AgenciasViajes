@@ -29,6 +29,7 @@ namespace Parcial_Labo2_AgenciasViajes
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridPasajeros = new System.Windows.Forms.DataGridView();
             this.NombrePasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,11 +56,19 @@ namespace Parcial_Labo2_AgenciasViajes
             this.cantidadBolsos,
             this.bolsoMano,
             this.kgBolsos});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridPasajeros.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridPasajeros.Location = new System.Drawing.Point(12, 12);
             this.dataGridPasajeros.Name = "dataGridPasajeros";
             this.dataGridPasajeros.RowHeadersWidth = 51;
             this.dataGridPasajeros.RowTemplate.Height = 29;
-            this.dataGridPasajeros.Size = new System.Drawing.Size(1178, 289);
+            this.dataGridPasajeros.Size = new System.Drawing.Size(1273, 319);
             this.dataGridPasajeros.TabIndex = 0;
             // 
             // NombrePasajero
@@ -67,14 +76,14 @@ namespace Parcial_Labo2_AgenciasViajes
             this.NombrePasajero.HeaderText = "Nombre";
             this.NombrePasajero.MinimumWidth = 6;
             this.NombrePasajero.Name = "NombrePasajero";
-            this.NombrePasajero.Width = 125;
+            this.NombrePasajero.Width = 150;
             // 
             // apellidoPasajero
             // 
             this.apellidoPasajero.HeaderText = "Apellido";
             this.apellidoPasajero.MinimumWidth = 6;
             this.apellidoPasajero.Name = "apellidoPasajero";
-            this.apellidoPasajero.Width = 125;
+            this.apellidoPasajero.Width = 150;
             // 
             // dni
             // 
@@ -88,7 +97,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.fechaNacimiento.HeaderText = "Fecha nacimiento";
             this.fechaNacimiento.MinimumWidth = 6;
             this.fechaNacimiento.Name = "fechaNacimiento";
-            this.fechaNacimiento.Width = 125;
+            this.fechaNacimiento.Width = 170;
             // 
             // sexo
             // 
@@ -129,7 +138,7 @@ namespace Parcial_Labo2_AgenciasViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 315);
+            this.ClientSize = new System.Drawing.Size(1303, 355);
             this.Controls.Add(this.dataGridPasajeros);
             this.Name = "FrmListaPasajeros";
             this.Text = "FrmListaPasajeros";
