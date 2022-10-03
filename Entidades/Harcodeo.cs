@@ -10,6 +10,19 @@ namespace Entidades
     {
         private static List<Usuario> usuarios;
 
+        private static DateTime GeneradorFecha()
+        {
+            DateTime start = new DateTime(1950, 1, 1,0,0,0);
+            DateTime fin = new DateTime(2003, 1, 1,0,0,0);
+
+            Random gen = new Random(); 
+
+            int range = (fin - start).Days; 
+           
+            return start.AddDays(gen.Next(range));
+                    
+        }
+
         private static Usuario[] HarcodeoUsuarios()
         {
             Usuario[] usuarios = {new Usuario("admin","admin"), new Usuario("admin2", "admin2"),
@@ -44,18 +57,17 @@ namespace Entidades
             ESexo sexo, int numeroPasaporte,Equipaje equipaje) */
         private static Pasaporte[] HarcodeoPasaportes()
         {
-            DateTime fecha = new DateTime();
 
             Pasaporte[] pasaportes = 
             {            
-                new Pasaporte("Fede","Cardozo",40812362,fecha,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Lea","Cardozo",54546645,fecha,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Marcos","Paez",112311321,fecha,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Carina","Jaure",16156161,fecha,ENacionalidad.Argentina,ESexo.Femenino,123456),
-                new Pasaporte("Carmen","Benvidez",1161566,fecha,ENacionalidad.Argentina,ESexo.Femenino,123456),
-                new Pasaporte("Toby","Perrito",161523213,fecha,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Evelio","Paez",23133212,fecha,ENacionalidad.Paraguaya,ESexo.Masculino,123456),
-                new Pasaporte("Clarisa","Alvarez",123131654,fecha,ENacionalidad.Argentina,ESexo.Femenino,123456)
+                new Pasaporte("Fede","Cardozo",40812362,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Lea","Cardozo",54546645,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Marcos","Paez",112311321,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Carina","Jaure",16156161,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Carmen","Benvidez",1161566,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Toby","Perrito",161523213,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Evelio","Paez",23133212,Harcodeo.GeneradorFecha(),ENacionalidad.Paraguaya,ESexo.Masculino,123456),
+                new Pasaporte("Clarisa","Alvarez",123131654,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Femenino,123456)
             };
 
             return pasaportes;
@@ -63,38 +75,36 @@ namespace Entidades
 
         private static Pasaporte[] HarcodeoPasaportes2()
         {
-            DateTime fecha = new DateTime();
 
             Pasaporte[] pasaportes =
             {
 
-                new Pasaporte("Fede2","Cardozo",40812362,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Lea2","Cardozo",54546645,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Marcos2","Paez",112311321,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Carina2","Jaure",16156161,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456),
-                new Pasaporte("Carmen2","Benvidez",1161566,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456),
-                new Pasaporte("Toby2","Perrito",161523213,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Evelio2","Paez",23133212,fecha.Date,ENacionalidad.Paraguaya,ESexo.Masculino,123456),
-                new Pasaporte("Clarisa2","Alvarez",123131654,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456)};
+                new Pasaporte("Fede2","Cardozo",40812362,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Lea2","Cardozo",54546645,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Marcos2","Paez",112311321,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Carina2","Jaure",16156161,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Carmen2","Benvidez",1161566,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Toby2","Perrito",161523213,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Evelio2","Paez",23133212,Harcodeo.GeneradorFecha(),ENacionalidad.Paraguaya,ESexo.Masculino,123456),
+                new Pasaporte("Clarisa2","Alvarez",123131654,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Femenino,123456)};
 
             return pasaportes;
         }
 
         private static Pasaporte[] HarcodeoPasaportes3()
         {
-            DateTime fecha = new DateTime();
 
             Pasaporte[] pasaportes =
             {
 
-                new Pasaporte("Fede3","Cardozo",40812362,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Lea3","Cardozo",54546645,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Marcos3","Paez",112311321,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Carina3","Jaure",16156161,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456),
-                new Pasaporte("Carmen3","Benvidez",1161566,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456),
-                new Pasaporte("Toby3","Perrito",161523213,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
-                new Pasaporte("Evelio3","Paez",23133212,fecha.Date,ENacionalidad.Paraguaya,ESexo.Masculino,123456),
-                new Pasaporte("Clarisa3","Alvarez",123131654,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456)};
+                new Pasaporte("Fede3","Cardozo",40812362,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Lea3","Cardozo",54546645,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Marcos3","Paez",112311321,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Carina3","Jaure",16156161,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Carmen3","Benvidez",1161566,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Toby3","Perrito",161523213,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Evelio3","Paez",23133212,Harcodeo.GeneradorFecha(),ENacionalidad.Paraguaya,ESexo.Masculino,123456),
+                new Pasaporte("Clarisa3","Alvarez",123131654,Harcodeo.GeneradorFecha(),ENacionalidad.Argentina,ESexo.Femenino,123456)};
 
             return pasaportes;
         }
@@ -162,7 +172,7 @@ namespace Entidades
 
         private static Viaje[] HarcodeoViaje()
         {
-            DateTime fecha = new DateTime();     
+            DateTime fecha = Harcodeo.GeneradorFecha();
 
             Viaje[] viajesito = { new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[6], 10, 10),
                 new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),

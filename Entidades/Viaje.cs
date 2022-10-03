@@ -45,7 +45,8 @@ namespace Entidades
         public int CantidadTurista { get { return this.cantidadClaseTurista; } }
         public int CantidadPremium { get { return this.cantidClasePremium; } }
         public int DuracionViaje { get { return this.duracionViaje; } }
-        public DateTime FechaInicioViaje { get { return this.fechaInicioViaje.Date; } }
+        public DateTime FechaInicioViajeDate { get { return this.fechaInicioViaje.Date; } }
+        public string FechaInicioViaje { get { return this.FechaInicioViajeDate.ToString("d"); } }
         public Crucero Crucero { get { return this.crucero; } }
 
         public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
