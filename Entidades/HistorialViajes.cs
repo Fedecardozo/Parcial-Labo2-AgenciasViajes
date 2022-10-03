@@ -22,13 +22,7 @@ namespace Entidades
 
         public List<Viaje> Viajes{ get{ return this.viajes; } }
 
-        public static void HarcodeoViajes(HistorialViajes historialViaje,Viaje[] viajes)
-        {
-            for (int i = 0; i < viajes.Length; i++)
-            {
-                historialViaje.AgregarViaje(viajes[i]);
-            }
-        }
+        
 
     }
 }

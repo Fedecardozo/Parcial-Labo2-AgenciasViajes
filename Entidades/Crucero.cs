@@ -30,7 +30,7 @@ namespace Entidades
             this.gimnasio = gimnasio;
         }
 
-        public string Gymnsaio 
+        public string Gimnsaio 
         { 
             get
             {
@@ -62,9 +62,5 @@ namespace Entidades
 
         public string Matricula { get { return this.matricula; } }
 
-        private string Mostrar()
-        {
-            return $"";
-        }
     }
 }

@@ -14,8 +14,8 @@ namespace Testeer
             foreach (Viaje viaje in historial.Viajes)
             {
                 Console.WriteLine(viaje.Mostrar());
-            }
 
+            }
 
         }
     }

@@ -42,74 +42,125 @@ namespace Entidades
 
         /*(string nombre, string apellido, long dni, DateTime fechaNacimiento, ENacionalidad nacion,
             ESexo sexo, int numeroPasaporte,Equipaje equipaje) */
-        public static Pasajero[] HarcodeoPasajeros()
+        private static Pasaporte[] HarcodeoPasaportes()
         {
             DateTime fecha = new DateTime();
 
-            Pasajero[] passangers = 
-            {
-                new Pasajero("Fede","Cardozo",40812362,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Lea","Cardozo",54546645,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,25f,1)),
-                new Pasajero("Marcos","Paez",112311321,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Carina","Jaure",16156161,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,35f,2)),
-                new Pasajero("Carmen","Benvidez",1161566,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Toby","Perrito",161523213,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,15f,2)),
-                new Pasajero("Evelio","Paez",23133212,fecha.Date,ENacionalidad.Paraguaya,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Clarisa","Alvarez",123131654,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,2))};
+            Pasaporte[] pasaportes = 
+            {            
+                new Pasaporte("Fede","Cardozo",40812362,fecha,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Lea","Cardozo",54546645,fecha,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Marcos","Paez",112311321,fecha,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Carina","Jaure",16156161,fecha,ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Carmen","Benvidez",1161566,fecha,ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Toby","Perrito",161523213,fecha,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Evelio","Paez",23133212,fecha,ENacionalidad.Paraguaya,ESexo.Masculino,123456),
+                new Pasaporte("Clarisa","Alvarez",123131654,fecha,ENacionalidad.Argentina,ESexo.Femenino,123456)
+            };
 
-            return passangers;
+            return pasaportes;
         }
 
-        public static Pasajero[] HarcodeoPasajeros2()
+        private static Pasaporte[] HarcodeoPasaportes2()
         {
             DateTime fecha = new DateTime();
 
-            Pasajero[] passangers =
+            Pasaporte[] pasaportes =
             {
-                new Pasajero("Fede2","Cardozo",40812362,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Lea2","Cardozo",54546645,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,25f,1)),
-                new Pasajero("Marcos2","Paez",112311321,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Carina2","Jaure",16156161,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,35f,2)),
-                new Pasajero("Carmen2","Benvidez",1161566,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Toby2","Perrito",161523213,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,15f,2)),
-                new Pasajero("Evelio2","Paez",23133212,fecha.Date,ENacionalidad.Paraguaya,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Clarisa2","Alvarez",123131654,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,2))};
 
-            return passangers;
+                new Pasaporte("Fede2","Cardozo",40812362,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Lea2","Cardozo",54546645,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Marcos2","Paez",112311321,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Carina2","Jaure",16156161,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Carmen2","Benvidez",1161566,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Toby2","Perrito",161523213,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Evelio2","Paez",23133212,fecha.Date,ENacionalidad.Paraguaya,ESexo.Masculino,123456),
+                new Pasaporte("Clarisa2","Alvarez",123131654,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456)};
+
+            return pasaportes;
         }
 
-        public static Pasajero[] HarcodeoPasajeros3()
+        private static Pasaporte[] HarcodeoPasaportes3()
         {
             DateTime fecha = new DateTime();
 
-            Pasajero[] passangers =
+            Pasaporte[] pasaportes =
             {
-                new Pasajero("Fede3","Cardozo",40812362,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Lea3","Cardozo",54546645,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,25f,1)),
-                new Pasajero("Marcos3","Paez",112311321,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Carina3","Jaure",16156161,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,35f,2)),
-                new Pasajero("Carmen3","Benvidez",1161566,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Toby3","Perrito",161523213,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456,new Equipaje(false,15f,2)),
-                new Pasajero("Evelio3","Paez",23133212,fecha.Date,ENacionalidad.Paraguaya,ESexo.Masculino,123456,new Equipaje(true,15f,1)),
-                new Pasajero("Clarisa3","Alvarez",123131654,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456,new Equipaje(true,15f,2))};
 
-            return passangers;
+                new Pasaporte("Fede3","Cardozo",40812362,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Lea3","Cardozo",54546645,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Marcos3","Paez",112311321,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Carina3","Jaure",16156161,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Carmen3","Benvidez",1161566,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456),
+                new Pasaporte("Toby3","Perrito",161523213,fecha.Date,ENacionalidad.Argentina,ESexo.Masculino,123456),
+                new Pasaporte("Evelio3","Paez",23133212,fecha.Date,ENacionalidad.Paraguaya,ESexo.Masculino,123456),
+                new Pasaporte("Clarisa3","Alvarez",123131654,fecha.Date,ENacionalidad.Argentina,ESexo.Femenino,123456)};
+
+            return pasaportes;
         }
 
-        public static Crucero[] HarcodeoCrucero()
+        private static Pasajero[] HarcodeoPasajeros(Pasaporte[] pasaportes)
         {
-            Crucero[] crucero = { new Crucero("EWK264", "Corsel", 10, 10, 1, 10000, true, true),
-            new Crucero("EWK265", "Corsel2", 10, 10, 2, 10000, true, true),
-            new Crucero("EWK266", "Corsel3", 10, 10, 1, 10000, true, false),
-            new Crucero("EWK267", "Corsel4", 10, 10, 2, 10000, true, true),
-            new Crucero("EWK268", "Corsel5", 10, 10, 1, 10000, false, true),
-            new Crucero("EWK269", "Corsel6", 10, 10, 3, 10000, true, true),
-            new Crucero("EWK270", "Corsel7", 10, 10, 1, 10000, true, false)};
+            Random random = new Random();
+            int numeroRandom;
+            float kg;
+            bool[] flag = {true,false};
+            Pasajero[] pasajeros = new Pasajero[pasaportes.Length];
+
+            for (int i = 0; i < pasaportes.Length; i++)
+            {
+                numeroRandom = random.Next(1,2);
+                kg = random.Next(2,25);
+
+                if(numeroRandom == 2)
+                {
+                    kg = random.Next(20,50);
+                }
+
+                pasajeros[i] = new Pasajero(pasaportes[i],new Equipaje(flag[numeroRandom],kg,numeroRandom));
+            }
+
+            return pasajeros;
+
+        }
+
+        private static void HarcodeoPasajeros(Pasajero[] pasajeros, Viaje viaje)
+        {
+
+            for (int i = 0; i < pasajeros.Length; i++)
+            {
+                viaje.AgregarPasajero(pasajeros[i]);
+            }
+
+        }
+
+        private static void HarcodeoPasajeros(Viaje viaje, int tipoHarcodeo)
+        {
+
+            switch (tipoHarcodeo)
+            {
+                case 1: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(Harcodeo.HarcodeoPasaportes()), viaje); break;
+                case 2: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(Harcodeo.HarcodeoPasaportes2()), viaje); break;
+                default: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(Harcodeo.HarcodeoPasaportes3()), viaje); break;
+
+            }
+
+        }
+
+        private static Crucero[] HarcodeoCrucero()
+        {
+            Crucero[] crucero = { new Crucero("EWK264", "Titanic", 15, 10, 1, 10000, true, true),
+            new Crucero("EWK265", "Corsa", 10, 5, 2, 10000, true, true),
+            new Crucero("EWK266", "Vento", 12, 3, 1, 10000, true, false),
+            new Crucero("EWK267", "Sirroco", 4, 4, 2, 10000, true, true),
+            new Crucero("EWK268", "Amarok", 10, 10, 1, 10000, false, true),
+            new Crucero("EWK269", "Lamborghini", 11, 7, 3, 10000, true, true),
+            new Crucero("EWK270", "Ferrari", 10, 5, 1, 10000, true, false)};
 
             return crucero;
         }
 
-        public static Viaje[] HarcodeoViaje()
+        private static Viaje[] HarcodeoViaje()
         {
             DateTime fecha = new DateTime();     
 
@@ -122,16 +173,31 @@ namespace Entidades
                 new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[5], 10, 10),
             };
 
-            Viaje.HarcodeoPasajeros(viajesito[0],1);
-            Viaje.HarcodeoPasajeros(viajesito[1],2);
-            Viaje.HarcodeoPasajeros(viajesito[2],3);
-            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[3]);
-            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[4]);
-            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[5]);
-            Viaje.HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(), viajesito[6]);
+            Harcodeo.HarcodeoPasajeros(viajesito[0],1);
+            Harcodeo.HarcodeoPasajeros(viajesito[1],2);
+            Harcodeo.HarcodeoPasajeros(viajesito[2],3);
+            Harcodeo.HarcodeoPasajeros(viajesito[3],1);
+            Harcodeo.HarcodeoPasajeros(viajesito[4],3);
+            Harcodeo.HarcodeoPasajeros(viajesito[5],3);
+            Harcodeo.HarcodeoPasajeros(viajesito[6],2);
 
             return viajesito;
         }
 
+        private static void HarcodeoViajesHistorial(HistorialViajes historialViaje, Viaje[] viajes)
+        {
+            for (int i = 0; i < viajes.Length; i++)
+            {
+                historialViaje.AgregarViaje(viajes[i]);
+            }
+        }
+
+        public static void HarcodeoProgram(HistorialViajes historialViaje)
+        {
+            Viaje[] viajes = Harcodeo.HarcodeoViaje();
+
+            Harcodeo.HarcodeoViajesHistorial(historialViaje, viajes);
+            
+        }
     }
 }

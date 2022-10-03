@@ -25,7 +25,8 @@ namespace Parcial_Labo2_AgenciasViajes
             foreach (Pasajero item in pasajeros)
             {
                 
-                frmListaPasajeros.dataGridPasajeros.Rows.Add(item.Nombre, item.Apellido, item.Dni, item.FechaNacimiento, item.Sexo, item.Pasaporte, 
+                frmListaPasajeros.dataGridPasajeros.Rows.Add(item.Pasaporte.Nombre, item.Pasaporte.Apellido, item.Pasaporte.Dni, 
+                    item.Pasaporte.FechaNacimiento, item.Pasaporte.Sexo, item.Pasaporte, 
                     item.Equipaje.Valijas,item.Equipaje.BolsoMano,item.Equipaje.Kilosgramos);
             }
 

@@ -10,8 +10,9 @@ namespace Entidades
     {
         private const int costoPremium = 120;
         private const int costoTurista = 57;
+        private const Eregional ciudadPartida = Eregional.Buenos_Aires;
+        
         List<Pasajero> listPasajeros;
-        private Ciudad ciudadPartida;
         private Ciudad ciudadDestino;
         private DateTime fechaInicioViaje;
         private Crucero crucero;
@@ -62,17 +63,6 @@ namespace Entidades
             return this.listPasajeros;
         }
 
-        public Viaje(Ciudad ciudadPartida, Ciudad ciudadDestino)
-        {
-            this.ciudadPartida = ciudadPartida;
-            this.ciudadDestino = ciudadDestino;
-        }
-
-        public string mostrarCiudad()
-        {
-            return $"{this.ciudadPartida} - {this.ciudadDestino}";
-        }
-
         public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -87,28 +77,7 @@ namespace Entidades
                  
         }
     
-        public static void HarcodeoPasajeros(Pasajero[] pasajeros, Viaje viaje)
-        {
-
-            for (int i = 0; i < pasajeros.Length; i++)
-            {
-                viaje.AgregarPasajero(pasajeros[i]);
-            }
-
-        }
-
-        public static void HarcodeoPasajeros(Viaje viaje,int tipoHarcodeo)
-        {
-
-            switch(tipoHarcodeo)
-            {
-                case 1: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(),viaje); break;
-                case 2: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros2(),viaje); break;
-                default: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros3(),viaje); break;
-            
-            }
-
-        }
+        
 
     }
 }

@@ -24,9 +24,10 @@ namespace Parcial_Labo2_AgenciasViajes
 
         private void FrmHistorial_Load(object sender, EventArgs e)
         {
-            HistorialViajes.HarcodeoViajes(historial, Harcodeo.HarcodeoViaje());
-            int i = 1;
+            Harcodeo.HarcodeoProgram(historial);
 
+            int i = 1;
+            
             foreach (Viaje viaje in historial.Viajes)
             {
                 this.dataGridViajes.Rows.Add(i++,"Buenos Aires",EextraRegional.Nueva_York,viaje.FechaInicioViaje,viaje.Crucero.Nombre,viaje.Crucero.Matricula,

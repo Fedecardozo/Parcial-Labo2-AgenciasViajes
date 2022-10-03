@@ -6,28 +6,25 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Pasajero : Pasaporte
+    public class Pasajero
     {
         private Equipaje equipaje;
+        private Pasaporte pasaporte;
  
-        public Pasajero(string nombre, string apellido, long dni, DateTime fechaNacimiento, ENacionalidad nacion,
-            ESexo sexo, int numeroPasaporte,Equipaje equipaje) :
-            base(nombre, apellido, dni, fechaNacimiento,nacion,sexo,numeroPasaporte)
+        public Pasajero (Pasaporte pasaporte, Equipaje equipaje)
         {
             this.equipaje = equipaje;
+            this.pasaporte = pasaporte;
         }
 
-        public string Nacionalidad { get { return base.nacionalidad.ToString(); } }
-        public string Sexo { get { return base.sexo.ToString(); } }
-        public string Pasaporte { get { return base.numeroPasaporte.ToString(); } }
+        public Pasaporte Pasaporte{ get { return this.pasaporte; } }
         public Equipaje Equipaje { get { return this.equipaje; } }
 
-
-        private new string Mostrar()
+        private string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append($"{base.ToString()}");
+            sb.Append($"{this.pasaporte.ToString()}");
             sb.AppendLine($"Equipaje: {this.equipaje.Mostrar()}");
             
             return sb.ToString();

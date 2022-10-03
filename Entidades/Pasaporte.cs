@@ -8,18 +8,21 @@ namespace Entidades
 {
     public class Pasaporte : Persona
     {
-        protected ENacionalidad nacionalidad;
-        protected ESexo sexo;
-        protected int numeroPasaporte;
+        private ENacionalidad nacionalidad;
+        private ESexo sexo;
+        private int numeroPasaporte;
 
         public Pasaporte(string nombre, string apellido, long dni, DateTime fechaNacimiento, ENacionalidad nacion,
-            ESexo sexo, int numeroPasaporte) :
-            base(nombre, apellido, dni, fechaNacimiento)
+            ESexo sexo, int numeroPasaporte) : base(nombre, apellido, dni, fechaNacimiento)
         {
             this.nacionalidad = nacion;
             this.numeroPasaporte = numeroPasaporte;
             this.sexo = sexo;
         }
+
+        public string Nacionalidad { get { return this.nacionalidad.ToString(); } }
+        public string Sexo { get { return this.sexo.ToString(); } }
+        public int NumeroPasaporte { get { return this.numeroPasaporte; } }
 
         protected override string Mostrar()
         {
