@@ -31,7 +31,7 @@ namespace Parcial_Labo2_AgenciasViajes
             foreach (Viaje viaje in historial.Viajes)
             {
                 this.dataGridViajes.Rows.Add(i++,viaje.CiudadPartida,viaje.TipoDestino,viaje.FechaInicioViaje,viaje.FechaLlegada,viaje.Crucero.Nombre,viaje.Crucero.Matricula,
-                    viaje.CantidadTurista,viaje.CantidadPremium,viaje.Estado);
+                    viaje.CantidadTurista,viaje.CantidadPremium,viaje.Estado,viaje.DuracionViaje);
             }
         }
 
@@ -43,10 +43,10 @@ namespace Parcial_Labo2_AgenciasViajes
                 FrmListaPasajeros frmPasajeros = new FrmListaPasajeros();
 
                 int obtenerIndex = this.dataGridViajes.CurrentRow.Index;
-                int obtenerIdIndex = int.Parse(this.dataGridViajes.Rows[obtenerIndex].Cells[0].Value.ToString());
+                int obtenerId = int.Parse(this.dataGridViajes.Rows[obtenerIndex].Cells[0].Value.ToString());
                 //MessageBox.Show($"{obtenerId}");
                 
-                FrmListaPasajeros.cargaPasajero(frmPasajeros,historial.Viajes[obtenerIdIndex-1].Pasajeros);
+                FrmListaPasajeros.cargaPasajero(frmPasajeros,historial.Viajes[obtenerId-1].Pasajeros);
                 frmPasajeros.ShowDialog();
                 //MessageBox.Show(this.dataGridViajes.CurrentRow.Index.ToString());
             }
@@ -64,6 +64,16 @@ namespace Parcial_Labo2_AgenciasViajes
 
         private void btnVenta_Click(object sender, EventArgs e)
         {
+            int obtenerIndex = this.dataGridViajes.CurrentRow.Index;
+            //string obtenerEstado = this.dataGridViajes.Rows[obtenerIndex].Cells[9].Value.ToString();
+            Eestado obtenerEstado = (Eestado)this.dataGridViajes.Rows[obtenerIndex].Cells[9].Value;
+
+            if(obtenerEstado == Eestado.Disponible)
+            {
+                FrmCargaPasajero frmCargaPasajero = new FrmCargaPasajero();
+
+                frmCargaPasajero.ShowDialog();
+            }
             
         }
     }

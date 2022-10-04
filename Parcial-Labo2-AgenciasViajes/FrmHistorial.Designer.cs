@@ -35,6 +35,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnVisualizarPasajero = new System.Windows.Forms.Button();
             this.dataGridViajes = new System.Windows.Forms.DataGridView();
+            this.btnVenta = new System.Windows.Forms.Button();
             this.idViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,14 +46,14 @@ namespace Parcial_Labo2_AgenciasViajes
             this.cantidadTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnVenta = new System.Windows.Forms.Button();
+            this.duracionViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViajes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAtras
             // 
             this.btnAtras.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAtras.Location = new System.Drawing.Point(162, 346);
+            this.btnAtras.Location = new System.Drawing.Point(287, 420);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(279, 54);
             this.btnAtras.TabIndex = 1;
@@ -62,7 +63,7 @@ namespace Parcial_Labo2_AgenciasViajes
             // 
             // btnVisualizarPasajero
             // 
-            this.btnVisualizarPasajero.Location = new System.Drawing.Point(600, 346);
+            this.btnVisualizarPasajero.Location = new System.Drawing.Point(725, 420);
             this.btnVisualizarPasajero.Name = "btnVisualizarPasajero";
             this.btnVisualizarPasajero.Size = new System.Drawing.Size(279, 54);
             this.btnVisualizarPasajero.TabIndex = 3;
@@ -93,7 +94,8 @@ namespace Parcial_Labo2_AgenciasViajes
             this.cruceroMatricula,
             this.cantidadTurista,
             this.cantidadPremium,
-            this.estadoViaje});
+            this.estadoViaje,
+            this.duracionViaje});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -117,6 +119,17 @@ namespace Parcial_Labo2_AgenciasViajes
             this.dataGridViajes.RowTemplate.Height = 29;
             this.dataGridViajes.Size = new System.Drawing.Size(1740, 294);
             this.dataGridViajes.TabIndex = 4;
+            // 
+            // btnVenta
+            // 
+            this.btnVenta.Location = new System.Drawing.Point(1180, 420);
+            this.btnVenta.Name = "btnVenta";
+            this.btnVenta.Size = new System.Drawing.Size(279, 54);
+            this.btnVenta.TabIndex = 5;
+            this.btnVenta.TabStop = false;
+            this.btnVenta.Text = "Vender pasaje";
+            this.btnVenta.UseVisualStyleBackColor = true;
+            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
             // idViaje
             // 
@@ -198,22 +211,19 @@ namespace Parcial_Labo2_AgenciasViajes
             this.estadoViaje.ReadOnly = true;
             this.estadoViaje.Width = 150;
             // 
-            // btnVenta
+            // duracionViaje
             // 
-            this.btnVenta.Location = new System.Drawing.Point(1055, 346);
-            this.btnVenta.Name = "btnVenta";
-            this.btnVenta.Size = new System.Drawing.Size(279, 54);
-            this.btnVenta.TabIndex = 5;
-            this.btnVenta.TabStop = false;
-            this.btnVenta.Text = "Vender pasaje";
-            this.btnVenta.UseVisualStyleBackColor = true;
-            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
+            this.duracionViaje.HeaderText = "Duracion Viaje";
+            this.duracionViaje.MinimumWidth = 6;
+            this.duracionViaje.Name = "duracionViaje";
+            this.duracionViaje.ReadOnly = true;
+            this.duracionViaje.Width = 150;
             // 
             // FrmHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1780, 429);
+            this.ClientSize = new System.Drawing.Size(1774, 503);
             this.Controls.Add(this.btnVenta);
             this.Controls.Add(this.dataGridViajes);
             this.Controls.Add(this.btnVisualizarPasajero);
@@ -231,6 +241,7 @@ namespace Parcial_Labo2_AgenciasViajes
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnVisualizarPasajero;
         private System.Windows.Forms.DataGridView dataGridViajes;
+        private System.Windows.Forms.Button btnVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn idViaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDestino;
@@ -241,6 +252,6 @@ namespace Parcial_Labo2_AgenciasViajes
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadTurista;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadPremium;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
-        private System.Windows.Forms.Button btnVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duracionViaje;
     }
 }

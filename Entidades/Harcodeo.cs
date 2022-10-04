@@ -168,13 +168,13 @@ namespace Entidades
 
         private static Crucero[] HarcodeoCrucero()
         {
-            Crucero[] crucero = { new Crucero("EWK264", "Titanic", 15, 10, 1, 10000, true, true),
-            new Crucero("EWK265", "Corsa", 10, 5, 2, 10000, true, true),
-            new Crucero("EWK266", "Vento", 12, 3, 1, 10000, true, false),
-            new Crucero("EWK267", "Sirroco", 4, 4, 2, 10000, true, true),
-            new Crucero("EWK268", "Amarok", 10, 10, 1, 10000, false, true),
-            new Crucero("EWK269", "Lamborghini", 11, 7, 3, 10000, true, true),
-            new Crucero("EWK270", "Ferrari", 10, 5, 1, 10000, true, false)};
+            Crucero[] crucero = { new Crucero("AAE264WK", "Titanic", 15, 10, 1, 10000, true, true),
+            new Crucero("BBE265WK", "Corsa", 10, 5, 2, 10000, true, true),
+            new Crucero("CCE266WK", "Vento", 12, 3, 1, 10000, true, false),
+            new Crucero("DDE267WK", "Sirroco", 4, 4, 2, 10000, true, true),
+            new Crucero("EEE268WK", "Amarok", 10, 10, 1, 10000, false, true),
+            new Crucero("FFE269WK", "Lamborghini", 11, 7, 3, 10000, true, true),
+            new Crucero("GGE270WK", "Ferrari", 10, 5, 1, 10000, true, false)};
 
             return crucero;
         }

@@ -20,5 +20,7 @@ namespace Entidades
         public Eregional Destino { get { return this.destino; } }
 
         public override string TipoDestino { get { return this.destino.ToString(); } }
+
+        public override string DuracionViaje { get { return $"{new Random().Next(72,360)} hs"; } }
     }
 }

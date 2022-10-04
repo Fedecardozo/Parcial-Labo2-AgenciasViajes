@@ -21,7 +21,7 @@ namespace Entidades
         private Crucero crucero;
         private int cantidClasePremium;
         private int cantidadClaseTurista;
-        private Eciudad tipoDestino;
+
         #endregion
 
         #region Constructores
@@ -57,7 +57,8 @@ namespace Entidades
         public Crucero Crucero { get { return this.crucero; } }
         public string CiudadPartida { get { return this.ciudadPartida; } }
         public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
-        public virtual string TipoDestino { get { return this.tipoDestino.ToString(); } }
+        public virtual string TipoDestino { get { return ""; } }
+        public virtual string DuracionViaje { get { return ""; } }
 
         public Eestado Estado 
         {
@@ -80,17 +81,13 @@ namespace Entidades
         #region Metodos
         public void AgregarPasajero(Pasajero passanger)
         {
-            if(passanger is not null)
+            if(passanger is not null && this.crucero.LugaresDisponibles > 0)
             {
                 this.listPasajeros.Add(passanger);
             }
 
         }
 
-        public List<Pasajero> GetListPasajeros()
-        {
-            return this.listPasajeros;
-        }
 
         public override string ToString()
         {

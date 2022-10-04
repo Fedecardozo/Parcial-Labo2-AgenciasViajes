@@ -8,6 +8,8 @@ namespace Entidades
 {
     public class Crucero
     {
+        #region Atributos
+
         private string matricula;
         private string nombre;
         private int cantidadCamarotes;
@@ -19,6 +21,9 @@ namespace Entidades
         private Eestado estadoViaje;
         private Viaje viaje;
 
+        #endregion
+
+        #region Constructores
         public Crucero(string matricula, string nombre, int cantidadCamarotes,
             int cantidadSalones,int cantidadCasino, float capacidadBodega, bool piscina, bool gimnasio)
         {
@@ -32,6 +37,18 @@ namespace Entidades
             this.gimnasio = gimnasio;
         }
 
+        public Crucero(string matricula, string nombre, int cantidadCamarotes,
+            int cantidadSalones, int cantidadCasino, float capacidadBodega, bool piscina, bool gimnasio,Eestado estadoViaje,Viaje viaje) 
+            : this(matricula, nombre, cantidadCamarotes,
+             cantidadSalones, cantidadCasino, capacidadBodega, piscina, gimnasio)
+        {
+            this.viaje = viaje;
+            this.estadoViaje = estadoViaje;
+        }
+
+        #endregion
+
+        #region Propiedades
         public string Gimnsaio 
         { 
             get
@@ -64,5 +81,79 @@ namespace Entidades
 
         public string Matricula { get { return this.matricula; } }
 
+        public Eestado EstadoCrucero 
+        { 
+            get 
+            { 
+                return this.estadoViaje; 
+            }
+
+            set
+            {
+                this.estadoViaje = value;
+            }
+        }
+
+        private int CapacidadMaximaPasajeros { get { return this.cantidadCamarotes * 4; } }
+
+        public int LugaresDisponibles { get { return this.LugaresLibres(); } }
+
+        #endregion
+
+        #region Sobrecarga operadores
+        public static bool operator ==(Crucero c1, Crucero c2)
+        {
+            return c1.matricula == c2.matricula;
+        }
+
+        public static bool operator !=(Crucero c1, Crucero c2)
+        {
+            return !(c1 == c2);
+        }
+
+        #endregion
+
+        #region Metodos
+
+        private int LugaresLibres()
+        {
+            int retorno = 0;
+
+            if (this.estadoViaje == Eestado.Disponible && this.CapacidadMaximaPasajeros > 7)//this.viaje.Pasajeros.Count())
+            {
+
+                retorno = this.CapacidadMaximaPasajeros - 7;//this.viaje.Pasajeros.Count();
+
+            }
+
+            return retorno;
+        }
+
+        #endregion
+
+        #region Sobreescritura
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+
+            if(obj is not null && obj is Crucero)
+            {
+                retorno = ((Crucero)obj) == this;
+            }
+
+            return retorno;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.nombre}-{this.cantidadCamarotes}-{this.cantidadCasino}";
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+        
+        #endregion
     }
 }

@@ -14,12 +14,14 @@ namespace Entidades
             int cantidadClaseTurista, DateTime fechaDeLlegada)
             : base(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada)
         {
-            this.destino = destino; 
+            this.destino = destino;
         }
 
         public EextraRegional Destino { get {return this.destino;} }
 
         public override string TipoDestino { get { return this.destino.ToString(); } }
+
+        public override string DuracionViaje { get { return $"{new Random().Next(480, 720)} hs"; } }
 
     }
 }
