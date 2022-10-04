@@ -8,15 +8,20 @@ namespace Entidades
 {
     public class Ciudad
     {
+        private static Eregional destinoRegional;
+        private static EextraRegional destinoExtraRegional;
 
-        private static Eciudad eciudad;
+        public static Eregional DestinoRegional 
+        { 
+            get { return Ciudad.destinoRegional; }
+            set { Ciudad.destinoRegional = value; }
+        }
 
-        public enum Eregional {Motevideo, Ushuaia, Recife, Santiago, Lima, Isla_de_Pascua, Isla_Galapagos,
-        Puerto_Madryn, Rio_de_Janeiro,Cartagena };
-
-        public enum EextraRegional {La_Habana, Venecia, Acapulco, Miami, Nueva_York, Bangkok, Taipei, Atenas };
-
-        
+        public static EextraRegional DestinoExtraRegional
+        {
+            get { return Ciudad.destinoExtraRegional; }
+            set { Ciudad.destinoExtraRegional = value; }
+        }
 
     }
 }

@@ -26,7 +26,7 @@ namespace Parcial_Labo2_AgenciasViajes
             {
                 
                 frmListaPasajeros.dataGridPasajeros.Rows.Add(item.Pasaporte.Nombre, item.Pasaporte.Apellido, item.Pasaporte.Dni, 
-                    item.Pasaporte.FechaNacimiento, item.Pasaporte.Sexo, item.Pasaporte, 
+                    item.Pasaporte.FechaNacimiento, item.Pasaporte.Sexo, item.Pasaporte.NumeroPasaporte, 
                     item.Equipaje.Valijas,item.Equipaje.BolsoMano,item.Equipaje.Kilosgramos);
             }
 

@@ -16,6 +16,8 @@ namespace Entidades
         private double capacidadBodega;
         private bool piscina;
         private bool gimnasio;
+        private Eestado estadoViaje;
+        private Viaje viaje;
 
         public Crucero(string matricula, string nombre, int cantidadCamarotes,
             int cantidadSalones,int cantidadCasino, float capacidadBodega, bool piscina, bool gimnasio)

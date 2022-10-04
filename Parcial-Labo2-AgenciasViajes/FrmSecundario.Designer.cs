@@ -31,14 +31,12 @@ namespace Parcial_Labo2_AgenciasViajes
         {
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEstadisticas = new System.Windows.Forms.Button();
-            this.btnNewViaje = new System.Windows.Forms.Button();
-            this.btnViajes = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(214, 344);
+            this.btnSalir.Location = new System.Drawing.Point(214, 297);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(373, 55);
             this.btnSalir.TabIndex = 7;
@@ -48,38 +46,20 @@ namespace Parcial_Labo2_AgenciasViajes
             // 
             // btnEstadisticas
             // 
-            this.btnEstadisticas.Location = new System.Drawing.Point(214, 265);
+            this.btnEstadisticas.Location = new System.Drawing.Point(214, 171);
             this.btnEstadisticas.Name = "btnEstadisticas";
             this.btnEstadisticas.Size = new System.Drawing.Size(373, 55);
             this.btnEstadisticas.TabIndex = 6;
             this.btnEstadisticas.Text = "Estadisticas";
             this.btnEstadisticas.UseVisualStyleBackColor = true;
             // 
-            // btnNewViaje
-            // 
-            this.btnNewViaje.Location = new System.Drawing.Point(214, 34);
-            this.btnNewViaje.Name = "btnNewViaje";
-            this.btnNewViaje.Size = new System.Drawing.Size(373, 55);
-            this.btnNewViaje.TabIndex = 5;
-            this.btnNewViaje.Text = "Crear nuevo viaje";
-            this.btnNewViaje.UseVisualStyleBackColor = true;
-            // 
-            // btnViajes
-            // 
-            this.btnViajes.Location = new System.Drawing.Point(214, 108);
-            this.btnViajes.Name = "btnViajes";
-            this.btnViajes.Size = new System.Drawing.Size(373, 55);
-            this.btnViajes.TabIndex = 4;
-            this.btnViajes.Text = "Viajes disponibles";
-            this.btnViajes.UseVisualStyleBackColor = true;
-            // 
             // btnHistorial
             // 
-            this.btnHistorial.Location = new System.Drawing.Point(214, 187);
+            this.btnHistorial.Location = new System.Drawing.Point(214, 53);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.Size = new System.Drawing.Size(373, 55);
             this.btnHistorial.TabIndex = 8;
-            this.btnHistorial.Text = "Historial viajes";
+            this.btnHistorial.Text = "Viajes";
             this.btnHistorial.UseVisualStyleBackColor = true;
             this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
@@ -91,8 +71,6 @@ namespace Parcial_Labo2_AgenciasViajes
             this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEstadisticas);
-            this.Controls.Add(this.btnNewViaje);
-            this.Controls.Add(this.btnViajes);
             this.Name = "FrmSecundario";
             this.Text = "FrmSecundario";
             this.ResumeLayout(false);
@@ -103,8 +81,6 @@ namespace Parcial_Labo2_AgenciasViajes
 
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnEstadisticas;
-        private System.Windows.Forms.Button btnNewViaje;
-        private System.Windows.Forms.Button btnViajes;
         private System.Windows.Forms.Button btnHistorial;
     }
 }

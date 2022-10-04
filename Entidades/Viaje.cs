@@ -13,12 +13,16 @@ namespace Entidades
         private const Eregional ciudadPartida = Eregional.Buenos_Aires;
         
         List<Pasajero> listPasajeros;
-        private Ciudad ciudadDestino;
+        private Eregional ciudadDestinoRegional;
+        private EextraRegional ciudadDestinoExtraRegional;
         private DateTime fechaInicioViaje;
+        private DateTime fechaDeLlegada;
         private Crucero crucero;
         private int cantidClasePremium;
         private int cantidadClaseTurista;
-        private int duracionViaje;
+
+
+        #region Constructores
 
         private Viaje()
         {
@@ -26,30 +30,67 @@ namespace Entidades
         }
 
         public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium, 
-            int cantidadClaseTurista) : this()
+            int cantidadClaseTurista, DateTime fechaDeLlegada) : this()
         {
-
-            Random numeroRandom = new Random();
 
             this.fechaInicioViaje = fechaInicioViaje;
             this.crucero = crucero;
             this.cantidClasePremium = cantidClasePremium;
             this.cantidadClaseTurista = cantidadClaseTurista;
-            //Cuando solucione lo de ciudad deberia calcular mejor la duracion de viaje
-            this.duracionViaje = numeroRandom.Next(100,300);
-            
+            this.fechaDeLlegada = fechaDeLlegada;
+
         }
 
-       // public string CiudadPartida { get { return this.ciudadPartida.ToString(); } }
-       // public string CiudadDestino { get { return this.ciudadDestino.ToString(); } }
+        public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
+            int cantidadClaseTurista, Eregional ciudadDestinoRegional, DateTime fechaDeLlegada)
+            : this(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada)
+        {
+            
+            this.ciudadDestinoRegional = ciudadDestinoRegional;
+        }
+
+        public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
+            int cantidadClaseTurista, DateTime fechaDeLlegada, EextraRegional ciudadDestinoExtraRegional)
+            : this(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada)
+        {
+    
+            this.ciudadDestinoExtraRegional = ciudadDestinoExtraRegional;
+        }
+
+        #endregion
+
+        #region Propiedades
+
         public int CantidadTurista { get { return this.cantidadClaseTurista; } }
         public int CantidadPremium { get { return this.cantidClasePremium; } }
-        public int DuracionViaje { get { return this.duracionViaje; } }
+        public DateTime FechaLlegada { get { return this.fechaDeLlegada.Date; } }
         public DateTime FechaInicioViajeDate { get { return this.fechaInicioViaje.Date; } }
         public string FechaInicioViaje { get { return this.FechaInicioViajeDate.ToString("d"); } }
         public Crucero Crucero { get { return this.crucero; } }
+        public Eregional DestinoRegional { get { return this.DestinoRegional; } }
+        public EextraRegional DestinoExtraRegional { get { return this.DestinoExtraRegional; } }
 
         public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
+
+        public Eestado Estado 
+        {
+            get
+            {
+                Eestado retorno = Eestado.Disponible;
+
+                if(this.fechaDeLlegada >= DateTime.Now)
+                {
+                    retorno = Eestado.En_Viaje;
+                }
+
+                return retorno;
+            }
+        
+        }
+
+        #endregion
+
+
         public void AgregarPasajero(Pasajero passanger)
         {
             if(passanger is not null)
@@ -70,7 +111,6 @@ namespace Entidades
 
             sb.AppendLine($"Clase turista: {this.cantidadClaseTurista} ");
             sb.AppendLine($"Cantidad Premium: {this.cantidClasePremium} ");
-            sb.AppendLine($"Duracion Viaje: {this.duracionViaje} ");
             sb.AppendLine($"Nombre Crucero: {this.crucero.Nombre} ");
             sb.AppendLine($"Matricula Crucero: {this.crucero.Matricula} ");
 

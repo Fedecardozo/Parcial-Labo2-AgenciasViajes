@@ -50,5 +50,22 @@ namespace Entidades
             return $"Usuario: {this.usuario}";
         }
 
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+
+            if(obj is Usuario)
+            {
+                retorno = ((Usuario)obj) == this;
+            }
+
+            return retorno;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
     }
 }

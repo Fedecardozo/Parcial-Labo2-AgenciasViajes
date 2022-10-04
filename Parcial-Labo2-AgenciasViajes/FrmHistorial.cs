@@ -30,8 +30,8 @@ namespace Parcial_Labo2_AgenciasViajes
             
             foreach (Viaje viaje in historial.Viajes)
             {
-                this.dataGridViajes.Rows.Add(i++,"Buenos Aires",EextraRegional.Nueva_York,viaje.FechaInicioViaje,viaje.Crucero.Nombre,viaje.Crucero.Matricula,
-                    viaje.CantidadTurista,viaje.CantidadPremium,viaje.DuracionViaje);
+                this.dataGridViajes.Rows.Add(i++,"Buenos Aires",EextraRegional.Nueva_York,viaje.FechaInicioViaje,viaje.FechaLlegada,viaje.Crucero.Nombre,viaje.Crucero.Matricula,
+                    viaje.CantidadTurista,viaje.CantidadPremium,viaje.Estado);
             }
         }
 

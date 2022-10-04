@@ -39,11 +39,12 @@ namespace Parcial_Labo2_AgenciasViajes
             this.ciudadPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicioViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaLLegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cruceroName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cruceroMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duracionViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViajes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,11 +87,12 @@ namespace Parcial_Labo2_AgenciasViajes
             this.ciudadPartida,
             this.ciudadDestino,
             this.fechaInicioViaje,
+            this.fechaLLegada,
             this.cruceroName,
             this.cruceroMatricula,
             this.cantidadTurista,
             this.cantidadPremium,
-            this.duracionViaje});
+            this.estadoViaje});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -112,7 +114,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.dataGridViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViajes.RowHeadersWidth = 51;
             this.dataGridViajes.RowTemplate.Height = 29;
-            this.dataGridViajes.Size = new System.Drawing.Size(1504, 294);
+            this.dataGridViajes.Size = new System.Drawing.Size(1740, 294);
             this.dataGridViajes.TabIndex = 4;
             // 
             // idViaje
@@ -141,11 +143,19 @@ namespace Parcial_Labo2_AgenciasViajes
             // 
             // fechaInicioViaje
             // 
-            this.fechaInicioViaje.HeaderText = "Fecha inicio viaje";
+            this.fechaInicioViaje.HeaderText = "Fecha inicio";
             this.fechaInicioViaje.MinimumWidth = 6;
             this.fechaInicioViaje.Name = "fechaInicioViaje";
             this.fechaInicioViaje.ReadOnly = true;
-            this.fechaInicioViaje.Width = 170;
+            this.fechaInicioViaje.Width = 130;
+            // 
+            // fechaLLegada
+            // 
+            this.fechaLLegada.HeaderText = "Fecha de LLegada";
+            this.fechaLLegada.MinimumWidth = 6;
+            this.fechaLLegada.Name = "fechaLLegada";
+            this.fechaLLegada.ReadOnly = true;
+            this.fechaLLegada.Width = 125;
             // 
             // cruceroName
             // 
@@ -179,19 +189,19 @@ namespace Parcial_Labo2_AgenciasViajes
             this.cantidadPremium.ReadOnly = true;
             this.cantidadPremium.Width = 200;
             // 
-            // duracionViaje
+            // estadoViaje
             // 
-            this.duracionViaje.HeaderText = "Duracion viaje";
-            this.duracionViaje.MinimumWidth = 6;
-            this.duracionViaje.Name = "duracionViaje";
-            this.duracionViaje.ReadOnly = true;
-            this.duracionViaje.Width = 150;
+            this.estadoViaje.HeaderText = "Estado de viaje";
+            this.estadoViaje.MinimumWidth = 6;
+            this.estadoViaje.Name = "estadoViaje";
+            this.estadoViaje.ReadOnly = true;
+            this.estadoViaje.Width = 150;
             // 
             // FrmHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1655, 429);
+            this.ClientSize = new System.Drawing.Size(1780, 429);
             this.Controls.Add(this.dataGridViajes);
             this.Controls.Add(this.btnVisualizarPasajero);
             this.Controls.Add(this.btnAtras);
@@ -212,10 +222,11 @@ namespace Parcial_Labo2_AgenciasViajes
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDestino;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioViaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaLLegada;
         private System.Windows.Forms.DataGridViewTextBoxColumn cruceroName;
         private System.Windows.Forms.DataGridViewTextBoxColumn cruceroMatricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadTurista;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadPremium;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duracionViaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
     }
 }

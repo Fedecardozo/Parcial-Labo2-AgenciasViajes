@@ -23,6 +23,17 @@ namespace Entidades
                     
         }
 
+        private static DateTime GeneradorFecha(DateTime start, DateTime fin)
+        {
+
+            Random gen = new Random();
+
+            int range = (fin - start).Days;
+
+            return start.AddDays(gen.Next(range));
+
+        }
+
         private static Usuario[] HarcodeoUsuarios()
         {
             Usuario[] usuarios = {new Usuario("admin","admin"), new Usuario("admin2", "admin2"),
@@ -172,15 +183,14 @@ namespace Entidades
 
         private static Viaje[] HarcodeoViaje()
         {
-            DateTime fecha = Harcodeo.GeneradorFecha();
 
-            Viaje[] viajesito = { new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[6], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[0], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[1], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[2], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[3], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[4], 10, 10),
-                new Viaje(fecha.Date, (Harcodeo.HarcodeoCrucero())[5], 10, 10),
+            Viaje[] viajesito = { new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[6], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
+                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[0], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
+                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[1], 10, 10,Harcodeo.GeneradorFecha(new DateTime(2022,1,2),DateTime.Today)),
+                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[2], 10, 10,Harcodeo.GeneradorFecha(new DateTime(2022,1,2),DateTime.Today)),
+                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[3], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
+                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[4], 10, 10,Harcodeo.GeneradorFecha(new DateTime(2022,1,2),DateTime.Today)),
+                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[5], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
             };
 
             Harcodeo.HarcodeoPasajeros(viajesito[0],1);
