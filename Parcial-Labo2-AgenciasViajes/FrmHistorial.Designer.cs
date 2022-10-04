@@ -45,13 +45,14 @@ namespace Parcial_Labo2_AgenciasViajes
             this.cantidadTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVenta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViajes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAtras
             // 
             this.btnAtras.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAtras.Location = new System.Drawing.Point(298, 346);
+            this.btnAtras.Location = new System.Drawing.Point(162, 346);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(279, 54);
             this.btnAtras.TabIndex = 1;
@@ -61,7 +62,7 @@ namespace Parcial_Labo2_AgenciasViajes
             // 
             // btnVisualizarPasajero
             // 
-            this.btnVisualizarPasajero.Location = new System.Drawing.Point(877, 346);
+            this.btnVisualizarPasajero.Location = new System.Drawing.Point(600, 346);
             this.btnVisualizarPasajero.Name = "btnVisualizarPasajero";
             this.btnVisualizarPasajero.Size = new System.Drawing.Size(279, 54);
             this.btnVisualizarPasajero.TabIndex = 3;
@@ -197,11 +198,23 @@ namespace Parcial_Labo2_AgenciasViajes
             this.estadoViaje.ReadOnly = true;
             this.estadoViaje.Width = 150;
             // 
+            // btnVenta
+            // 
+            this.btnVenta.Location = new System.Drawing.Point(1055, 346);
+            this.btnVenta.Name = "btnVenta";
+            this.btnVenta.Size = new System.Drawing.Size(279, 54);
+            this.btnVenta.TabIndex = 5;
+            this.btnVenta.TabStop = false;
+            this.btnVenta.Text = "Vender pasaje";
+            this.btnVenta.UseVisualStyleBackColor = true;
+            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
+            // 
             // FrmHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1780, 429);
+            this.Controls.Add(this.btnVenta);
             this.Controls.Add(this.dataGridViajes);
             this.Controls.Add(this.btnVisualizarPasajero);
             this.Controls.Add(this.btnAtras);
@@ -228,5 +241,6 @@ namespace Parcial_Labo2_AgenciasViajes
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadTurista;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadPremium;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
+        private System.Windows.Forms.Button btnVenta;
     }
 }

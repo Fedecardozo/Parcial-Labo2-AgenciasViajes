@@ -1,13 +1,13 @@
 ﻿
 
-public enum  Eregional {Buenos_Aires,Motevideo, Ushuaia, Recife, Santiago, Lima, Isla_de_Pascua, Isla_Galapagos,
+public enum  Eregional {Motevideo, Ushuaia, Recife, Santiago, Lima, Isla_de_Pascua, Isla_Galapagos,
 Puerto_Madryn, Rio_de_Janeiro,Cartagena };
 
 public enum EextraRegional {La_Habana, Venecia, Acapulco, Miami, Nueva_York, Bangkok, Taipei, Atenas };
 
 public enum Eestado {Disponible, En_Viaje, Destino};
 
-internal enum Eciudad { Regional, ExtraRegional };
+public enum Eciudad { Regional, Extra_Regional };
 
 public enum EtipoClase {Turistica, Premium };
 

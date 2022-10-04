@@ -64,8 +64,6 @@ namespace Entidades
 
         }
 
-        /*(string nombre, string apellido, long dni, DateTime fechaNacimiento, ENacionalidad nacion,
-            ESexo sexo, int numeroPasaporte,Equipaje equipaje) */
         private static Pasaporte[] HarcodeoPasaportes()
         {
 
@@ -181,25 +179,40 @@ namespace Entidades
             return crucero;
         }
 
-        private static Viaje[] HarcodeoViaje()
+        private static ViajeExtraRegional[] ViajeExtraRegional()
         {
+            ViajeExtraRegional[] viajesito =
+            {
+                new ViajeExtraRegional(EextraRegional.Atenas,Harcodeo.GeneradorFecha(new DateTime(2022, 1, 1), DateTime.Today), (Harcodeo.HarcodeoCrucero())[6], 10, 10, Harcodeo.GeneradorFecha(DateTime.Today, new DateTime(2022, 10, 10))),
+                new ViajeExtraRegional(EextraRegional.Bangkok,Harcodeo.GeneradorFecha(new DateTime(2022, 1, 1), DateTime.Today), (Harcodeo.HarcodeoCrucero())[4], 10, 10, Harcodeo.GeneradorFecha(new DateTime(2022, 1, 2), DateTime.Today)),
+                new ViajeExtraRegional(EextraRegional.Miami,Harcodeo.GeneradorFecha(new DateTime(2022, 1, 1), DateTime.Today), (Harcodeo.HarcodeoCrucero())[5], 10, 10, Harcodeo.GeneradorFecha(DateTime.Today, new DateTime(2022, 10, 10))),
+            };
 
-            Viaje[] viajesito = { new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[6], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
-                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[0], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
-                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[1], 10, 10,Harcodeo.GeneradorFecha(new DateTime(2022,1,2),DateTime.Today)),
-                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[2], 10, 10,Harcodeo.GeneradorFecha(new DateTime(2022,1,2),DateTime.Today)),
-                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[3], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
-                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[4], 10, 10,Harcodeo.GeneradorFecha(new DateTime(2022,1,2),DateTime.Today)),
-                new Viaje(Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[5], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
+            Harcodeo.HarcodeoPasajeros(viajesito[0], 3);
+            Harcodeo.HarcodeoPasajeros(viajesito[1], 3);
+            Harcodeo.HarcodeoPasajeros(viajesito[2], 2);
+
+            return viajesito;
+
+        }
+
+        private static ViajeRegional[] HarcodeoViaje()
+        {
+            
+            ViajeRegional[] viajesito = 
+            { 
+                new ViajeRegional(Eregional.Rio_de_Janeiro,Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[0], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
+                new ViajeRegional(Eregional.Puerto_Madryn,Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[1], 10, 10,Harcodeo.GeneradorFecha(new DateTime(2022,1,2),DateTime.Today)),
+                new ViajeRegional(Eregional.Lima,Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[2], 10, 10,Harcodeo.GeneradorFecha(new DateTime(2022,1,2),DateTime.Today)),
+                new ViajeRegional(Eregional.Cartagena,Harcodeo.GeneradorFecha(new DateTime(2022,1,1),DateTime.Today), (Harcodeo.HarcodeoCrucero())[3], 10, 10,Harcodeo.GeneradorFecha(DateTime.Today,new DateTime(2022,10,10))),
+                
             };
 
             Harcodeo.HarcodeoPasajeros(viajesito[0],1);
             Harcodeo.HarcodeoPasajeros(viajesito[1],2);
             Harcodeo.HarcodeoPasajeros(viajesito[2],3);
             Harcodeo.HarcodeoPasajeros(viajesito[3],1);
-            Harcodeo.HarcodeoPasajeros(viajesito[4],3);
-            Harcodeo.HarcodeoPasajeros(viajesito[5],3);
-            Harcodeo.HarcodeoPasajeros(viajesito[6],2);
+            
 
             return viajesito;
         }
@@ -215,9 +228,11 @@ namespace Entidades
         public static void HarcodeoProgram(HistorialViajes historialViaje)
         {
             Viaje[] viajes = Harcodeo.HarcodeoViaje();
+            Viaje[] viajesEx = Harcodeo.ViajeExtraRegional();
 
             Harcodeo.HarcodeoViajesHistorial(historialViaje, viajes);
-            
+            Harcodeo.HarcodeoViajesHistorial(historialViaje, viajesEx);
+
         }
     }
 }

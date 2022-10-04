@@ -8,25 +8,28 @@ namespace Entidades
 {
     public class Viaje
     {
+        #region Constantes
         private const int costoPremium = 120;
         private const int costoTurista = 57;
-        private const Eregional ciudadPartida = Eregional.Buenos_Aires;
-        
+        #endregion
+
+        #region Atributos
         List<Pasajero> listPasajeros;
-        private Eregional ciudadDestinoRegional;
-        private EextraRegional ciudadDestinoExtraRegional;
+        private string ciudadPartida;
         private DateTime fechaInicioViaje;
         private DateTime fechaDeLlegada;
         private Crucero crucero;
         private int cantidClasePremium;
         private int cantidadClaseTurista;
-
+        private Eciudad tipoDestino;
+        #endregion
 
         #region Constructores
 
         private Viaje()
         {
             this.listPasajeros = new List<Pasajero>();
+            this.ciudadPartida = "Buenos Aires";
         }
 
         public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium, 
@@ -41,21 +44,6 @@ namespace Entidades
 
         }
 
-        public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
-            int cantidadClaseTurista, Eregional ciudadDestinoRegional, DateTime fechaDeLlegada)
-            : this(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada)
-        {
-            
-            this.ciudadDestinoRegional = ciudadDestinoRegional;
-        }
-
-        public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
-            int cantidadClaseTurista, DateTime fechaDeLlegada, EextraRegional ciudadDestinoExtraRegional)
-            : this(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada)
-        {
-    
-            this.ciudadDestinoExtraRegional = ciudadDestinoExtraRegional;
-        }
 
         #endregion
 
@@ -67,10 +55,9 @@ namespace Entidades
         public DateTime FechaInicioViajeDate { get { return this.fechaInicioViaje.Date; } }
         public string FechaInicioViaje { get { return this.FechaInicioViajeDate.ToString("d"); } }
         public Crucero Crucero { get { return this.crucero; } }
-        public Eregional DestinoRegional { get { return this.DestinoRegional; } }
-        public EextraRegional DestinoExtraRegional { get { return this.DestinoExtraRegional; } }
-
+        public string CiudadPartida { get { return this.ciudadPartida; } }
         public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
+        public virtual string TipoDestino { get { return this.tipoDestino.ToString(); } }
 
         public Eestado Estado 
         {
@@ -90,7 +77,7 @@ namespace Entidades
 
         #endregion
 
-
+        #region Metodos
         public void AgregarPasajero(Pasajero passanger)
         {
             if(passanger is not null)
@@ -105,7 +92,7 @@ namespace Entidades
             return this.listPasajeros;
         }
 
-        public string Mostrar()
+        public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
 
@@ -115,10 +102,9 @@ namespace Entidades
             sb.AppendLine($"Matricula Crucero: {this.crucero.Matricula} ");
 
             return sb.ToString();
-                 
         }
-    
-        
+
+        #endregion
 
     }
 }
