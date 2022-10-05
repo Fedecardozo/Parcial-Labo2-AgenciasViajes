@@ -365,6 +365,9 @@ namespace Parcial_Labo2_AgenciasViajes
             // 
             // panelPrincipal
             // 
+            this.panelPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPrincipal.AutoSize = true;
             this.panelPrincipal.Controls.Add(this.groupBox1);
             this.panelPrincipal.Controls.Add(this.button1);
