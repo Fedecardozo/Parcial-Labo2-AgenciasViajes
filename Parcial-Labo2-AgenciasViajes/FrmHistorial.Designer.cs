@@ -35,7 +35,6 @@ namespace Parcial_Labo2_AgenciasViajes
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnVisualizarPasajero = new System.Windows.Forms.Button();
             this.dataGridViajes = new System.Windows.Forms.DataGridView();
-            this.btnVenta = new System.Windows.Forms.Button();
             this.idViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +46,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.cantidadPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracionViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVenta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViajes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,17 +119,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.dataGridViajes.RowTemplate.Height = 29;
             this.dataGridViajes.Size = new System.Drawing.Size(1740, 294);
             this.dataGridViajes.TabIndex = 4;
-            // 
-            // btnVenta
-            // 
-            this.btnVenta.Location = new System.Drawing.Point(1180, 420);
-            this.btnVenta.Name = "btnVenta";
-            this.btnVenta.Size = new System.Drawing.Size(279, 54);
-            this.btnVenta.TabIndex = 5;
-            this.btnVenta.TabStop = false;
-            this.btnVenta.Text = "Vender pasaje";
-            this.btnVenta.UseVisualStyleBackColor = true;
-            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
+            this.dataGridViajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViajes_CellContentClick);
             // 
             // idViaje
             // 
@@ -218,6 +208,17 @@ namespace Parcial_Labo2_AgenciasViajes
             this.duracionViaje.Name = "duracionViaje";
             this.duracionViaje.ReadOnly = true;
             this.duracionViaje.Width = 150;
+            // 
+            // btnVenta
+            // 
+            this.btnVenta.Location = new System.Drawing.Point(1180, 420);
+            this.btnVenta.Name = "btnVenta";
+            this.btnVenta.Size = new System.Drawing.Size(279, 54);
+            this.btnVenta.TabIndex = 5;
+            this.btnVenta.TabStop = false;
+            this.btnVenta.Text = "Vender pasaje";
+            this.btnVenta.UseVisualStyleBackColor = true;
+            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
             // FrmHistorial
             // 

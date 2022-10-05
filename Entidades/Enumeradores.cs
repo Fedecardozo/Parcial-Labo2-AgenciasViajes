@@ -5,7 +5,7 @@ Puerto_Madryn, Rio_de_Janeiro,Cartagena };
 
 public enum EextraRegional {La_Habana, Venecia, Acapulco, Miami, Nueva_York, Bangkok, Taipei, Atenas };
 
-public enum Eestado {Disponible, En_Viaje, Destino};
+public enum Eestado {Disponible, En_Viaje, Completo};
 
 public enum Eciudad { Regional, Extra_Regional };
 

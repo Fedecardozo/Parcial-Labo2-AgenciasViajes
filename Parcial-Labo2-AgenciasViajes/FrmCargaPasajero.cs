@@ -16,6 +16,5 @@ namespace Parcial_Labo2_AgenciasViajes
         {
             InitializeComponent();
         }
-
     }
 }

@@ -101,7 +101,15 @@ namespace Entidades
         {
             return !(v1 == v2);
         }
+        public static bool operator ==(Viaje v1, int id)
+        {
+            return v1.id == id;
+        }
 
+        public static bool operator !=(Viaje v1, int id)
+        {
+            return !(v1 == id);
+        }
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
