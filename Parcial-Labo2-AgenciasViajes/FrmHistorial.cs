@@ -30,7 +30,7 @@ namespace Parcial_Labo2_AgenciasViajes
             
             foreach (Viaje viaje in historial.Viajes)
             {
-                this.dataGridViajes.Rows.Add(i++,viaje.CiudadPartida,viaje.TipoDestino,viaje.FechaInicioViaje,viaje.FechaLlegada,viaje.Crucero.Nombre,viaje.Crucero.Matricula,
+                this.dataGridViajes.Rows.Add(viaje.Id,viaje.CiudadPartida,viaje.TipoDestino,viaje.FechaInicioViaje,viaje.FechaLlegada,viaje.Crucero.Nombre,viaje.Crucero.LugaresDisponibles,
                     viaje.CantidadTurista,viaje.CantidadPremium,viaje.Estado,viaje.DuracionViaje);
             }
         }
@@ -68,7 +68,7 @@ namespace Parcial_Labo2_AgenciasViajes
             //string obtenerEstado = this.dataGridViajes.Rows[obtenerIndex].Cells[9].Value.ToString();
             Eestado obtenerEstado = (Eestado)this.dataGridViajes.Rows[obtenerIndex].Cells[9].Value;
 
-            if(obtenerEstado == Eestado.Disponible)
+            if (obtenerEstado == Eestado.Disponible)
             {
                 FrmCargaPasajero frmCargaPasajero = new FrmCargaPasajero();
 

@@ -21,7 +21,8 @@ namespace Entidades
         private Crucero crucero;
         private int cantidClasePremium;
         private int cantidadClaseTurista;
-
+        private int id;
+        private static int contadorId = 1000;
         #endregion
 
         #region Constructores
@@ -30,6 +31,8 @@ namespace Entidades
         {
             this.listPasajeros = new List<Pasajero>();
             this.ciudadPartida = "Buenos Aires";
+            this.id = Viaje.contadorId;
+            Viaje.contadorId++;
         }
 
         public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium, 
@@ -59,6 +62,7 @@ namespace Entidades
         public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
         public virtual string TipoDestino { get { return ""; } }
         public virtual string DuracionViaje { get { return ""; } }
+        public int Id { get { return this.id; } }
 
         public Eestado Estado 
         {
@@ -88,6 +92,15 @@ namespace Entidades
 
         }
 
+        public static bool operator ==(Viaje v1,Viaje v2)
+        {
+            return v1.id == v2.id;
+        }
+
+        public static bool operator != (Viaje v1, Viaje v2)
+        {
+            return !(v1 == v2);
+        }
 
         public override string ToString()
         {
@@ -99,6 +112,23 @@ namespace Entidades
             sb.AppendLine($"Matricula Crucero: {this.crucero.Matricula} ");
 
             return sb.ToString();
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+            
+            if(obj != null && obj is Viaje)
+            {
+                retorno = (Viaje)obj == this;
+            }
+
+            return retorno;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
 
         #endregion

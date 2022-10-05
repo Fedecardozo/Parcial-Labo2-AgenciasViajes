@@ -42,7 +42,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.fechaInicioViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaLLegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cruceroName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cruceroMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pasajesLibres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,7 +91,7 @@ namespace Parcial_Labo2_AgenciasViajes
             this.fechaInicioViaje,
             this.fechaLLegada,
             this.cruceroName,
-            this.cruceroMatricula,
+            this.pasajesLibres,
             this.cantidadTurista,
             this.cantidadPremium,
             this.estadoViaje,
@@ -179,13 +179,13 @@ namespace Parcial_Labo2_AgenciasViajes
             this.cruceroName.ReadOnly = true;
             this.cruceroName.Width = 150;
             // 
-            // cruceroMatricula
+            // pasajesLibres
             // 
-            this.cruceroMatricula.HeaderText = "Matricula crucero";
-            this.cruceroMatricula.MinimumWidth = 6;
-            this.cruceroMatricula.Name = "cruceroMatricula";
-            this.cruceroMatricula.ReadOnly = true;
-            this.cruceroMatricula.Width = 170;
+            this.pasajesLibres.HeaderText = "Pasaje libre";
+            this.pasajesLibres.MinimumWidth = 6;
+            this.pasajesLibres.Name = "pasajesLibres";
+            this.pasajesLibres.ReadOnly = true;
+            this.pasajesLibres.Width = 140;
             // 
             // cantidadTurista
             // 
@@ -248,7 +248,7 @@ namespace Parcial_Labo2_AgenciasViajes
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioViaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaLLegada;
         private System.Windows.Forms.DataGridViewTextBoxColumn cruceroName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cruceroMatricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pasajesLibres;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadTurista;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadPremium;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
