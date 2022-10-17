@@ -75,7 +75,7 @@ namespace Entidades
         public string FechaInicioViaje { get { return this.FechaInicioViajeDate.ToString("d"); } }
         public Crucero Crucero { get { return this.crucero; } }
         public string CiudadPartida { get { return this.ciudadPartida; } }
-        //public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
+        public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
         public virtual string TipoDestino { get { return ""; } }
         public string DuracionViaje 
         { 

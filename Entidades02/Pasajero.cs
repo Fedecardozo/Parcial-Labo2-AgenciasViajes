@@ -11,13 +11,15 @@ namespace Entidades
         #region Atributos
         private Equipaje equipaje;
         private Pasaporte pasaporte;
+        private EtipoClase clase;
         #endregion
 
         #region Constructor
-        public Pasajero(Pasaporte pasaporte, Equipaje equipaje)
+        public Pasajero(Pasaporte pasaporte, Equipaje equipaje, EtipoClase clase)
         {
             this.equipaje = equipaje;
             this.pasaporte = pasaporte;
+            this.clase = clase;
         }
         #endregion
 
@@ -35,6 +37,7 @@ namespace Entidades
 
             sb.AppendLine($"{this.pasaporte.ToString()}");
             sb.AppendLine($"Equipaje: {this.equipaje.ToString()}");
+            sb.AppendLine($"Tipo de clase: {this.clase}");
 
             return sb.ToString();
         }

@@ -37,7 +37,7 @@ namespace Entidades
         public override string ToString()
         {
             return $"\nNombre: {this.nombre} \nApellido: {this.apellido} \nDNI: {this.dni}" +
-                $" \nFecha Nacimiento: {this.fechaNacimiento.Date}";
+                $" \nFecha Nacimiento: {this.fechaNacimiento.Date.ToString("d")}";
         }
 
         #region Propiedades

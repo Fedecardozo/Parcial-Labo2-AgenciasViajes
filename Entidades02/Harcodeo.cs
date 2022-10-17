@@ -154,24 +154,26 @@ namespace Entidades
         private static void Pasajeros()
         {
             int indexAzar;
+            int claseAzar;
             int catidadPasaportes = Harcodeo.pasaportes.Count();
             int divisionPasajeros = catidadPasaportes / 3;
 
             for (int  i = 0;  i < catidadPasaportes;  i++)
             {
                 indexAzar = Aleatorio.Azar(0, Harcodeo.equipajes.Count());
+                claseAzar = Aleatorio.Azar(0,2);
 
                 if (i < divisionPasajeros)
                 {
-                    Harcodeo.pasajeros1.Add(new Pasajero(Harcodeo.pasaportes[i],Harcodeo.equipajes[indexAzar]));
+                    Harcodeo.pasajeros1.Add(new Pasajero(Harcodeo.pasaportes[i],Harcodeo.equipajes[indexAzar],(EtipoClase)claseAzar));
                 }
                 else if(i >= divisionPasajeros && i < divisionPasajeros*2)
                 {
-                    Harcodeo.pasajeros2.Add(new Pasajero(Harcodeo.pasaportes[i], Harcodeo.equipajes[indexAzar]));
+                    Harcodeo.pasajeros2.Add(new Pasajero(Harcodeo.pasaportes[i], Harcodeo.equipajes[indexAzar],(EtipoClase)claseAzar));
                 }
                 else
                 {
-                    Harcodeo.pasajeros3.Add(new Pasajero(Harcodeo.pasaportes[i], Harcodeo.equipajes[indexAzar]));
+                    Harcodeo.pasajeros3.Add(new Pasajero(Harcodeo.pasaportes[i], Harcodeo.equipajes[indexAzar],(EtipoClase)claseAzar));
                 }
             }
         }

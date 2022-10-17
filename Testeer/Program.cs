@@ -19,7 +19,12 @@ namespace Testeer
                 #region Viajes Disponibles
                 foreach (Viaje viaje in Harcodeo.ListaViajes())
                 {
-                    //Console.WriteLine(viaje.ToString());
+                    foreach (Pasajero item in viaje.Pasajeros)
+                    {
+                        Console.WriteLine(item.ToString());
+                        
+                    }
+                    break;
 
                 }
                 #endregion
