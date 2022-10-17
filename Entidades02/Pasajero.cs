@@ -27,6 +27,7 @@ namespace Entidades
 
         public Pasaporte Pasaporte { get { return this.pasaporte; } }
         public Equipaje Equipaje { get { return this.equipaje; } }
+        public EtipoClase TipoClase { get { return this.clase; } }
 
         #endregion
 

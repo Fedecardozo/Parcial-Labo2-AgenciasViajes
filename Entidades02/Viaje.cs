@@ -20,10 +20,8 @@ namespace Entidades
         private DateTime fechaInicioViaje;
         private DateTime fechaDeLlegada;
         private Crucero crucero;
-        private int cantidClasePremium;
-        private int cantidadClaseTurista;
-        private int id;
         private EestadoViaje estadoViaje;
+        private int id;
         #endregion
 
         #region Constructores
@@ -44,32 +42,28 @@ namespace Entidades
             Viaje.contadorId++;
         }
 
-        public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
-            int cantidadClaseTurista, DateTime fechaDeLlegada) : this()
+        public Viaje(DateTime fechaInicioViaje, Crucero crucero, DateTime fechaDeLlegada) : this()
         {
 
             this.fechaInicioViaje = fechaInicioViaje;
             this.fechaDeLlegada = fechaDeLlegada;
             this.crucero = crucero;
-            this.cantidClasePremium = cantidClasePremium;
-            this.cantidadClaseTurista = cantidadClaseTurista;
             this.estadoViaje = this.EstadoViaje;
 
         }
 
-        public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
-            int cantidadClaseTurista, DateTime fechaDeLlegada,List<Pasajero> listpasajeros) 
-            : this(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada)
+        public Viaje(DateTime fechaInicioViaje, Crucero crucero, DateTime fechaDeLlegada,List<Pasajero> listPasajeros) 
+            : this(fechaInicioViaje, crucero, fechaDeLlegada)
         {
-            this.listPasajeros = listpasajeros;
+            this.listPasajeros = listPasajeros;
         }
 
         #endregion
 
         #region Propiedades
 
-        public int CantidadTurista { get { return this.cantidadClaseTurista; } }
-        public int CantidadPremium { get { return this.cantidClasePremium; } }
+        public int CantidadTurista { get { return this.ContarClaseTurista(); } }
+        public int CantidadPremium { get { return this.ContarClasePremium(); } }
         public DateTime FechaLlegada { get { return this.fechaDeLlegada.Date; } }
         public DateTime FechaInicioViajeDate { get { return this.fechaInicioViaje.Date; } }
         public string FechaInicioViaje { get { return this.FechaInicioViajeDate.ToString("d"); } }
@@ -104,16 +98,50 @@ namespace Entidades
 
         #endregion
 
-        #region Sobrecarga operadores
-        /*public void AgregarPasajero(Pasajero passanger)
+        #region Metodos
+        private int ContarClasePremium()
         {
-            if (passanger is not null && this.crucero.LugaresDisponibles > 0)
+            int cantidadClasePremium = 0;
+
+            foreach (Pasajero passanger in this.listPasajeros)
+            {
+                if (passanger.TipoClase == EtipoClase.Premium)
+                {
+                    cantidadClasePremium++;
+                }
+            }
+
+            return cantidadClasePremium;
+        }
+        private int ContarClaseTurista()
+        {
+            int cantidadClaseTurista = 0;
+
+            foreach (Pasajero passanger in this.listPasajeros)
+            {
+                if (passanger.TipoClase == EtipoClase.Turistica)
+                {
+                    cantidadClaseTurista++;
+                }
+            }
+
+            return cantidadClaseTurista;
+
+        }
+
+        public void AgregarPasajero(Pasajero passanger)
+        {
+            
+            if (passanger is not null )//&& this.crucero.LugaresDisponibles > 0)
             {
                 this.listPasajeros.Add(passanger);
             }
 
-        }*/
+        }
+        
+        #endregion
 
+        #region Sobrecarga operadores
         public static bool operator ==(Viaje v1, Viaje v2)
         {
             return v1.id == v2.id;
@@ -142,8 +170,8 @@ namespace Entidades
             sb.AppendLine($"Ciudad de partida: {this.ciudadPartida}");
             sb.AppendLine($"Fecha inicio de viaje: {this.fechaInicioViaje}");
             sb.AppendLine($"Fecha llegada de viaje: {this.fechaDeLlegada}");
-            sb.AppendLine($"Clase turista: {this.cantidadClaseTurista} ");
-            sb.AppendLine($"Cantidad Premium: {this.cantidClasePremium} ");
+            sb.AppendLine($"Clase turista: {this.CantidadTurista} ");
+            sb.AppendLine($"Cantidad Premium: {this.CantidadPremium}");
             sb.AppendLine($"Estado de viaje {this.estadoViaje}");
             sb.AppendLine($"Nombre Crucero: {this.crucero.Nombre} ");
             sb.AppendLine($"Matricula Crucero: {this.crucero.Matricula} ");

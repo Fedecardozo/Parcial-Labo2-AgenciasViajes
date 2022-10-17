@@ -186,17 +186,15 @@ namespace Entidades
         {
             DateTime fechaRegional;
             DateTime fechaExtra;
-            int indexCrucero, indexCruceroExtra, cantPremiun,cantTurista,destinoRegion,destinoExtra,numeroAzar;
+            int indexCrucero, indexCruceroExtra,destinoRegion,destinoExtra,numeroAzar;
             List<Pasajero> azarPasajeros;
-            
+
             for (int i = 0; i < 20; i++)
             {
                 fechaRegional = Aleatorio.FechaInicio();
                 fechaExtra = Aleatorio.FechaInicio();
                 indexCrucero = Aleatorio.Azar(0,6);
                 indexCruceroExtra = Aleatorio.Azar(0, 6);
-                cantPremiun = Aleatorio.Azar(5,20);
-                cantTurista = Aleatorio.Azar(10,25);
                 destinoRegion = Aleatorio.Azar(0,9);
                 destinoExtra = Aleatorio.Azar(0, 7);
                 numeroAzar = Aleatorio.Azar(0,3);
@@ -210,11 +208,11 @@ namespace Entidades
 
                 //Viajes regionales
                 Harcodeo.viajes.Add(new ViajeRegional((Eregional)destinoRegion, fechaRegional,Harcodeo.cruceros[indexCrucero],
-                    cantPremiun, cantTurista, Aleatorio.FechaLlegadaRegional(fechaRegional), azarPasajeros));
+                    Aleatorio.FechaLlegadaRegional(fechaRegional), azarPasajeros));
 
                 //Viajes extra regionales
                 Harcodeo.viajes.Add(new ViajeExtraRegional((EextraRegional)destinoExtra, fechaExtra, Harcodeo.cruceros[indexCruceroExtra],
-                    10, 5, Aleatorio.FechaLlegadaExtraRegional(fechaExtra), azarPasajeros));
+                    Aleatorio.FechaLlegadaExtraRegional(fechaExtra), azarPasajeros));
             }
 
         }

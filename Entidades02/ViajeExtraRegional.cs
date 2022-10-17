@@ -12,14 +12,13 @@ namespace Entidades
 
         public ViajeExtraRegional(EextraRegional destino, DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
             int cantidadClaseTurista, DateTime fechaDeLlegada)
-            : base(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada)
+            : base(fechaInicioViaje, crucero, fechaDeLlegada)
         {
             this.destino = destino;
         }
 
-        public ViajeExtraRegional(EextraRegional destino, DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
-            int cantidadClaseTurista, DateTime fechaDeLlegada,List<Pasajero> listPasajeros)
-            : base(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada, listPasajeros)
+        public ViajeExtraRegional(EextraRegional destino, DateTime fechaInicioViaje, Crucero crucero, DateTime fechaDeLlegada,List<Pasajero> listPasajeros)
+            : base(fechaInicioViaje, crucero, fechaDeLlegada, listPasajeros)
         {
             
         }

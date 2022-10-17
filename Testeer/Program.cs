@@ -10,7 +10,6 @@ namespace Testeer
         {
 
             Harcodeo.Global();
-            Random random = new Random();
 
             if (Validacion.ValidarUsuario(new Usuario("admin", "admin")))
             {
@@ -22,14 +21,16 @@ namespace Testeer
                     foreach (Pasajero item in viaje.Pasajeros)
                     {
                         Console.WriteLine(item.ToString());
-                        
                     }
+
+                    Console.WriteLine("Premium: " + viaje.CantidadPremium);
+                    Console.WriteLine("Turista: " + viaje.CantidadTurista);
+                    
                     break;
 
                 }
                 #endregion
                
-
             }
 
         }
