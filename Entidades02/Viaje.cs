@@ -16,7 +16,7 @@ namespace Entidades
 
         #region Atributos
         private string ciudadPartida;
-        //List<Pasajero> listPasajeros;
+        List<Pasajero> listPasajeros;
         private DateTime fechaInicioViaje;
         private DateTime fechaDeLlegada;
         private Crucero crucero;
@@ -37,7 +37,7 @@ namespace Entidades
 
         private Viaje()
         {
-            //this.listPasajeros = new List<Pasajero>();
+            this.listPasajeros = new List<Pasajero>();
             this.ciudadPartida = "Buenos Aires";
             this.estadoViaje = EestadoViaje.Disponible;
             this.id = Viaje.contadorId;
@@ -57,6 +57,12 @@ namespace Entidades
 
         }
 
+        public Viaje(DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
+            int cantidadClaseTurista, DateTime fechaDeLlegada,List<Pasajero> listpasajeros) 
+            : this(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada)
+        {
+            this.listPasajeros = listpasajeros;
+        }
 
         #endregion
 

@@ -17,6 +17,13 @@ namespace Entidades
             this.destino = destino;
         }
 
+        public ViajeRegional(Eregional destino, DateTime fechaInicioViaje, Crucero crucero, int cantidClasePremium,
+            int cantidadClaseTurista, DateTime fechaDeLlegada, List<Pasajero> listPasajeros)
+            : base(fechaInicioViaje, crucero, cantidClasePremium, cantidadClaseTurista, fechaDeLlegada, listPasajeros)
+        {
+
+        }
+
         public override string TipoDestino { get { return this.destino.ToString(); } }
 
         public override string ToString()
