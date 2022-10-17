@@ -18,7 +18,7 @@ namespace Entidades
         private double capacidadBodega;
         private bool piscina;
         private bool gimnasio;
-        private EestadoViaje estadoViaje;
+        //private EestadoViaje estadoViaje;
         //private Viaje viaje;
 
         #endregion
@@ -37,14 +37,14 @@ namespace Entidades
             this.gimnasio = gimnasio;
         }
 
-        public Crucero(string matricula, string nombre, int cantidadCamarotes,
-            int cantidadSalones, int cantidadCasino, float capacidadBodega, bool piscina, bool gimnasio, EestadoViaje estadoViaje)
+        /*public Crucero(string matricula, string nombre, int cantidadCamarotes,
+            int cantidadSalones, int cantidadCasino, float capacidadBodega, bool piscina, bool gimnasio)
             : this(matricula, nombre, cantidadCamarotes,
              cantidadSalones, cantidadCasino, capacidadBodega, piscina, gimnasio)
         {
             //this.viaje = viaje;
-            this.estadoViaje = estadoViaje;
-        }
+            //this.estadoViaje = estadoViaje;
+        }*/
 
         #endregion
 
@@ -81,7 +81,7 @@ namespace Entidades
 
         public string Matricula { get { return this.matricula; } }
 
-        public EestadoViaje EstadoViaje
+        /*public EestadoViaje EstadoViaje
         {
             get
             {
@@ -92,7 +92,7 @@ namespace Entidades
             {
                 this.estadoViaje = value;
             }
-        }
+        }*/
 
         private int CapacidadMaximaPasajeros { get { return this.cantidadCamarotes * 4; } }
 
@@ -130,8 +130,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"Nombre: {this.nombre} - Camarotes: {this.cantidadCamarotes} - Casinos: {this.cantidadCasino}" +
-                $" - Estado de viaje: {this.estadoViaje}";
+            return $"Nombre: {this.nombre} - Camarotes: {this.cantidadCamarotes} - Casinos: {this.cantidadCasino}";
         }
 
         public override int GetHashCode()
