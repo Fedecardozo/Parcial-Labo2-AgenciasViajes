@@ -11,7 +11,7 @@ using Entidades;
 
 namespace Parcial_Labo2_AgenciasViajes
 {
-    public partial class FrmHistorial : Form
+    public partial class FrmHistorial : FrmCentrado
     {
         private HistorialViajes historial;
         private Viaje obtenerViaje; 
@@ -25,6 +25,26 @@ namespace Parcial_Labo2_AgenciasViajes
 
         private void FrmHistorial_Load(object sender, EventArgs e)
         {
+            //No se puede agregar mas filas
+            this.dataGridViajes.AllowUserToAddRows = false;
+
+            //No se puede seleccionar mas de una fila
+            this.dataGridViajes.MultiSelect = false;
+
+            //Se selecciona toda la fila
+            this.dataGridViajes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            //Elimina la primera columna que viene por defecto
+            this.dataGridViajes.RowHeadersVisible = false;
+
+            //Saco la visibilidad de la primera columna
+            this.dataGridViajes.Columns[0].Visible = false;
+
+            //Centro el header
+            this.dataGridViajes.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            
+
             Harcodeo.HarcodeoProgram(historial);
             
             foreach (Viaje viaje in historial.Viajes)
@@ -84,13 +104,24 @@ namespace Parcial_Labo2_AgenciasViajes
 
         private void dataGridViajes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.dataGridViajes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
+            
             int obtenerIndex = this.dataGridViajes.CurrentRow.Index;
             int obtenerId = int.Parse(this.dataGridViajes.Rows[obtenerIndex].Cells[0].Value.ToString());
             this.historial.ObtenerViaje(obtenerId,out this.obtenerViaje);
             
             //MessageBox.Show(obtenerId.ToString());
+        }
+
+        private void FrmHistorial_SizeChanged(object sender, EventArgs e)
+        {
+            this.Centrado(this.panelListado,this);
+        }
+
+        private void dataGridViajes_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+            //Las columnas toman todo el espacio
+            e.Column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            
         }
     }
 }

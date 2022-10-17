@@ -11,7 +11,7 @@ using Entidades;
 
 namespace Parcial_Labo2_AgenciasViajes
 {
-    public partial class FrmLogin : Form
+    public partial class FrmLogin : FrmCentrado
     {
 
         private static bool flag;
@@ -24,7 +24,7 @@ namespace Parcial_Labo2_AgenciasViajes
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+            this.Centrado(this.panelLogin,this);
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -54,6 +54,11 @@ namespace Parcial_Labo2_AgenciasViajes
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panelLogin_SizeChanged(object sender, EventArgs e)
+        {
+            this.Centrado(this.panelLogin,this);
         }
     }
 }

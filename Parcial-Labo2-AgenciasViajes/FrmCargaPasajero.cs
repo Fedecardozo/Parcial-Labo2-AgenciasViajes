@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Parcial_Labo2_AgenciasViajes
 {
-    public partial class FrmCargaPasajero : Form
+    public partial class FrmCargaPasajero : FrmCentrado
     {
         public FrmCargaPasajero()
         {

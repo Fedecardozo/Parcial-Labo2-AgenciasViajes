@@ -14,6 +14,7 @@ namespace Entidades
         #endregion
 
         #region Atributos
+        private static int contadorId;
         List<Pasajero> listPasajeros;
         private string ciudadPartida;
         private DateTime fechaInicioViaje;
@@ -22,10 +23,14 @@ namespace Entidades
         private int cantidClasePremium;
         private int cantidadClaseTurista;
         private int id;
-        private static int contadorId = 1000;
         #endregion
 
         #region Constructores
+
+        static Viaje()
+        {
+            Viaje.contadorId = 1000;
+        }
 
         private Viaje()
         {

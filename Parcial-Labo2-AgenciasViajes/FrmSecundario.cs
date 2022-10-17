@@ -11,7 +11,7 @@ using Entidades;
 
 namespace Parcial_Labo2_AgenciasViajes
 {
-    public partial class FrmSecundario : Form
+    public partial class FrmSecundario : FrmCentrado
     {
         public FrmSecundario()
         {

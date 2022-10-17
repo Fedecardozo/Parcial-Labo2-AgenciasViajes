@@ -10,6 +10,14 @@ namespace Entidades
     {
         private static List<Usuario> usuarios;
 
+        #region Constructor Estatico
+        static Harcodeo()
+        {
+            Harcodeo.usuarios = new List<Usuario>();
+        }
+        #endregion
+
+        #region Generadores de fecha
         private static DateTime GeneradorFecha()
         {
             DateTime start = new DateTime(1950, 1, 1,0,0,0);
@@ -34,7 +42,11 @@ namespace Entidades
 
         }
 
-        private static Usuario[] HarcodeoUsuarios()
+        #endregion
+
+        #region Harcodeo de Usuarios
+
+        private static Usuario[] Usuarios()
         {
             Usuario[] usuarios = {new Usuario("admin","admin"), new Usuario("admin2", "admin2"),
                 new Usuario("admin3", "admin3"),new Usuario("admin4","admin4") };
@@ -54,17 +66,18 @@ namespace Entidades
 
         public static List<Usuario> ListaUsuarios()
         {
-            //Inicio la misma clase
-            Harcodeo.usuarios = new List<Usuario>();
 
             //Cargo los datos
-            Harcodeo.AgregarUsuarios(Harcodeo.HarcodeoUsuarios());
+            Harcodeo.AgregarUsuarios(Harcodeo.Usuarios());
 
             return Harcodeo.usuarios;
 
         }
 
-        private static Pasaporte[] HarcodeoPasaportes()
+        #endregion
+
+        #region Harcodeo Pasaportes
+        private static Pasaporte[] Pasaportes()
         {
 
             Pasaporte[] pasaportes = 
@@ -82,7 +95,7 @@ namespace Entidades
             return pasaportes;
         }
 
-        private static Pasaporte[] HarcodeoPasaportes2()
+        private static Pasaporte[] Pasaportes2()
         {
 
             Pasaporte[] pasaportes =
@@ -100,7 +113,7 @@ namespace Entidades
             return pasaportes;
         }
 
-        private static Pasaporte[] HarcodeoPasaportes3()
+        private static Pasaporte[] Pasaportes3()
         {
 
             Pasaporte[] pasaportes =
@@ -118,7 +131,16 @@ namespace Entidades
             return pasaportes;
         }
 
-        private static Pasajero[] HarcodeoPasajeros(Pasaporte[] pasaportes)
+        #endregion
+
+        #region Pasajeros
+
+        /// <summary>
+        /// Generador del equipaje de manera aleatoria
+        /// </summary>
+        /// <param name="pasaportes"></param>
+        /// <returns></returns>
+        private static Pasajero[] Equipaje(Pasaporte[] pasaportes)
         {
             Random random = new Random();
             int numeroRandom;
@@ -158,13 +180,15 @@ namespace Entidades
 
             switch (tipoHarcodeo)
             {
-                case 1: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(Harcodeo.HarcodeoPasaportes()), viaje); break;
-                case 2: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(Harcodeo.HarcodeoPasaportes2()), viaje); break;
-                default: HarcodeoPasajeros(Harcodeo.HarcodeoPasajeros(Harcodeo.HarcodeoPasaportes3()), viaje); break;
+                case 1: HarcodeoPasajeros(Harcodeo.Equipaje(Harcodeo.Pasaportes()), viaje); break;
+                case 2: HarcodeoPasajeros(Harcodeo.Equipaje(Harcodeo.Pasaportes2()), viaje); break;
+                default: HarcodeoPasajeros(Harcodeo.Equipaje(Harcodeo.Pasaportes3()), viaje); break;
 
             }
 
         }
+
+        #endregion
 
         private static Crucero[] HarcodeoCrucero()
         {
