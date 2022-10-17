@@ -10,20 +10,20 @@ namespace Testeer
         {
 
             Harcodeo.Global();
-            
-            if(Validacion.ValidarUsuario(new Usuario("admin", "admin")))
+            Random random = new Random();
+
+            if (Validacion.ValidarUsuario(new Usuario("admin", "admin")))
             {
                 Console.WriteLine("Viajes disponibles");
 
                 #region Viajes Disponibles
                 foreach (Viaje viaje in Harcodeo.ListaViajes())
                 {
-                  
-                     Console.WriteLine(viaje.ToString());
-                    
+                    //Console.WriteLine(viaje.ToString());
+
                 }
                 #endregion
-
+               
 
             }
 

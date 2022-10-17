@@ -115,7 +115,7 @@ namespace Entidades
 
                 //Viajes extra regionales
                 Harcodeo.viajes.Add(new ViajeExtraRegional((EextraRegional)destinoExtra, fechaExtra, Harcodeo.cruceros[indexCruceroExtra],
-                    10, 5, Aleatorio.FechaLlegadaRegional(fechaExtra)));
+                    10, 5, Aleatorio.FechaLlegadaExtraRegional(fechaExtra)));
             }
 
         }

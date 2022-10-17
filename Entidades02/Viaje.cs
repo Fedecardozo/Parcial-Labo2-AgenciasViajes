@@ -53,6 +53,7 @@ namespace Entidades
             this.crucero = crucero;
             this.cantidClasePremium = cantidClasePremium;
             this.cantidadClaseTurista = cantidadClaseTurista;
+            this.estadoViaje = this.EstadoViaje;
 
         }
 
@@ -70,7 +71,15 @@ namespace Entidades
         public string CiudadPartida { get { return this.ciudadPartida; } }
         //public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
         public virtual string TipoDestino { get { return ""; } }
-        public virtual string DuracionViaje { get { return ""; } }
+        public string DuracionViaje 
+        { 
+            get 
+            {              
+                double duracion = (this.fechaDeLlegada - this.fechaInicioViaje).TotalHours;
+                //return $"Inicio:{this.fechaInicioViaje} \nFin:{this.fechaDeLlegada} \nDuracion:{duracion}"; 
+                return $"{duracion}";
+            } 
+        }
         public int Id { get { return this.id; } }
 
         public EestadoViaje EstadoViaje
@@ -132,6 +141,7 @@ namespace Entidades
             sb.AppendLine($"Estado de viaje {this.estadoViaje}");
             sb.AppendLine($"Nombre Crucero: {this.crucero.Nombre} ");
             sb.AppendLine($"Matricula Crucero: {this.crucero.Matricula} ");
+            sb.AppendLine($"Duracion viaje: {this.DuracionViaje}");
 
             return sb.ToString();
         }
