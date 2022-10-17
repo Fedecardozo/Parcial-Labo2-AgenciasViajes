@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Viaje
+    public abstract class Viaje
     {
         #region Atributos estaticos
         private static int costoPremium;
@@ -123,9 +123,13 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-
+            sb.AppendLine($"ID: {this.id}");
+            sb.AppendLine($"Ciudad de partida: {this.ciudadPartida}");
+            sb.AppendLine($"Fecha inicio de viaje: {this.fechaInicioViaje}");
+            sb.AppendLine($"Fecha llegada de viaje: {this.fechaDeLlegada}");
             sb.AppendLine($"Clase turista: {this.cantidadClaseTurista} ");
             sb.AppendLine($"Cantidad Premium: {this.cantidClasePremium} ");
+            sb.AppendLine($"Estado de viaje {this.estadoViaje}");
             sb.AppendLine($"Nombre Crucero: {this.crucero.Nombre} ");
             sb.AppendLine($"Matricula Crucero: {this.crucero.Matricula} ");
 

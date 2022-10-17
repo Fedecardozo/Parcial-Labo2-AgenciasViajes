@@ -16,30 +16,14 @@ namespace Testeer
                 Console.WriteLine("Viajes disponibles");
 
                 #region Viajes Disponibles
-                /*foreach (Crucero crucero in Harcodeo.ListaCruceros())
+                foreach (Viaje viaje in Harcodeo.ListaViajes())
                 {
-                    if(true)
-                    {
-                        Console.WriteLine(crucero.ToString());
-                    }
-                }*/
+                  
+                     Console.WriteLine(viaje.ToString());
+                    
+                }
                 #endregion
 
-                for (int i = 0; i < 5; i++)
-                {
-                    DateTime fechaInicio = Aleatorio.FechaInicio();
-                    Console.WriteLine("Regional");
-                    Console.WriteLine($"Fecha inicio: {fechaInicio}");
-                    Console.WriteLine($"Fecha llegada: {Aleatorio.FechaLlegadaRegional(fechaInicio)}");
-                    Console.WriteLine($"Fecha nacimiento: {Aleatorio.FechaNacimiento()}");
-                    Console.WriteLine("");
-                    DateTime fechaInicio2 = Aleatorio.FechaInicio();
-                    Console.WriteLine("Extra Regional");
-                    Console.WriteLine($"Fecha inicio: {fechaInicio2}");
-                    Console.WriteLine($"Fecha llegada: {Aleatorio.FechaLlegadaExtraRegional(fechaInicio2)}");
-                    Console.WriteLine($"Fecha nacimiento: {Aleatorio.FechaNacimiento()}");
-                    Console.WriteLine("");
-                }
 
             }
 

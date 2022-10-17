@@ -26,6 +26,7 @@ namespace Entidades
         public static void Global()
         {
             Harcodeo.Cruceros();
+            Harcodeo.Viajes();
         }
 
         #endregion
@@ -67,7 +68,7 @@ namespace Entidades
         private static void Cruceros()
         {
             //Crucero 1
-            cruceros.Add(new Crucero("ABC265","Titanic",5,5,2,1000,false,true));
+            cruceros.Add(new Crucero("ABC265", "Titanic", 5, 5, 2, 1000, false, true));
             //Crucero 2
             cruceros.Add(new Crucero("EWK264", "Corsa", 5, 5, 2, 1000, false, true));
             //Crucero 3
@@ -81,7 +82,7 @@ namespace Entidades
             //Crucero 7
             cruceros.Add(new Crucero("ABC277", "Ataque77", 5, 5, 2, 1000, false, true));
         }
-        
+
         public static List<Crucero> ListaCruceros()
         {
             return Harcodeo.cruceros;
@@ -90,10 +91,38 @@ namespace Entidades
         #endregion
 
         #region Harcodeo Viajes
-  
+
         private static void Viajes()
         {
-           // Harcodeo.viajes.Add(new Viaje());
+            DateTime fechaRegional;
+            DateTime fechaExtra;
+            int indexCrucero, indexCruceroExtra, cantPremiun,cantTurista,destinoRegion,destinoExtra;
+            
+            for (int i = 0; i < 20; i++)
+            {
+                fechaRegional = Aleatorio.FechaInicio();
+                fechaExtra = Aleatorio.FechaInicio();
+                indexCrucero = Aleatorio.Azar(0,6);
+                indexCruceroExtra = Aleatorio.Azar(0, 6);
+                cantPremiun = Aleatorio.Azar(5,20);
+                cantTurista = Aleatorio.Azar(10,25);
+                destinoRegion = Aleatorio.Azar(0,9);
+                destinoExtra = Aleatorio.Azar(0, 7);
+
+                //Viajes regionales
+                Harcodeo.viajes.Add(new ViajeRegional((Eregional)destinoRegion, fechaRegional,Harcodeo.cruceros[indexCrucero],
+                    cantPremiun, cantTurista, Aleatorio.FechaLlegadaRegional(fechaRegional)));
+
+                //Viajes extra regionales
+                Harcodeo.viajes.Add(new ViajeExtraRegional((EextraRegional)destinoExtra, fechaExtra, Harcodeo.cruceros[indexCruceroExtra],
+                    10, 5, Aleatorio.FechaLlegadaRegional(fechaExtra)));
+            }
+
+        }
+
+        public static List<Viaje> ListaViajes()
+        {
+            return Harcodeo.viajes;
         }
 
         #endregion
