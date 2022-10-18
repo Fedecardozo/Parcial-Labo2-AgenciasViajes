@@ -48,8 +48,8 @@ namespace Entidades
 
         private static Usuario[] Usuarios()
         {
-            Usuario[] usuarios = {new Usuario("admin","admin"), new Usuario("admin2", "admin2"),
-                new Usuario("admin3", "admin3"),new Usuario("admin4","admin4") };
+            Usuario[] usuarios = {new Usuario("admin","admin","Federico","Cardozo"), new Usuario("admin2", "admin2","Gaston","Bizarrap"),
+                new Usuario("admin3","admin3","Nicolas", "Bertolo"),new Usuario("admin4","admin4","Lionel","Messi") };
 
             return usuarios;
         }

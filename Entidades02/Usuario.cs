@@ -6,24 +6,31 @@ namespace Entidades
     {
         private string usuario;
         private string password;
+        private string nombre;
+        private string apellido;
 
-        /*public Usuario()
+        public Usuario()
         {
-            this.usuario = "";
-            this.password = "";
-        }*/
+            this.nombre = "";
+            this.apellido = "";
+        }
 
-        public Usuario(string usuario, string password) //:this()
+        public Usuario(string usuario, string password) : this()
         {
+            this.usuario = usuario;
+            this.password = password;
+        }
 
-            if (usuario != null && password != null)
-            {
-                this.usuario = usuario;
-                this.password = password;
-            }
+        public Usuario(string usuario, string password, string nombre,string apellido) :this(usuario,password)
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
         }
 
         public string User { get { return this.usuario; } }
+        public string Nombre { get { return this.nombre; } }
+        public string Apellido { get { return this.apellido; } }
+
 
         public static bool operator ==(Usuario user1, Usuario user2)
         {

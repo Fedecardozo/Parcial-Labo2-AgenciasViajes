@@ -30,11 +30,11 @@ namespace Cruzeiro
         private void InitializeComponent()
         {
             this.panelLateral = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelUsuario = new System.Windows.Forms.Label();
+            this.labelUsuarioVendedor = new System.Windows.Forms.Label();
+            this.labelApellido = new System.Windows.Forms.Label();
+            this.labelApellidoVendedor = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.labelnNombreVendedor = new System.Windows.Forms.Label();
             this.labelFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,11 +51,11 @@ namespace Cruzeiro
             // panelLateral
             // 
             this.panelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panelLateral.Controls.Add(this.label4);
-            this.panelLateral.Controls.Add(this.label5);
-            this.panelLateral.Controls.Add(this.label2);
-            this.panelLateral.Controls.Add(this.label3);
-            this.panelLateral.Controls.Add(this.label1);
+            this.panelLateral.Controls.Add(this.labelUsuario);
+            this.panelLateral.Controls.Add(this.labelUsuarioVendedor);
+            this.panelLateral.Controls.Add(this.labelApellido);
+            this.panelLateral.Controls.Add(this.labelApellidoVendedor);
+            this.panelLateral.Controls.Add(this.labelName);
             this.panelLateral.Controls.Add(this.labelnNombreVendedor);
             this.panelLateral.Controls.Add(this.labelFecha);
             this.panelLateral.Controls.Add(this.pictureBox1);
@@ -65,60 +65,60 @@ namespace Cruzeiro
             this.panelLateral.Size = new System.Drawing.Size(268, 421);
             this.panelLateral.TabIndex = 0;
             // 
-            // label4
+            // labelUsuario
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(35, 310);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 33);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Usuario:";
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelUsuario.Location = new System.Drawing.Point(35, 310);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(88, 33);
+            this.labelUsuario.TabIndex = 7;
+            this.labelUsuario.Text = "Usuario:";
             // 
-            // label5
+            // labelUsuarioVendedor
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(133, 310);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 33);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Admin";
+            this.labelUsuarioVendedor.AutoSize = true;
+            this.labelUsuarioVendedor.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.labelUsuarioVendedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelUsuarioVendedor.Location = new System.Drawing.Point(133, 310);
+            this.labelUsuarioVendedor.Name = "labelUsuarioVendedor";
+            this.labelUsuarioVendedor.Size = new System.Drawing.Size(73, 33);
+            this.labelUsuarioVendedor.TabIndex = 6;
+            this.labelUsuarioVendedor.Text = "Admin";
             // 
-            // label2
+            // labelApellido
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(35, 257);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 33);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Apellido:";
+            this.labelApellido.AutoSize = true;
+            this.labelApellido.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelApellido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelApellido.Location = new System.Drawing.Point(35, 257);
+            this.labelApellido.Name = "labelApellido";
+            this.labelApellido.Size = new System.Drawing.Size(91, 33);
+            this.labelApellido.TabIndex = 5;
+            this.labelApellido.Text = "Apellido:";
             // 
-            // label3
+            // labelApellidoVendedor
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(133, 257);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 33);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Cardozo";
+            this.labelApellidoVendedor.AutoSize = true;
+            this.labelApellidoVendedor.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.labelApellidoVendedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelApellidoVendedor.Location = new System.Drawing.Point(133, 257);
+            this.labelApellidoVendedor.Name = "labelApellidoVendedor";
+            this.labelApellidoVendedor.Size = new System.Drawing.Size(87, 33);
+            this.labelApellidoVendedor.TabIndex = 4;
+            this.labelApellidoVendedor.Text = "Cardozo";
             // 
-            // label1
+            // labelName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(35, 207);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 33);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nombre:";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelName.Location = new System.Drawing.Point(35, 207);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(92, 33);
+            this.labelName.TabIndex = 3;
+            this.labelName.Text = "Nombre:";
             // 
             // labelnNombreVendedor
             // 
@@ -228,11 +228,11 @@ namespace Cruzeiro
 
         private System.Windows.Forms.Panel panelLateral;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelUsuario;
+        private System.Windows.Forms.Label labelUsuarioVendedor;
+        private System.Windows.Forms.Label labelApellido;
+        private System.Windows.Forms.Label labelApellidoVendedor;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelnNombreVendedor;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.PictureBox pictureBox1;

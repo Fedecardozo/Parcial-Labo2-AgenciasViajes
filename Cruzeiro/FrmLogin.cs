@@ -47,10 +47,10 @@ namespace Cruzeiro
 
         private void InicioSesion()
         {
-            Usuario user = new Usuario(this.textBoxUser.Text, this.textBoxPassword.Text);
+            Usuario user;
 
             //MessageBox.Show(Validacion.ValidarUsuario(user).ToString());
-            if (Validacion.ValidarUsuario(user) == true)
+            if (Validacion.ValidarUsuario(this.textBoxUser.Text, this.textBoxPassword.Text,out user) == true)
             {
                 //Nuevo formulario con el menu de opciones 
                 this.AbrirMenuUsuario(user);

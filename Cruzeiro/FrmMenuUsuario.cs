@@ -27,11 +27,19 @@ namespace Cruzeiro
 
         private void FrmMenuUsuario_Load(object sender, EventArgs e)
         {
-            this.UsuarioDeInicio();
+            this.CargarUsuario();
             FrmPadre.Centrar(this.panelContenedor,this);
         }
 
-        private void UsuarioDeInicio()
+        #region Metodos
+        
+        private void CargarUsuario()
+        {
+            this.UsuarioCargaImagen();
+            this.UsuarioLabel();
+        }
+
+        private void UsuarioCargaImagen()
         {
             string nombreUsuario = this.usuario.User;
 
@@ -52,5 +60,15 @@ namespace Cruzeiro
                 this.pictureBox1.Image = Cruzeiro.Properties.Resources.man__1_;
             }
         }
+        
+        private void UsuarioLabel()
+        {
+            this.labelnNombreVendedor.Text = this.usuario.Nombre;
+            this.labelApellidoVendedor.Text = this.usuario.Apellido;
+            this.labelUsuarioVendedor.Text = this.usuario.User;
+            this.labelFecha.Text = DateTime.Now.ToString("d");
+        }
+
+        #endregion
     }
 }

@@ -22,5 +22,26 @@ namespace Entidades
 
             return retorno;
         }
+
+        public static bool ValidarUsuario(string user, string pass, out Usuario userAux)
+        {
+            bool retorno = false;
+            userAux = null;
+
+            foreach (Usuario item in Harcodeo.ListaUsuarios())
+            {
+                retorno = item == new Usuario(user, pass);
+
+                if (retorno)
+                {
+                    userAux = item;
+                    break;
+                }
+            }
+
+            return retorno;
+
+        }
+
     }
 }
