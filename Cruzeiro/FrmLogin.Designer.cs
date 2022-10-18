@@ -35,7 +35,7 @@ namespace Cruzeiro
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.textBoxUsuario = new System.Windows.Forms.TextBox();
+            this.textBoxUser = new System.Windows.Forms.TextBox();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.panelContenedorImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
@@ -70,7 +70,7 @@ namespace Cruzeiro
             this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContenedor.Controls.Add(this.btnLogin);
             this.panelContenedor.Controls.Add(this.textBoxPassword);
-            this.panelContenedor.Controls.Add(this.textBoxUsuario);
+            this.panelContenedor.Controls.Add(this.textBoxUser);
             this.panelContenedor.Controls.Add(this.labelTitulo);
             this.panelContenedor.Controls.Add(this.panelContenedorImage);
             this.panelContenedor.Location = new System.Drawing.Point(-3, 1);
@@ -86,6 +86,7 @@ namespace Cruzeiro
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "ACCEDER";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // textBoxPassword
             // 
@@ -96,16 +97,18 @@ namespace Cruzeiro
             this.textBoxPassword.PlaceholderText = "CONTRASEÑA";
             this.textBoxPassword.Size = new System.Drawing.Size(398, 33);
             this.textBoxPassword.TabIndex = 7;
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             // 
-            // textBoxUsuario
+            // textBoxUser
             // 
-            this.textBoxUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBoxUsuario.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxUsuario.Location = new System.Drawing.Point(307, 98);
-            this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.PlaceholderText = "USUARIO";
-            this.textBoxUsuario.Size = new System.Drawing.Size(398, 33);
-            this.textBoxUsuario.TabIndex = 6;
+            this.textBoxUser.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxUser.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxUser.Location = new System.Drawing.Point(307, 98);
+            this.textBoxUser.Name = "textBoxUser";
+            this.textBoxUser.PlaceholderText = "USUARIO";
+            this.textBoxUser.Size = new System.Drawing.Size(398, 33);
+            this.textBoxUser.TabIndex = 6;
+            this.textBoxUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUser_KeyPress);
             // 
             // labelTitulo
             // 
@@ -125,7 +128,7 @@ namespace Cruzeiro
             this.Controls.Add(this.panelContenedor);
             this.MinimumSize = new System.Drawing.Size(775, 388);
             this.Name = "FrmLogin";
-            this.Text = "FrmLogin";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panelContenedorImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
@@ -142,7 +145,7 @@ namespace Cruzeiro
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.TextBox textBoxUsuario;
+        private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.Label labelTitulo;
     }
 }

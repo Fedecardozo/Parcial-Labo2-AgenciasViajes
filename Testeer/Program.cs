@@ -9,30 +9,29 @@ namespace Testeer
         static void Main(string[] args)
         {
 
-            Harcodeo.Global();
+            /* Harcodeo.Global();
 
-            if (Validacion.ValidarUsuario(new Usuario("admin", "admin")))
-            {
-                Console.WriteLine("Viajes disponibles");
+             if (Validacion.ValidarUsuario(new Usuario("admin", "admin")))
+             {
+                 Console.WriteLine("Viajes disponibles");
 
-                #region Viajes Disponibles
-                foreach (Viaje viaje in Harcodeo.ListaViajes())
-                {
-                    foreach (Pasajero item in viaje.Pasajeros)
-                    {
-                        Console.WriteLine(item.ToString());
-                    }
+                 #region Viajes Disponibles
+                 foreach (Viaje viaje in Harcodeo.ListaViajes())
+                 {
+                     foreach (Pasajero item in viaje.Pasajeros)
+                     {
+                         Console.WriteLine(item.ToString());
+                     }
 
-                    Console.WriteLine("Premium: " + viaje.CantidadPremium);
-                    Console.WriteLine("Turista: " + viaje.CantidadTurista);
-                    
-                    break;
+                     Console.WriteLine("Premium: " + viaje.CantidadPremium);
+                     Console.WriteLine("Turista: " + viaje.CantidadTurista);
 
-                }
-                #endregion
-               
-            }
+                     break;
+
+                 }
+                 #endregion*/
 
         }
+
     }
 }
