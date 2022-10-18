@@ -185,6 +185,7 @@ namespace Cruzeiro
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnDatosHistoricos
             // 
