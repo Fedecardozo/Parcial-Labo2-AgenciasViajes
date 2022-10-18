@@ -29,15 +29,93 @@ namespace Cruzeiro
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            this.panelContenedorImage = new System.Windows.Forms.Panel();
+            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxUsuario = new System.Windows.Forms.TextBox();
+            this.labelTitulo = new System.Windows.Forms.Label();
+            this.panelContenedorImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
+            this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelContenedorImage
+            // 
+            this.panelContenedorImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panelContenedorImage.Controls.Add(this.pictureBoxIcon);
+            this.panelContenedorImage.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelContenedorImage.Location = new System.Drawing.Point(0, 0);
+            this.panelContenedorImage.Name = "panelContenedorImage";
+            this.panelContenedorImage.Size = new System.Drawing.Size(244, 343);
+            this.panelContenedorImage.TabIndex = 0;
+            // 
+            // pictureBoxIcon
+            // 
+            this.pictureBoxIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pictureBoxIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIcon.Image")));
+            this.pictureBoxIcon.Location = new System.Drawing.Point(35, 61);
+            this.pictureBoxIcon.Name = "pictureBoxIcon";
+            this.pictureBoxIcon.Size = new System.Drawing.Size(167, 205);
+            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxIcon.TabIndex = 0;
+            this.pictureBoxIcon.TabStop = false;
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Location = new System.Drawing.Point(12, 12);
+            this.panelContenedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelContenedor.Controls.Add(this.btnLogin);
+            this.panelContenedor.Controls.Add(this.textBoxPassword);
+            this.panelContenedor.Controls.Add(this.textBoxUsuario);
+            this.panelContenedor.Controls.Add(this.labelTitulo);
+            this.panelContenedor.Controls.Add(this.panelContenedorImage);
+            this.panelContenedor.Location = new System.Drawing.Point(-3, 1);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(733, 317);
-            this.panelContenedor.TabIndex = 0;
+            this.panelContenedor.Size = new System.Drawing.Size(765, 345);
+            this.panelContenedor.TabIndex = 5;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(307, 253);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(398, 50);
+            this.btnLogin.TabIndex = 8;
+            this.btnLogin.Text = "ACCEDER";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxPassword.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPassword.Location = new System.Drawing.Point(307, 177);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PlaceholderText = "CONTRASEÑA";
+            this.textBoxPassword.Size = new System.Drawing.Size(398, 33);
+            this.textBoxPassword.TabIndex = 7;
+            // 
+            // textBoxUsuario
+            // 
+            this.textBoxUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxUsuario.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxUsuario.Location = new System.Drawing.Point(307, 98);
+            this.textBoxUsuario.Name = "textBoxUsuario";
+            this.textBoxUsuario.PlaceholderText = "USUARIO";
+            this.textBoxUsuario.Size = new System.Drawing.Size(398, 33);
+            this.textBoxUsuario.TabIndex = 6;
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Sitka Banner", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTitulo.Location = new System.Drawing.Point(447, 22);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(103, 53);
+            this.labelTitulo.TabIndex = 5;
+            this.labelTitulo.Text = "Login";
             // 
             // FrmLogin
             // 
@@ -45,14 +123,26 @@ namespace Cruzeiro
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 341);
             this.Controls.Add(this.panelContenedor);
+            this.MinimumSize = new System.Drawing.Size(775, 388);
             this.Name = "FrmLogin";
             this.Text = "FrmLogin";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
+            this.panelContenedorImage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
+            this.panelContenedor.ResumeLayout(false);
+            this.panelContenedor.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panelContenedorImage;
+        private System.Windows.Forms.PictureBox pictureBoxIcon;
         private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.TextBox textBoxUsuario;
+        private System.Windows.Forms.Label labelTitulo;
     }
 }

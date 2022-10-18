@@ -17,5 +17,21 @@ namespace Cruzeiro
             InitializeComponent();
         }
 
+        protected static void Centrar(Panel panel1, Form form1)
+        {
+            int altura_forma = form1.Height;
+            int anchura_forma = form1.Width;
+            int alturaPanel = panel1.Height;
+            int anchuraPanel = panel1.Width;
+
+            int nuevaAltura = (altura_forma - alturaPanel - 45) / 2;
+            int nuevaAnchura = (anchura_forma - anchuraPanel - 20) / 2;
+
+            panel1.Location = new Point(nuevaAnchura, nuevaAltura);
+            //return new Point(nuevaAnchura, nuevaAltura);
+        }
+
     }
+
+   
 }
