@@ -1,0 +1,230 @@
+﻿
+namespace Cruzeiro
+{
+    partial class FrmViajes
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.dataGridViewViajes = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciudadPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciudadDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaLlegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCrucero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pasajerosTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pasajeroPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracionViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViajes)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelContenedor.Controls.Add(this.dataGridViewViajes);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 0);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1323, 450);
+            this.panelContenedor.TabIndex = 0;
+            // 
+            // dataGridViewViajes
+            // 
+            this.dataGridViewViajes.AllowUserToAddRows = false;
+            this.dataGridViewViajes.AllowUserToDeleteRows = false;
+            this.dataGridViewViajes.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridViewViajes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewViajes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewViajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewViajes.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewViajes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewViajes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.ciudadPartida,
+            this.ciudadDestino,
+            this.fechaInicio,
+            this.fechaLlegada,
+            this.nombreCrucero,
+            this.pasajerosTurista,
+            this.pasajeroPremium,
+            this.estadoViaje,
+            this.duracionViaje});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewViajes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewViajes.EnableHeadersVisualStyles = false;
+            this.dataGridViewViajes.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewViajes.MultiSelect = false;
+            this.dataGridViewViajes.Name = "dataGridViewViajes";
+            this.dataGridViewViajes.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewViajes.RowHeadersVisible = false;
+            this.dataGridViewViajes.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dataGridViewViajes.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewViajes.RowTemplate.Height = 29;
+            this.dataGridViewViajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewViajes.Size = new System.Drawing.Size(1317, 374);
+            this.dataGridViewViajes.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // ciudadPartida
+            // 
+            this.ciudadPartida.HeaderText = "Ciudad partida";
+            this.ciudadPartida.MinimumWidth = 6;
+            this.ciudadPartida.Name = "ciudadPartida";
+            this.ciudadPartida.ReadOnly = true;
+            // 
+            // ciudadDestino
+            // 
+            this.ciudadDestino.HeaderText = "Ciudad de destino";
+            this.ciudadDestino.MinimumWidth = 6;
+            this.ciudadDestino.Name = "ciudadDestino";
+            this.ciudadDestino.ReadOnly = true;
+            // 
+            // fechaInicio
+            // 
+            this.fechaInicio.HeaderText = "Fecha de inicio";
+            this.fechaInicio.MinimumWidth = 6;
+            this.fechaInicio.Name = "fechaInicio";
+            this.fechaInicio.ReadOnly = true;
+            // 
+            // fechaLlegada
+            // 
+            this.fechaLlegada.HeaderText = "Fecha de llegada";
+            this.fechaLlegada.MinimumWidth = 6;
+            this.fechaLlegada.Name = "fechaLlegada";
+            this.fechaLlegada.ReadOnly = true;
+            // 
+            // nombreCrucero
+            // 
+            this.nombreCrucero.HeaderText = "Nombre de crucero";
+            this.nombreCrucero.MinimumWidth = 6;
+            this.nombreCrucero.Name = "nombreCrucero";
+            this.nombreCrucero.ReadOnly = true;
+            // 
+            // pasajerosTurista
+            // 
+            this.pasajerosTurista.HeaderText = "Pasajeros turista";
+            this.pasajerosTurista.MinimumWidth = 6;
+            this.pasajerosTurista.Name = "pasajerosTurista";
+            this.pasajerosTurista.ReadOnly = true;
+            // 
+            // pasajeroPremium
+            // 
+            this.pasajeroPremium.HeaderText = "Pasajero premium";
+            this.pasajeroPremium.MinimumWidth = 6;
+            this.pasajeroPremium.Name = "pasajeroPremium";
+            this.pasajeroPremium.ReadOnly = true;
+            // 
+            // estadoViaje
+            // 
+            this.estadoViaje.HeaderText = "Estado viaje";
+            this.estadoViaje.MinimumWidth = 6;
+            this.estadoViaje.Name = "estadoViaje";
+            this.estadoViaje.ReadOnly = true;
+            // 
+            // duracionViaje
+            // 
+            this.duracionViaje.HeaderText = "DuracionViaje";
+            this.duracionViaje.MinimumWidth = 6;
+            this.duracionViaje.Name = "duracionViaje";
+            this.duracionViaje.ReadOnly = true;
+            // 
+            // FrmViajes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1323, 450);
+            this.Controls.Add(this.panelContenedor);
+            this.Name = "FrmViajes";
+            this.Text = "FrmViajes";
+            this.panelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViajes)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.DataGridView dataGridViewViajes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ciudadPartida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDestino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaLlegada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCrucero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pasajerosTurista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pasajeroPremium;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duracionViaje;
+    }
+}

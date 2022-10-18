@@ -134,13 +134,13 @@ namespace Cruzeiro
             // labelFecha
             // 
             this.labelFecha.AutoSize = true;
-            this.labelFecha.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelFecha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelFecha.Location = new System.Drawing.Point(128, 371);
+            this.labelFecha.Location = new System.Drawing.Point(163, 388);
             this.labelFecha.Name = "labelFecha";
-            this.labelFecha.Size = new System.Drawing.Size(137, 33);
+            this.labelFecha.Size = new System.Drawing.Size(102, 22);
             this.labelFecha.TabIndex = 1;
-            this.labelFecha.Text = "XX/XX/XXXX";
+            this.labelFecha.Text = "10/12/2050";
             // 
             // pictureBox1
             // 
@@ -183,7 +183,7 @@ namespace Cruzeiro
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(424, 65);
             this.btnSalir.TabIndex = 3;
-            this.btnSalir.Text = "SALIR";
+            this.btnSalir.Text = "CERRAR SESIÓN";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
