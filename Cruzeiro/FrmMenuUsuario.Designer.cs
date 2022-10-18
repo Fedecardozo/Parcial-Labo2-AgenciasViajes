@@ -39,10 +39,10 @@ namespace Cruzeiro
             this.labelFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnHistorialViajes = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnDatosHistoricos = new System.Windows.Forms.Button();
+            this.btnListaViajes = new System.Windows.Forms.Button();
             this.panelLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContenedor.SuspendLayout();
@@ -156,55 +156,55 @@ namespace Cruzeiro
             // 
             this.panelContenedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelContenedor.Controls.Add(this.button4);
-            this.panelContenedor.Controls.Add(this.button3);
-            this.panelContenedor.Controls.Add(this.button2);
-            this.panelContenedor.Controls.Add(this.button1);
+            this.panelContenedor.Controls.Add(this.btnHistorialViajes);
+            this.panelContenedor.Controls.Add(this.btnSalir);
+            this.panelContenedor.Controls.Add(this.btnDatosHistoricos);
+            this.panelContenedor.Controls.Add(this.btnListaViajes);
             this.panelContenedor.Controls.Add(this.panelLateral);
             this.panelContenedor.Location = new System.Drawing.Point(-3, -3);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(777, 421);
             this.panelContenedor.TabIndex = 1;
             // 
-            // button3
+            // btnHistorialViajes
             // 
-            this.button3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(318, 325);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(424, 65);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "SALIR";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnHistorialViajes.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHistorialViajes.Location = new System.Drawing.Point(318, 129);
+            this.btnHistorialViajes.Name = "btnHistorialViajes";
+            this.btnHistorialViajes.Size = new System.Drawing.Size(424, 65);
+            this.btnHistorialViajes.TabIndex = 4;
+            this.btnHistorialViajes.Text = "HISTORIAL DE VIAJES";
+            this.btnHistorialViajes.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSalir
             // 
-            this.button2.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(318, 229);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(424, 65);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "DATOS HISTORICOS";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSalir.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(318, 325);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(424, 65);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnDatosHistoricos
             // 
-            this.button1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(318, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(424, 65);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "LISTA DE VIAJES DISPONIBLES";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDatosHistoricos.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDatosHistoricos.Location = new System.Drawing.Point(318, 229);
+            this.btnDatosHistoricos.Name = "btnDatosHistoricos";
+            this.btnDatosHistoricos.Size = new System.Drawing.Size(424, 65);
+            this.btnDatosHistoricos.TabIndex = 2;
+            this.btnDatosHistoricos.Text = "DATOS HISTORICOS";
+            this.btnDatosHistoricos.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnListaViajes
             // 
-            this.button4.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(318, 129);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(424, 65);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "HISTORIAL DE VIAJES";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnListaViajes.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnListaViajes.Location = new System.Drawing.Point(318, 33);
+            this.btnListaViajes.Name = "btnListaViajes";
+            this.btnListaViajes.Size = new System.Drawing.Size(424, 65);
+            this.btnListaViajes.TabIndex = 1;
+            this.btnListaViajes.Text = "LISTA DE VIAJES DISPONIBLES";
+            this.btnListaViajes.UseVisualStyleBackColor = true;
             // 
             // FrmMenuUsuario
             // 
@@ -236,9 +236,9 @@ namespace Cruzeiro
         private System.Windows.Forms.Label labelnNombreVendedor;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnDatosHistoricos;
+        private System.Windows.Forms.Button btnListaViajes;
+        private System.Windows.Forms.Button btnHistorialViajes;
     }
 }

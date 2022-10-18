@@ -7,19 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace Cruzeiro
 {
     public partial class FrmMenuUsuario : FrmPadre
     {
+        private Usuario usuario;
+
         public FrmMenuUsuario()
         {
             InitializeComponent();
         }
 
+        public FrmMenuUsuario(Usuario usuario) : this()
+        {
+            this.usuario = usuario;
+        }
+
         private void FrmMenuUsuario_Load(object sender, EventArgs e)
         {
             FrmPadre.Centrar(this.panelContenedor,this);
+        }
+
+        private void UsuarioDeInicio()
+        {
+            
         }
     }
 }
