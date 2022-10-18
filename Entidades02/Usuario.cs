@@ -23,6 +23,8 @@ namespace Entidades
             }
         }
 
+        public string User { get { return this.usuario; } }
+
         public static bool operator ==(Usuario user1, Usuario user2)
         {
             bool retorno = false;

@@ -27,12 +27,30 @@ namespace Cruzeiro
 
         private void FrmMenuUsuario_Load(object sender, EventArgs e)
         {
+            this.UsuarioDeInicio();
             FrmPadre.Centrar(this.panelContenedor,this);
         }
 
         private void UsuarioDeInicio()
         {
-            
+            string nombreUsuario = this.usuario.User;
+
+            if(nombreUsuario == "admin")
+            {
+                this.pictureBox1.Image = Cruzeiro.Properties.Resources.gamer;
+            }
+            else if(nombreUsuario == "admin2")
+            {
+                this.pictureBox1.Image = Cruzeiro.Properties.Resources.hacker;
+            }
+            else if (nombreUsuario == "admin3")
+            {
+                this.pictureBox1.Image = Cruzeiro.Properties.Resources.man;
+            }
+            else
+            {
+                this.pictureBox1.Image = Cruzeiro.Properties.Resources.man__1_;
+            }
         }
     }
 }
