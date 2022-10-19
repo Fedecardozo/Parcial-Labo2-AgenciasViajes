@@ -15,6 +15,7 @@ namespace Cruzeiro
     {
         private Usuario usuario;
 
+        #region Constructores
         public FrmMenuUsuario()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace Cruzeiro
         {
             this.usuario = usuario;
         }
+        #endregion
 
         private void FrmMenuUsuario_Load(object sender, EventArgs e)
         {
@@ -71,6 +73,8 @@ namespace Cruzeiro
 
         #endregion
 
+        #region Botones
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -88,5 +92,8 @@ namespace Cruzeiro
 
             //this.WindowState = FormWindowState.Maximized;
         }
+
+        #endregion
+
     }
 }

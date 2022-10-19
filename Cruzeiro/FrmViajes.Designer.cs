@@ -35,6 +35,7 @@ namespace Cruzeiro
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnListaPasajeros = new System.Windows.Forms.Button();
             this.dataGridViewViajes = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +47,7 @@ namespace Cruzeiro
             this.pasajeroPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracionViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViajes)).BeginInit();
             this.SuspendLayout();
@@ -53,12 +55,24 @@ namespace Cruzeiro
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelContenedor.Controls.Add(this.btnListaPasajeros);
             this.panelContenedor.Controls.Add(this.dataGridViewViajes);
+            this.panelContenedor.Controls.Add(this.btnAtras);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1404, 338);
             this.panelContenedor.TabIndex = 0;
+            // 
+            // btnListaPasajeros
+            // 
+            this.btnListaPasajeros.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnListaPasajeros.Location = new System.Drawing.Point(462, 282);
+            this.btnListaPasajeros.Name = "btnListaPasajeros";
+            this.btnListaPasajeros.Size = new System.Drawing.Size(260, 44);
+            this.btnListaPasajeros.TabIndex = 6;
+            this.btnListaPasajeros.Text = "LISTA DE PASAJEROS";
+            this.btnListaPasajeros.UseVisualStyleBackColor = true;
             // 
             // dataGridViewViajes
             // 
@@ -207,6 +221,17 @@ namespace Cruzeiro
             this.duracionViaje.Name = "duracionViaje";
             this.duracionViaje.ReadOnly = true;
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAtras.Location = new System.Drawing.Point(151, 282);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(260, 44);
+            this.btnAtras.TabIndex = 5;
+            this.btnAtras.Text = "ATRAS";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // FrmViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
@@ -234,5 +259,7 @@ namespace Cruzeiro
         private System.Windows.Forms.DataGridViewTextBoxColumn pasajeroPremium;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracionViaje;
+        protected System.Windows.Forms.Button btnListaPasajeros;
+        protected System.Windows.Forms.Button btnAtras;
     }
 }

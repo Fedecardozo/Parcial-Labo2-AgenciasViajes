@@ -9,17 +9,23 @@ namespace Entidades
     public static class HistorialViajes
     {
 
-        public static bool ViajesDiponibles(out List<Viaje> viajes)
+        private static List<Viaje> viajes;
+
+        static HistorialViajes()
+        {
+            HistorialViajes.viajes = Harcodeo.ListaViajes();
+        }
+
+        public static bool ViajesDiponibles(out List<Viaje> viajes1)
         {
             bool retorno = false;
-            viajes = new List<Viaje>();
+            viajes1 = new List<Viaje>();
 
-
-            foreach (Viaje item in Harcodeo.ListaViajes())
+            foreach (Viaje item in viajes)
             {
                 if(item.EstadoViaje == EestadoViaje.Disponible)
                 {
-                    viajes.Add(item);
+                    viajes1.Add(item);
 
                     retorno = true;
                     
@@ -29,6 +35,8 @@ namespace Entidades
 
             return retorno;
         }
+
+        public static List<Viaje> HistorialdeViajes { get { return HistorialViajes.viajes; } }
 
     }
 }

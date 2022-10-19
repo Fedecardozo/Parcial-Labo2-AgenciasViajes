@@ -32,9 +32,9 @@ namespace Cruzeiro
         #region Metodos
         private void MostrarViajesDisponibles()
         {
-            List<Viaje> viajeDispobibles;
+            List<Viaje> viajeDisponibles;
 
-            if (!HistorialViajes.ViajesDiponibles(out viajeDispobibles))
+            if (!HistorialViajes.ViajesDiponibles(out viajeDisponibles))
             {
                 if(MessageBox.Show("¿Desea continuar?", "Sin viajes disponibles", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
                 {
@@ -43,20 +43,13 @@ namespace Cruzeiro
             }
             else
             {
-                foreach (Viaje viaje in viajeDispobibles)
-                {
-                    this.dataGridViewViajes.Rows.Add(viaje.Id, viaje.CiudadPartida, viaje.TipoDestino, viaje.FechaInicioViaje, viaje.FechaLlegada, viaje.Crucero.Nombre,
-                        viaje.CantidadTurista, viaje.CantidadPremium, viaje.EstadoViaje.ToString(), viaje.DuracionViaje);
-                }
+                base.CargarDataGrid(viajeDisponibles);
 
             }
         }
 
         #endregion
 
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
     }
 }
