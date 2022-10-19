@@ -21,6 +21,8 @@ namespace Cruzeiro
         private void FrmHistorialViajes_Load(object sender, EventArgs e)
         {
             base.CargarDataGrid(HistorialViajes.HistorialdeViajes);
+            
         }
+
     }
 }

@@ -33,6 +33,7 @@ namespace Cruzeiro
             FrmPadre.Centrar(this.panelContenedor,this);
         }
 
+
         #region Metodos
         
         private void CargarUsuario()
@@ -84,16 +85,18 @@ namespace Cruzeiro
         {
             FrmViajesDisponibles viajesDisponibles = new FrmViajesDisponibles();
 
-            this.Hide();
+            base.MostrarFormularioModal(viajesDisponibles);
 
-            viajesDisponibles.ShowDialog();
+        }
 
-            this.Show();
+        private void btnHistorialViajes_Click(object sender, EventArgs e)
+        {
+            FrmHistorialViajes frmHistorialViajes = new FrmHistorialViajes();
 
-            //this.WindowState = FormWindowState.Maximized;
+            base.MostrarFormularioModal(frmHistorialViajes);
+
         }
 
         #endregion
-
     }
 }

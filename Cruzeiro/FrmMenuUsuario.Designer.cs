@@ -175,6 +175,7 @@ namespace Cruzeiro
             this.btnHistorialViajes.TabIndex = 4;
             this.btnHistorialViajes.Text = "HISTORIAL DE VIAJES";
             this.btnHistorialViajes.UseVisualStyleBackColor = true;
+            this.btnHistorialViajes.Click += new System.EventHandler(this.btnHistorialViajes_Click);
             // 
             // btnSalir
             // 

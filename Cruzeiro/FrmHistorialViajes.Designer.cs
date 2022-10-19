@@ -48,6 +48,7 @@ namespace Cruzeiro
             this.MinimumSize = new System.Drawing.Size(1422, 385);
             this.Name = "FrmHistorialViajes";
             this.Text = "Historial de viajes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmHistorialViajes_Load);
             this.panelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);

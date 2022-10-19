@@ -31,6 +31,14 @@ namespace Cruzeiro
             //return new Point(nuevaAnchura, nuevaAltura);
         }
 
+        protected void MostrarFormularioModal(Form form)
+        {
+            this.Hide();
+
+            form.ShowDialog();
+
+            this.Show();
+        }
     }
 
    

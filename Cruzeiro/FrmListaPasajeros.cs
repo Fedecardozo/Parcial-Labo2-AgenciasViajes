@@ -15,12 +15,12 @@ namespace Cruzeiro
     {
         private List<Pasajero> pasajeros;
 
-        public FrmListaPasajeros()
+        private FrmListaPasajeros()
         {
             InitializeComponent();
         }
 
-        public FrmListaPasajeros(List<Pasajero> pasajeros)
+        public FrmListaPasajeros(List<Pasajero> pasajeros) : this()
         {
             this.pasajeros = pasajeros;
         }
@@ -36,7 +36,7 @@ namespace Cruzeiro
                 equipaje = item.Equipaje;
 
                 this.dataGridViewPasajeros.Rows.Add(pasaporte.Nombre,pasaporte.Apellido,pasaporte.Dni,pasaporte.FechaNacimiento,pasaporte.Sexo,
-                    pasaporte.NumeroPasaporte,equipaje.Valijas,equipaje.BolsoMano,equipaje.Kilosgramos);
+                    pasaporte.NumeroPasaporte,equipaje.Valijas,equipaje.BolsoMano,equipaje.Kilosgramos.ToString("N2"));
             }
         }
     }

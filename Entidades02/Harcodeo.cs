@@ -146,10 +146,10 @@ namespace Entidades
 
         private static void Equipaje()
         {
-            Harcodeo.equipajes.Add(new Equipaje(true,40,2));
-            Harcodeo.equipajes.Add(new Equipaje(false, 35, 2));
-            Harcodeo.equipajes.Add(new Equipaje(true, 18, 1));
-            Harcodeo.equipajes.Add(new Equipaje(false, 20, 1));
+            Harcodeo.equipajes.Add(new Equipaje(true,40.2f,2));
+            Harcodeo.equipajes.Add(new Equipaje(false, 35.5f, 2));
+            Harcodeo.equipajes.Add(new Equipaje(true, 18.7f, 1));
+            Harcodeo.equipajes.Add(new Equipaje(false, 20.4f, 1));
         }
 
         private static void Pasajeros()

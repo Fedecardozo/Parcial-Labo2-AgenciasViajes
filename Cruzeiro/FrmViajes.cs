@@ -13,6 +13,8 @@ namespace Cruzeiro
 {
     public partial class FrmViajes : FrmPadre
     {
+
+        private int idViaje;
         public FrmViajes()
         {
             InitializeComponent();
@@ -30,11 +32,29 @@ namespace Cruzeiro
                 this.dataGridViewViajes.Rows.Add(viaje.Id, viaje.CiudadPartida, viaje.TipoDestino, viaje.FechaInicioViaje, viaje.FechaLlegada, viaje.Crucero.Nombre,
                     viaje.CantidadTurista, viaje.CantidadPremium, viaje.EstadoViaje.ToString(), viaje.DuracionViaje);
             }
+
+            this.idViaje = int.Parse(this.dataGridViewViajes.Rows[0].Cells[0].Value.ToString());
         }
 
         private void btnListaPasajeros_Click(object sender, EventArgs e)
         {
+            if (this.dataGridViewViajes.Rows.Count >= 0)
+            {
+                base.MostrarFormularioModal(new FrmListaPasajeros(HistorialViajes.Pasajeros(this.idViaje)));           
+            }
+            else
+            {
+                MessageBox.Show("No hay pasajeros cargados","Error!",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+            }
+        }
 
+        private void dataGridViewViajes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int obtenerIndex = this.dataGridViewViajes.CurrentRow.Index;
+
+            this.idViaje = int.Parse(this.dataGridViewViajes.Rows[obtenerIndex].Cells[0].Value.ToString());
+            
+            //dataGridViewViajes.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(209, 227, 254);
         }
     }
 }

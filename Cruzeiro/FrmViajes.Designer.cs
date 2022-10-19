@@ -150,6 +150,7 @@ namespace Cruzeiro
             this.dataGridViewViajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewViajes.Size = new System.Drawing.Size(1398, 262);
             this.dataGridViewViajes.TabIndex = 0;
+            this.dataGridViewViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViajes_CellClick);
             // 
             // id
             // 
