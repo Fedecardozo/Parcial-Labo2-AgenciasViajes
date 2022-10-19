@@ -24,11 +24,22 @@ namespace Cruzeiro
 
             //Harcodeo.Global();
 
+            this.MostrarViajesDisponibles();
+            
+
+        }
+
+        #region Metodos
+        private void MostrarViajesDisponibles()
+        {
             List<Viaje> viajeDispobibles;
 
-            if(!HistorialViajes.ViajesDiponibles(out viajeDispobibles))
+            if (!HistorialViajes.ViajesDiponibles(out viajeDispobibles))
             {
-                MessageBox.Show("¿Desea continuar?" , "Sin viajes disponibles" , MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if(MessageBox.Show("¿Desea continuar?", "Sin viajes disponibles", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
+                {
+                    this.Close();
+                }
             }
             else
             {
@@ -39,7 +50,13 @@ namespace Cruzeiro
                 }
 
             }
+        }
 
+        #endregion
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

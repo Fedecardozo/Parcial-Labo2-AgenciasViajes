@@ -206,6 +206,7 @@ namespace Cruzeiro
             this.btnListaViajes.TabIndex = 1;
             this.btnListaViajes.Text = "LISTA DE VIAJES DISPONIBLES";
             this.btnListaViajes.UseVisualStyleBackColor = true;
+            this.btnListaViajes.Click += new System.EventHandler(this.btnListaViajes_Click);
             // 
             // FrmMenuUsuario
             // 

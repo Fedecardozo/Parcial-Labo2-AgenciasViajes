@@ -42,7 +42,7 @@ namespace Cruzeiro
             this.panelContenedor.Controls.Add(this.btnCrearViaje);
             this.panelContenedor.Controls.Add(this.btnCargaPasajero);
             this.panelContenedor.Controls.Add(this.btnAtras);
-            this.panelContenedor.Size = new System.Drawing.Size(1404, 283);
+            this.panelContenedor.Size = new System.Drawing.Size(1404, 377);
             this.panelContenedor.Controls.SetChildIndex(this.btnAtras, 0);
             this.panelContenedor.Controls.SetChildIndex(this.btnCargaPasajero, 0);
             this.panelContenedor.Controls.SetChildIndex(this.btnCrearViaje, 0);
@@ -51,17 +51,18 @@ namespace Cruzeiro
             // btnAtras
             // 
             this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAtras.Location = new System.Drawing.Point(144, 227);
+            this.btnAtras.Location = new System.Drawing.Point(143, 297);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(133, 44);
             this.btnAtras.TabIndex = 1;
             this.btnAtras.Text = "ATRAS";
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnCargaPasajero
             // 
             this.btnCargaPasajero.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCargaPasajero.Location = new System.Drawing.Point(660, 227);
+            this.btnCargaPasajero.Location = new System.Drawing.Point(659, 297);
             this.btnCargaPasajero.Name = "btnCargaPasajero";
             this.btnCargaPasajero.Size = new System.Drawing.Size(260, 44);
             this.btnCargaPasajero.TabIndex = 2;
@@ -71,7 +72,7 @@ namespace Cruzeiro
             // btnCrearViaje
             // 
             this.btnCrearViaje.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCrearViaje.Location = new System.Drawing.Point(984, 227);
+            this.btnCrearViaje.Location = new System.Drawing.Point(983, 297);
             this.btnCrearViaje.Name = "btnCrearViaje";
             this.btnCrearViaje.Size = new System.Drawing.Size(260, 44);
             this.btnCrearViaje.TabIndex = 3;
@@ -81,7 +82,7 @@ namespace Cruzeiro
             // btnListaPasajeros
             // 
             this.btnListaPasajeros.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnListaPasajeros.Location = new System.Drawing.Point(336, 227);
+            this.btnListaPasajeros.Location = new System.Drawing.Point(335, 297);
             this.btnListaPasajeros.Name = "btnListaPasajeros";
             this.btnListaPasajeros.Size = new System.Drawing.Size(260, 44);
             this.btnListaPasajeros.TabIndex = 4;
@@ -92,7 +93,7 @@ namespace Cruzeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 283);
+            this.ClientSize = new System.Drawing.Size(1404, 377);
             this.MinimumSize = new System.Drawing.Size(1422, 300);
             this.Name = "FrmViajesDisponibles";
             this.Text = "Viajes Disponibles";

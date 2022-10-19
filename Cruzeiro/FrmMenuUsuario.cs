@@ -75,5 +75,18 @@ namespace Cruzeiro
         {
             this.Close();
         }
+
+        private void btnListaViajes_Click(object sender, EventArgs e)
+        {
+            FrmViajesDisponibles viajesDisponibles = new FrmViajesDisponibles();
+
+            this.Hide();
+
+            viajesDisponibles.ShowDialog();
+
+            this.Show();
+
+            //this.WindowState = FormWindowState.Maximized;
+        }
     }
 }
