@@ -23,12 +23,23 @@ namespace Cruzeiro
         {
 
             //Harcodeo.Global();
-            
-            foreach (Viaje viaje in Harcodeo.ListaViajes())
+
+            List<Viaje> viajeDispobibles;
+
+            if(!HistorialViajes.ViajesDiponibles(out viajeDispobibles))
             {
-                this.dataGridViewViajes.Rows.Add(viaje.Id, viaje.CiudadPartida, viaje.TipoDestino, viaje.FechaInicioViaje, viaje.FechaLlegada, viaje.Crucero.Nombre,
-                    viaje.CantidadTurista, viaje.CantidadPremium, viaje.EstadoViaje.ToString(), viaje.DuracionViaje);
+                MessageBox.Show("¿Desea continuar?" , "Sin viajes disponibles" , MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             }
+            else
+            {
+                foreach (Viaje viaje in viajeDispobibles)
+                {
+                    this.dataGridViewViajes.Rows.Add(viaje.Id, viaje.CiudadPartida, viaje.TipoDestino, viaje.FechaInicioViaje, viaje.FechaLlegada, viaje.Crucero.Nombre,
+                        viaje.CantidadTurista, viaje.CantidadPremium, viaje.EstadoViaje.ToString(), viaje.DuracionViaje);
+                }
+
+            }
+
         }
     }
 }

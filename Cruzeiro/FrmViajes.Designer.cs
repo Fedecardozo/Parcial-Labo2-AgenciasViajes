@@ -57,7 +57,7 @@ namespace Cruzeiro
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1404, 450);
+            this.panelContenedor.Size = new System.Drawing.Size(1404, 338);
             this.panelContenedor.TabIndex = 0;
             // 
             // dataGridViewViajes
@@ -133,7 +133,7 @@ namespace Cruzeiro
             this.dataGridViewViajes.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewViajes.RowTemplate.Height = 29;
             this.dataGridViewViajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewViajes.Size = new System.Drawing.Size(1398, 374);
+            this.dataGridViewViajes.Size = new System.Drawing.Size(1398, 262);
             this.dataGridViewViajes.TabIndex = 0;
             // 
             // id
@@ -211,9 +211,8 @@ namespace Cruzeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 450);
+            this.ClientSize = new System.Drawing.Size(1404, 338);
             this.Controls.Add(this.panelContenedor);
-            this.MaximumSize = new System.Drawing.Size(1422, 497);
             this.Name = "FrmViajes";
             this.Text = "FrmViajes";
             this.panelContenedor.ResumeLayout(false);
