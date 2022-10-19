@@ -86,9 +86,18 @@ namespace Entidades
         {
             get
             {
-                if (this.fechaDeLlegada >= DateTime.Now)
+                //15/09/2022 - 19-10-2022
+                if (this.fechaInicioViaje <= DateTime.Now && this.fechaDeLlegada <= DateTime.Now)
+                {
+                    this.estadoViaje = EestadoViaje.Terminado;
+                }
+                else if(this.fechaInicioViaje <= DateTime.Now && this.fechaDeLlegada >= DateTime.Now)
                 {
                     this.estadoViaje = EestadoViaje.En_Viaje;
+                }
+                else
+                {
+                    this.estadoViaje = EestadoViaje.Disponible;
                 }
 
                 return this.estadoViaje;

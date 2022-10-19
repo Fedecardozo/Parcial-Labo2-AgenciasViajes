@@ -28,6 +28,7 @@ namespace Entidades
             Harcodeo.pasajeros1 = new List<Pasajero>();
             Harcodeo.pasajeros2 = new List<Pasajero>();
             Harcodeo.pasajeros3 = new List<Pasajero>();
+            Harcodeo.Global();
         }
         #endregion
 

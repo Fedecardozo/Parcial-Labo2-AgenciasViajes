@@ -65,13 +65,17 @@ namespace Cruzeiro
             this.dataGridViewViajes.AllowUserToAddRows = false;
             this.dataGridViewViajes.AllowUserToDeleteRows = false;
             this.dataGridViewViajes.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
             this.dataGridViewViajes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewViajes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewViajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewViajes.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewViajes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewViajes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -121,7 +125,11 @@ namespace Cruzeiro
             this.dataGridViewViajes.RowHeadersVisible = false;
             this.dataGridViewViajes.RowHeadersWidth = 51;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.Format = "d";
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.dataGridViewViajes.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewViajes.RowTemplate.Height = 29;
             this.dataGridViewViajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -138,7 +146,7 @@ namespace Cruzeiro
             // 
             // ciudadPartida
             // 
-            this.ciudadPartida.HeaderText = "Ciudad partida";
+            this.ciudadPartida.HeaderText = "Ciudad de partida";
             this.ciudadPartida.MinimumWidth = 6;
             this.ciudadPartida.Name = "ciudadPartida";
             this.ciudadPartida.ReadOnly = true;
@@ -215,7 +223,8 @@ namespace Cruzeiro
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridViewViajes;
+        protected System.Windows.Forms.DataGridView dataGridViewViajes;
+        protected System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDestino;
@@ -226,6 +235,5 @@ namespace Cruzeiro
         private System.Windows.Forms.DataGridViewTextBoxColumn pasajeroPremium;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracionViaje;
-        protected System.Windows.Forms.Panel panelContenedor;
     }
 }

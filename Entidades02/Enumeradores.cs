@@ -1,5 +1,5 @@
 ﻿
-public enum EestadoViaje {En_Viaje, Disponible,Completo};
+public enum EestadoViaje {En_Viaje, Disponible,Terminado,Completo};
 
 public enum Eregional
 {

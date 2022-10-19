@@ -36,7 +36,7 @@ namespace Entidades
 
         public static DateTime FechaInicio()
         {
-            return Aleatorio.Fecha(new DateTime(2020, 1, 1), DateTime.Now);
+            return Aleatorio.Fecha(new DateTime(2020, 1, 1), DateTime.Now.AddDays(10));
         }
         public static DateTime FechaLlegadaRegional(DateTime fechaInicio)
         {
