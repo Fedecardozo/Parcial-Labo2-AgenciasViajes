@@ -15,6 +15,7 @@ namespace Entidades
         {
             HistorialViajes.viajes = Harcodeo.ListaViajes();
         }
+        public static List<Viaje> HistorialdeViajes { get { return HistorialViajes.viajes; } }
 
         public static bool ViajesDiponibles(out List<Viaje> viajes1)
         {
@@ -36,7 +37,21 @@ namespace Entidades
             return retorno;
         }
 
-        public static List<Viaje> HistorialdeViajes { get { return HistorialViajes.viajes; } }
+        public static List<Pasajero> Pasajeros(int id)
+        {
+            List<Pasajero> pasajeros = new List<Pasajero>();
+
+            foreach (Viaje item in HistorialViajes.viajes)
+            {
+                if(item == id)
+                {
+                    pasajeros = item.Pasajeros;
+                    break;
+                }
+            }
+
+            return pasajeros;
+        }
 
     }
 }

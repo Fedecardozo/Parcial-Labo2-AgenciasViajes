@@ -73,6 +73,7 @@ namespace Cruzeiro
             this.btnListaPasajeros.TabIndex = 6;
             this.btnListaPasajeros.Text = "LISTA DE PASAJEROS";
             this.btnListaPasajeros.UseVisualStyleBackColor = true;
+            this.btnListaPasajeros.Click += new System.EventHandler(this.btnListaPasajeros_Click);
             // 
             // dataGridViewViajes
             // 

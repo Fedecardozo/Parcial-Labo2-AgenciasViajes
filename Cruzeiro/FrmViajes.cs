@@ -32,5 +32,9 @@ namespace Cruzeiro
             }
         }
 
+        private void btnListaPasajeros_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
