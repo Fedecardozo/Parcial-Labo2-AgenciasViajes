@@ -48,8 +48,12 @@ namespace Cruzeiro
             }
         }
 
+
         #endregion
 
-
+        private void btnCargaPasajero_Click(object sender, EventArgs e)
+        {
+            base.MostrarFormularioModal(new FrmCargaPasajero());
+        }
     }
 }

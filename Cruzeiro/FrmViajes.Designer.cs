@@ -54,11 +54,13 @@ namespace Cruzeiro
             // 
             // panelContenedor
             // 
+            this.panelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelContenedor.Controls.Add(this.btnListaPasajeros);
             this.panelContenedor.Controls.Add(this.dataGridViewViajes);
             this.panelContenedor.Controls.Add(this.btnAtras);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1404, 338);
@@ -90,7 +92,6 @@ namespace Cruzeiro
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewViajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewViajes.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridViewViajes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewViajes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -125,7 +126,7 @@ namespace Cruzeiro
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewViajes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewViajes.EnableHeadersVisualStyles = false;
-            this.dataGridViewViajes.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewViajes.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewViajes.MultiSelect = false;
             this.dataGridViewViajes.Name = "dataGridViewViajes";
             this.dataGridViewViajes.ReadOnly = true;
@@ -148,7 +149,7 @@ namespace Cruzeiro
             this.dataGridViewViajes.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewViajes.RowTemplate.Height = 29;
             this.dataGridViewViajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewViajes.Size = new System.Drawing.Size(1398, 262);
+            this.dataGridViewViajes.Size = new System.Drawing.Size(1404, 262);
             this.dataGridViewViajes.TabIndex = 0;
             this.dataGridViewViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViajes_CellClick);
             // 

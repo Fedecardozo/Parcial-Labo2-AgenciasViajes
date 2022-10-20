@@ -62,7 +62,7 @@ namespace Cruzeiro
             this.panelLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLateral.Location = new System.Drawing.Point(0, 0);
             this.panelLateral.Name = "panelLateral";
-            this.panelLateral.Size = new System.Drawing.Size(268, 421);
+            this.panelLateral.Size = new System.Drawing.Size(268, 419);
             this.panelLateral.TabIndex = 0;
             // 
             // labelUsuario
@@ -156,6 +156,7 @@ namespace Cruzeiro
             // 
             this.panelContenedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContenedor.Controls.Add(this.btnHistorialViajes);
             this.panelContenedor.Controls.Add(this.btnSalir);
             this.panelContenedor.Controls.Add(this.btnDatosHistoricos);
