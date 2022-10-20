@@ -15,6 +15,7 @@ namespace Entidades
         #endregion
 
         #region Constructor
+
         public Pasajero(Pasaporte pasaporte, Equipaje equipaje, EtipoClase clase)
         {
             this.equipaje = equipaje;

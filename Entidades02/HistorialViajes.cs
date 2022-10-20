@@ -41,16 +41,24 @@ namespace Entidades
         {
             List<Pasajero> pasajeros = new List<Pasajero>();
 
+            pasajeros = (HistorialViajes.BuscadorViaje(id)).Pasajeros;
+
+            return pasajeros;
+        }
+
+        public static Viaje BuscadorViaje(int id)
+        {
+            Viaje viaje = null ;
             foreach (Viaje item in HistorialViajes.viajes)
             {
-                if(item == id)
+                if (item == id)
                 {
-                    pasajeros = item.Pasajeros;
+                    viaje = item;
                     break;
                 }
             }
 
-            return pasajeros;
+            return viaje;
         }
 
     }

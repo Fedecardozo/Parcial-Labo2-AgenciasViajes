@@ -14,7 +14,7 @@ namespace Cruzeiro
     public partial class FrmViajes : FrmPadre
     {
 
-        private int idViaje;
+        protected int idViaje;
         public FrmViajes()
         {
             InitializeComponent();

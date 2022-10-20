@@ -92,6 +92,7 @@ namespace Cruzeiro
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewViajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewViajes.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewViajes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewViajes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveBorder;

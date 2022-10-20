@@ -29,6 +29,22 @@ namespace Cruzeiro
 
         }
 
+        private void btnCargaPasajero_Click(object sender, EventArgs e)
+        {
+
+            Viaje viaje = HistorialViajes.BuscadorViaje(base.idViaje);
+
+            if (viaje is not null)
+            {
+                base.MostrarFormularioModal(new FrmCargaPasajero());
+            }
+            else
+            {
+                MessageBox.Show("No se puede cargar pasajeros a este viaje","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+        }
+
         #region Metodos
         private void MostrarViajesDisponibles()
         {
@@ -51,9 +67,5 @@ namespace Cruzeiro
 
         #endregion
 
-        private void btnCargaPasajero_Click(object sender, EventArgs e)
-        {
-            base.MostrarFormularioModal(new FrmCargaPasajero());
-        }
     }
 }

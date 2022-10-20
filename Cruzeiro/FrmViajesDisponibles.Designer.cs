@@ -40,8 +40,7 @@ namespace Cruzeiro
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.Controls.Add(this.btnCrearViaje);
             this.panelContenedor.Controls.Add(this.btnCargaPasajero);
-            this.panelContenedor.Location = new System.Drawing.Point(0, 5);
-            this.panelContenedor.Size = new System.Drawing.Size(1404, 413);
+            this.panelContenedor.Size = new System.Drawing.Size(1404, 418);
             this.panelContenedor.Controls.SetChildIndex(this.btnAtras, 0);
             this.panelContenedor.Controls.SetChildIndex(this.btnCargaPasajero, 0);
             this.panelContenedor.Controls.SetChildIndex(this.btnCrearViaje, 0);
@@ -49,16 +48,16 @@ namespace Cruzeiro
             // 
             // btnListaPasajeros
             // 
-            this.btnListaPasajeros.Location = new System.Drawing.Point(412, 271);
+            this.btnListaPasajeros.Location = new System.Drawing.Point(412, 276);
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(107, 271);
+            this.btnAtras.Location = new System.Drawing.Point(107, 276);
             // 
             // btnCargaPasajero
             // 
             this.btnCargaPasajero.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCargaPasajero.Location = new System.Drawing.Point(714, 271);
+            this.btnCargaPasajero.Location = new System.Drawing.Point(714, 276);
             this.btnCargaPasajero.Name = "btnCargaPasajero";
             this.btnCargaPasajero.Size = new System.Drawing.Size(260, 44);
             this.btnCargaPasajero.TabIndex = 2;
@@ -69,7 +68,7 @@ namespace Cruzeiro
             // btnCrearViaje
             // 
             this.btnCrearViaje.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCrearViaje.Location = new System.Drawing.Point(1032, 271);
+            this.btnCrearViaje.Location = new System.Drawing.Point(1032, 276);
             this.btnCrearViaje.Name = "btnCrearViaje";
             this.btnCrearViaje.Size = new System.Drawing.Size(260, 44);
             this.btnCrearViaje.TabIndex = 3;
