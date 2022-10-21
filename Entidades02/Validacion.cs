@@ -43,24 +43,6 @@ namespace Entidades
 
         }
 
-        public static bool ValidarPasajero(Pasajero pasajero)
-        {
-            bool retorno = false;
-
-            if(pasajero is not null)
-            {
-                Pasaporte pasaporte = pasajero.Pasaporte;
-
-                if(!string.IsNullOrWhiteSpace(pasaporte.Nombre) && !string.IsNullOrWhiteSpace(pasaporte.Apellido))
-                {
-                    retorno = true;
-                }
-
-            }
-
-
-            return retorno;
-        }
 
     }
 }

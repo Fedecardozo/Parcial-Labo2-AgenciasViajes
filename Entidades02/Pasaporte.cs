@@ -9,13 +9,13 @@ namespace Entidades
     public class Pasaporte : Persona
     {
         #region Atributos
-        private ENacionalidad nacionalidad;
+        private string nacionalidad;
         private ESexo sexo;
         private int numeroPasaporte;
         #endregion
 
         #region Constructor
-        public Pasaporte(string nombre, string apellido, long dni, DateTime fechaNacimiento, ENacionalidad nacion,
+        public Pasaporte(string nombre, string apellido, long dni, DateTime fechaNacimiento, string nacion,
             ESexo sexo, int numeroPasaporte) : base(nombre, apellido, dni, fechaNacimiento)
         {
             this.nacionalidad = nacion;
@@ -25,7 +25,7 @@ namespace Entidades
         #endregion
 
         #region Propiedades
-        public string Nacionalidad { get { return this.nacionalidad.ToString(); } }
+        public string Nacionalidad { get { return this.nacionalidad; } }
         public string Sexo { get { return this.sexo.ToString(); } }
         public int NumeroPasaporte { get { return this.numeroPasaporte; } }
         #endregion

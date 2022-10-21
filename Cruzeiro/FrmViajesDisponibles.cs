@@ -36,7 +36,7 @@ namespace Cruzeiro
 
             if (viaje is not null)
             {
-                base.MostrarFormularioModal(new FrmCargaPasajero());
+                base.MostrarFormularioModal(new FrmCargaPasajero(viaje));
             }
             else
             {

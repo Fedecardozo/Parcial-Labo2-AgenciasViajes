@@ -31,21 +31,22 @@ namespace Cruzeiro
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
+            this.rBtnClaseTurista = new System.Windows.Forms.RadioButton();
+            this.rBtnClasePremium = new System.Windows.Forms.RadioButton();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.groupBoxEquipaje = new System.Windows.Forms.GroupBox();
+            this.rBtnCantidad2 = new System.Windows.Forms.RadioButton();
+            this.rBtnCantidad1 = new System.Windows.Forms.RadioButton();
+            this.rBtnCantidad0 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rBtnBolsoManoNo = new System.Windows.Forms.RadioButton();
+            this.rBtnBolsoManoSi = new System.Windows.Forms.RadioButton();
             this.textBoxKg = new System.Windows.Forms.TextBox();
             this.groupBoxDatosPersonales = new System.Windows.Forms.GroupBox();
+            this.textBoxNroDni = new System.Windows.Forms.TextBox();
             this.comboBoxNacionalidad = new System.Windows.Forms.ComboBox();
             this.comboBoxSexo = new System.Windows.Forms.ComboBox();
             this.textBoxNroPasaporte = new System.Windows.Forms.TextBox();
@@ -56,7 +57,7 @@ namespace Cruzeiro
             this.panelContenedor.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBoxEquipaje.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxDatosPersonales.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,7 @@ namespace Cruzeiro
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContenedor.Controls.Add(this.groupBox4);
-            this.panelContenedor.Controls.Add(this.button3);
+            this.panelContenedor.Controls.Add(this.btnAtras);
             this.panelContenedor.Controls.Add(this.btnLimpiar);
             this.panelContenedor.Controls.Add(this.button1);
             this.panelContenedor.Controls.Add(this.groupBox1);
@@ -79,8 +80,8 @@ namespace Cruzeiro
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.radioButton7);
-            this.groupBox4.Controls.Add(this.radioButton6);
+            this.groupBox4.Controls.Add(this.rBtnClaseTurista);
+            this.groupBox4.Controls.Add(this.rBtnClasePremium);
             this.groupBox4.Location = new System.Drawing.Point(382, 256);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(215, 103);
@@ -88,36 +89,37 @@ namespace Cruzeiro
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tipo de clase";
             // 
-            // radioButton7
+            // rBtnClaseTurista
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Checked = true;
-            this.radioButton7.Location = new System.Drawing.Point(133, 44);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(76, 28);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Turista";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rBtnClaseTurista.AutoSize = true;
+            this.rBtnClaseTurista.Checked = true;
+            this.rBtnClaseTurista.Location = new System.Drawing.Point(133, 44);
+            this.rBtnClaseTurista.Name = "rBtnClaseTurista";
+            this.rBtnClaseTurista.Size = new System.Drawing.Size(76, 28);
+            this.rBtnClaseTurista.TabIndex = 1;
+            this.rBtnClaseTurista.TabStop = true;
+            this.rBtnClaseTurista.Text = "Turista";
+            this.rBtnClaseTurista.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rBtnClasePremium
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 44);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(90, 28);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.Text = "Premium";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rBtnClasePremium.AutoSize = true;
+            this.rBtnClasePremium.Location = new System.Drawing.Point(6, 44);
+            this.rBtnClasePremium.Name = "rBtnClasePremium";
+            this.rBtnClasePremium.Size = new System.Drawing.Size(90, 28);
+            this.rBtnClasePremium.TabIndex = 0;
+            this.rBtnClasePremium.Text = "Premium";
+            this.rBtnClasePremium.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAtras
             // 
-            this.button3.Location = new System.Drawing.Point(124, 447);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 41);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Atras";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAtras.Location = new System.Drawing.Point(124, 447);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(147, 41);
+            this.btnAtras.TabIndex = 4;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnLimpiar
             // 
@@ -141,7 +143,7 @@ namespace Cruzeiro
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.groupBoxEquipaje);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.textBoxKg);
             this.groupBox1.Location = new System.Drawing.Point(12, 256);
@@ -151,54 +153,57 @@ namespace Cruzeiro
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Equipaje";
             // 
-            // groupBox3
+            // groupBoxEquipaje
             // 
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton4);
-            this.groupBox3.Location = new System.Drawing.Point(13, 28);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(166, 64);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Cantidad de valijas";
+            this.groupBoxEquipaje.Controls.Add(this.rBtnCantidad2);
+            this.groupBoxEquipaje.Controls.Add(this.rBtnCantidad1);
+            this.groupBoxEquipaje.Controls.Add(this.rBtnCantidad0);
+            this.groupBoxEquipaje.Location = new System.Drawing.Point(13, 28);
+            this.groupBoxEquipaje.Name = "groupBoxEquipaje";
+            this.groupBoxEquipaje.Size = new System.Drawing.Size(166, 64);
+            this.groupBoxEquipaje.TabIndex = 3;
+            this.groupBoxEquipaje.TabStop = false;
+            this.groupBoxEquipaje.Text = "Cantidad de valijas";
             // 
-            // radioButton5
+            // rBtnCantidad2
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(111, 29);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(39, 28);
-            this.radioButton5.TabIndex = 2;
-            this.radioButton5.Text = "2";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rBtnCantidad2.AutoSize = true;
+            this.rBtnCantidad2.Location = new System.Drawing.Point(111, 29);
+            this.rBtnCantidad2.Name = "rBtnCantidad2";
+            this.rBtnCantidad2.Size = new System.Drawing.Size(39, 28);
+            this.rBtnCantidad2.TabIndex = 2;
+            this.rBtnCantidad2.Text = "2";
+            this.rBtnCantidad2.UseVisualStyleBackColor = true;
+            this.rBtnCantidad2.CheckedChanged += new System.EventHandler(this.rBtnCantidad2_CheckedChanged);
             // 
-            // radioButton3
+            // rBtnCantidad1
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(68, 29);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(37, 28);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.Text = "1";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rBtnCantidad1.AutoSize = true;
+            this.rBtnCantidad1.Checked = true;
+            this.rBtnCantidad1.Location = new System.Drawing.Point(68, 29);
+            this.rBtnCantidad1.Name = "rBtnCantidad1";
+            this.rBtnCantidad1.Size = new System.Drawing.Size(37, 28);
+            this.rBtnCantidad1.TabIndex = 1;
+            this.rBtnCantidad1.TabStop = true;
+            this.rBtnCantidad1.Text = "1";
+            this.rBtnCantidad1.UseVisualStyleBackColor = true;
+            this.rBtnCantidad1.CheckedChanged += new System.EventHandler(this.rBtnCantidad1_CheckedChanged);
             // 
-            // radioButton4
+            // rBtnCantidad0
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Checked = true;
-            this.radioButton4.Location = new System.Drawing.Point(22, 29);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(40, 28);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "0";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rBtnCantidad0.AutoSize = true;
+            this.rBtnCantidad0.Location = new System.Drawing.Point(22, 29);
+            this.rBtnCantidad0.Name = "rBtnCantidad0";
+            this.rBtnCantidad0.Size = new System.Drawing.Size(40, 28);
+            this.rBtnCantidad0.TabIndex = 0;
+            this.rBtnCantidad0.Text = "0";
+            this.rBtnCantidad0.UseVisualStyleBackColor = true;
+            this.rBtnCantidad0.CheckedChanged += new System.EventHandler(this.rBtnCantidad0_CheckedChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.rBtnBolsoManoNo);
+            this.groupBox2.Controls.Add(this.rBtnBolsoManoSi);
             this.groupBox2.Location = new System.Drawing.Point(198, 28);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(150, 64);
@@ -206,39 +211,42 @@ namespace Cruzeiro
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bolso de mano";
             // 
-            // radioButton2
+            // rBtnBolsoManoNo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(85, 29);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(50, 28);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rBtnBolsoManoNo.AutoSize = true;
+            this.rBtnBolsoManoNo.Checked = true;
+            this.rBtnBolsoManoNo.Location = new System.Drawing.Point(85, 29);
+            this.rBtnBolsoManoNo.Name = "rBtnBolsoManoNo";
+            this.rBtnBolsoManoNo.Size = new System.Drawing.Size(50, 28);
+            this.rBtnBolsoManoNo.TabIndex = 1;
+            this.rBtnBolsoManoNo.TabStop = true;
+            this.rBtnBolsoManoNo.Text = "No";
+            this.rBtnBolsoManoNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rBtnBolsoManoSi
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(22, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(43, 28);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.Text = "Si";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rBtnBolsoManoSi.AutoSize = true;
+            this.rBtnBolsoManoSi.Location = new System.Drawing.Point(22, 29);
+            this.rBtnBolsoManoSi.Name = "rBtnBolsoManoSi";
+            this.rBtnBolsoManoSi.Size = new System.Drawing.Size(43, 28);
+            this.rBtnBolsoManoSi.TabIndex = 0;
+            this.rBtnBolsoManoSi.Text = "Si";
+            this.rBtnBolsoManoSi.UseVisualStyleBackColor = true;
             // 
             // textBoxKg
             // 
+            this.textBoxKg.Enabled = false;
+            this.textBoxKg.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxKg.Location = new System.Drawing.Point(13, 114);
             this.textBoxKg.Name = "textBoxKg";
             this.textBoxKg.PlaceholderText = "Kilogramos";
-            this.textBoxKg.Size = new System.Drawing.Size(335, 29);
+            this.textBoxKg.Size = new System.Drawing.Size(335, 27);
             this.textBoxKg.TabIndex = 1;
             this.textBoxKg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKg_KeyPress);
             // 
             // groupBoxDatosPersonales
             // 
+            this.groupBoxDatosPersonales.Controls.Add(this.textBoxNroDni);
             this.groupBoxDatosPersonales.Controls.Add(this.comboBoxNacionalidad);
             this.groupBoxDatosPersonales.Controls.Add(this.comboBoxSexo);
             this.groupBoxDatosPersonales.Controls.Add(this.textBoxNroPasaporte);
@@ -248,10 +256,21 @@ namespace Cruzeiro
             this.groupBoxDatosPersonales.Controls.Add(this.textBoxNombre);
             this.groupBoxDatosPersonales.Location = new System.Drawing.Point(12, 20);
             this.groupBoxDatosPersonales.Name = "groupBoxDatosPersonales";
-            this.groupBoxDatosPersonales.Size = new System.Drawing.Size(585, 220);
+            this.groupBoxDatosPersonales.Size = new System.Drawing.Size(585, 230);
             this.groupBoxDatosPersonales.TabIndex = 0;
             this.groupBoxDatosPersonales.TabStop = false;
             this.groupBoxDatosPersonales.Text = "Datos personales";
+            // 
+            // textBoxNroDni
+            // 
+            this.textBoxNroDni.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNroDni.Location = new System.Drawing.Point(21, 143);
+            this.textBoxNroDni.MaxLength = 8;
+            this.textBoxNroDni.Name = "textBoxNroDni";
+            this.textBoxNroDni.PlaceholderText = "Numero de documento";
+            this.textBoxNroDni.Size = new System.Drawing.Size(238, 27);
+            this.textBoxNroDni.TabIndex = 7;
+            this.textBoxNroDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // comboBoxNacionalidad
             // 
@@ -494,7 +513,7 @@ namespace Cruzeiro
             "YEMEN",
             "ZAMBIA",
             "ZIMBABWE"});
-            this.comboBoxNacionalidad.Location = new System.Drawing.Point(322, 93);
+            this.comboBoxNacionalidad.Location = new System.Drawing.Point(322, 90);
             this.comboBoxNacionalidad.Name = "comboBoxNacionalidad";
             this.comboBoxNacionalidad.Size = new System.Drawing.Size(238, 32);
             this.comboBoxNacionalidad.Sorted = true;
@@ -504,11 +523,7 @@ namespace Cruzeiro
             // comboBoxSexo
             // 
             this.comboBoxSexo.FormattingEnabled = true;
-            this.comboBoxSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "No binario"});
-            this.comboBoxSexo.Location = new System.Drawing.Point(322, 149);
+            this.comboBoxSexo.Location = new System.Drawing.Point(322, 140);
             this.comboBoxSexo.Name = "comboBoxSexo";
             this.comboBoxSexo.Size = new System.Drawing.Size(238, 32);
             this.comboBoxSexo.TabIndex = 5;
@@ -516,10 +531,12 @@ namespace Cruzeiro
             // 
             // textBoxNroPasaporte
             // 
+            this.textBoxNroPasaporte.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxNroPasaporte.Location = new System.Drawing.Point(322, 43);
+            this.textBoxNroPasaporte.MaxLength = 9;
             this.textBoxNroPasaporte.Name = "textBoxNroPasaporte";
             this.textBoxNroPasaporte.PlaceholderText = "Numero de pasaporte";
-            this.textBoxNroPasaporte.Size = new System.Drawing.Size(238, 29);
+            this.textBoxNroPasaporte.Size = new System.Drawing.Size(238, 27);
             this.textBoxNroPasaporte.TabIndex = 4;
             this.textBoxNroPasaporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNroPasaporte_KeyPress);
             // 
@@ -527,7 +544,7 @@ namespace Cruzeiro
             // 
             this.labelFechaNacimiento.AutoSize = true;
             this.labelFechaNacimiento.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelFechaNacimiento.Location = new System.Drawing.Point(21, 150);
+            this.labelFechaNacimiento.Location = new System.Drawing.Point(157, 187);
             this.labelFechaNacimiento.Name = "labelFechaNacimiento";
             this.labelFechaNacimiento.Size = new System.Drawing.Size(142, 26);
             this.labelFechaNacimiento.TabIndex = 3;
@@ -537,7 +554,7 @@ namespace Cruzeiro
             // 
             this.dateTimePickerNacimiento.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePickerNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerNacimiento.Location = new System.Drawing.Point(169, 150);
+            this.dateTimePickerNacimiento.Location = new System.Drawing.Point(305, 187);
             this.dateTimePickerNacimiento.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerNacimiento.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
@@ -547,19 +564,21 @@ namespace Cruzeiro
             // 
             // textBoxApellido
             // 
+            this.textBoxApellido.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxApellido.Location = new System.Drawing.Point(21, 93);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.PlaceholderText = "Apellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(238, 29);
+            this.textBoxApellido.Size = new System.Drawing.Size(238, 27);
             this.textBoxApellido.TabIndex = 1;
             this.textBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApellido_KeyPress);
             // 
             // textBoxNombre
             // 
+            this.textBoxNombre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxNombre.Location = new System.Drawing.Point(21, 43);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.PlaceholderText = "Nombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(238, 29);
+            this.textBoxNombre.Size = new System.Drawing.Size(238, 27);
             this.textBoxNombre.TabIndex = 0;
             this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
             // 
@@ -578,8 +597,8 @@ namespace Cruzeiro
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBoxEquipaje.ResumeLayout(false);
+            this.groupBoxEquipaje.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBoxDatosPersonales.ResumeLayout(false);
@@ -597,22 +616,23 @@ namespace Cruzeiro
         private System.Windows.Forms.DateTimePicker dateTimePickerNacimiento;
         private System.Windows.Forms.TextBox textBoxApellido;
         private System.Windows.Forms.TextBox textBoxNombre;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.GroupBox groupBoxEquipaje;
+        private System.Windows.Forms.RadioButton rBtnCantidad2;
+        private System.Windows.Forms.RadioButton rBtnCantidad1;
+        private System.Windows.Forms.RadioButton rBtnCantidad0;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rBtnBolsoManoNo;
+        private System.Windows.Forms.RadioButton rBtnBolsoManoSi;
         private System.Windows.Forms.Label labelFechaNacimiento;
         private System.Windows.Forms.TextBox textBoxNroPasaporte;
         private System.Windows.Forms.ComboBox comboBoxSexo;
         private System.Windows.Forms.ComboBox comboBoxNacionalidad;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rBtnClaseTurista;
+        private System.Windows.Forms.RadioButton rBtnClasePremium;
+        private System.Windows.Forms.TextBox textBoxNroDni;
     }
 }

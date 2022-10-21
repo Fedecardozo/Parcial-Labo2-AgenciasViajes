@@ -31,6 +31,13 @@ namespace Testeer
                  }
                  #endregion*/
 
+            string name = "federico cardozo";
+
+            string aux = name.Substring(0,1).ToUpper() + name.Substring(1).ToLower();
+
+            Console.WriteLine(aux);
+
+
         }
 
     }

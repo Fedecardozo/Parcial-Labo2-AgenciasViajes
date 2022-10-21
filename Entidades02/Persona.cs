@@ -18,8 +18,8 @@ namespace Entidades
         #region Constructores
         protected Persona(string nombre, string apellido)
         {
-            this.nombre = nombre;
-            this.apellido = apellido;
+            this.Nombre = nombre;
+            this.Apellido = apellido;
         }
 
         protected Persona(string nombre, string apellido, long dni) : this(nombre, apellido)
@@ -42,11 +42,20 @@ namespace Entidades
 
         #region Propiedades
 
-        public string Nombre { get { return this.nombre; } }
-        public string Apellido { get { return this.apellido; } }
+        public string Nombre { get { return this.nombre; } set { this.nombre = this.ConvertirMayusculaMinuscula(value); } }
+        public string Apellido { get { return this.apellido; } set { this.apellido = this.ConvertirMayusculaMinuscula(value);  } }
         public long Dni { get { return this.dni; } }
         public DateTime FechaNacimientoDate { get { return this.fechaNacimiento.Date; } }
         public string FechaNacimiento { get { return this.FechaNacimientoDate.ToString("d"); } }
+
+        #endregion
+
+        #region Metodos
+
+        private string ConvertirMayusculaMinuscula(string cadena)
+        {
+            return cadena.Substring(0, 1).ToUpper() + cadena.Substring(1).ToLower();
+        }
 
         #endregion
     }
