@@ -123,9 +123,9 @@ namespace Cruzeiro
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(444, 389);
+            this.btnLimpiar.Location = new System.Drawing.Point(382, 383);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(147, 41);
+            this.btnLimpiar.Size = new System.Drawing.Size(209, 41);
             this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
