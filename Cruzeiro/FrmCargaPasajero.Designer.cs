@@ -209,6 +209,7 @@ namespace Cruzeiro
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(85, 29);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(50, 28);
@@ -224,7 +225,6 @@ namespace Cruzeiro
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(43, 28);
             this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Si";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
@@ -235,6 +235,7 @@ namespace Cruzeiro
             this.textBoxKg.PlaceholderText = "Kilogramos";
             this.textBoxKg.Size = new System.Drawing.Size(335, 29);
             this.textBoxKg.TabIndex = 1;
+            this.textBoxKg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKg_KeyPress);
             // 
             // groupBoxDatosPersonales
             // 
@@ -520,6 +521,7 @@ namespace Cruzeiro
             this.textBoxNroPasaporte.PlaceholderText = "Numero de pasaporte";
             this.textBoxNroPasaporte.Size = new System.Drawing.Size(238, 29);
             this.textBoxNroPasaporte.TabIndex = 4;
+            this.textBoxNroPasaporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNroPasaporte_KeyPress);
             // 
             // labelFechaNacimiento
             // 
@@ -550,6 +552,7 @@ namespace Cruzeiro
             this.textBoxApellido.PlaceholderText = "Apellido";
             this.textBoxApellido.Size = new System.Drawing.Size(238, 29);
             this.textBoxApellido.TabIndex = 1;
+            this.textBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApellido_KeyPress);
             // 
             // textBoxNombre
             // 
@@ -558,6 +561,7 @@ namespace Cruzeiro
             this.textBoxNombre.PlaceholderText = "Nombre";
             this.textBoxNombre.Size = new System.Drawing.Size(238, 29);
             this.textBoxNombre.TabIndex = 0;
+            this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
             // 
             // FrmCargaPasajero
             // 

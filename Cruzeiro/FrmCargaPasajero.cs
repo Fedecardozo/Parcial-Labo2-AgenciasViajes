@@ -37,6 +37,7 @@ namespace Cruzeiro
             else
             {
                 MessageBox.Show("¿Desea seguir cargando pasajeros?", "Carga exitosa!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                //Tengo que validar que se puedan seguir subiendo pasajeros 
             }
         }
 
@@ -63,7 +64,7 @@ namespace Cruzeiro
             }
         }
 
-       private bool ObtenerDatosPasajero(out string mensaje)
+        private bool ObtenerDatosPasajero(out string mensaje)
        {
             string nombre = this.textBoxNombre.Text;
             string apellido = this.textBoxApellido.Text;
@@ -100,6 +101,63 @@ namespace Cruzeiro
             return retorno;
             //return pasajero;
        }
+
+       
+
+        #region Validacion de textbox Eventos
+        
+        private void ValidadorSoloLetras(KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        
+        private void textBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ValidadorSoloLetras(e);
+        }
+
+        private void textBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ValidadorSoloLetras(e);
+        }
+
+        private void textBoxNroPasaporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if(!(char.IsNumber(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxKg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+           /* bool flag = false;
+
+            if(e.KeyChar == (char)Keys.Delete && !flag)
+            {
+                e.Handled = false;
+                flag = true;
+            }*/
+
+            if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (!(char.IsDigit(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        #endregion
 
     }
 }
