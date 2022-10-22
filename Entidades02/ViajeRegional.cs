@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class ViajeRegional : Viaje
+    public class ViajeRegional : Viaje
     {
         private Eregional destino;
 
@@ -20,6 +20,12 @@ namespace Entidades
             : base(fechaInicioViaje, crucero, fechaDeLlegada, listPasajeros)
         {
 
+        }
+
+        public ViajeRegional(DateTime fechaInicioViaje, Crucero crucero, Eregional destino)
+           : base(fechaInicioViaje, crucero, Aleatorio.FechaLlegadaExtraRegional(fechaInicioViaje))
+        {
+            this.destino = destino;
         }
 
         public override string TipoDestino { get { return this.destino.ToString(); } }

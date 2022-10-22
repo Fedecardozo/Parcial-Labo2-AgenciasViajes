@@ -24,12 +24,12 @@ namespace Entidades
 
             foreach (Viaje item in viajes)
             {
-                if(item.EstadoViaje == EestadoViaje.Disponible)
+                if (item.EstadoViaje == EestadoViaje.Disponible)
                 {
                     viajes1.Add(item);
 
                     retorno = true;
-                    
+
                 }
             }
 
@@ -48,7 +48,7 @@ namespace Entidades
 
         public static Viaje BuscadorViaje(int id)
         {
-            Viaje viaje = null ;
+            Viaje viaje = null;
             foreach (Viaje item in HistorialViajes.viajes)
             {
                 if (item == id)
@@ -67,7 +67,7 @@ namespace Entidades
 
             foreach (Viaje item in HistorialViajes.viajes)
             {
-                if(item.Crucero == crucero)
+                if (item.Crucero == crucero)
                 {
                     historial.Add(item);
                 }
@@ -77,5 +77,9 @@ namespace Entidades
             return historial;
         }
 
+        public static void AgregarViaje(Viaje viaje)
+        {
+            HistorialViajes.viajes.Add(viaje);
+        }
     }
 }

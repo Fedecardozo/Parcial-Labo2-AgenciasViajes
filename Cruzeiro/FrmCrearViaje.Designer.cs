@@ -44,6 +44,8 @@ namespace Cruzeiro
             this.cantSalones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capacidadBodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelActulizarFechaDisponible = new System.Windows.Forms.Label();
+            this.labelFechaDisponible = new System.Windows.Forms.Label();
             this.btnCrearViaje = new System.Windows.Forms.Button();
             this.groupBoxDestino = new System.Windows.Forms.GroupBox();
             this.rBtnExtraRegional = new System.Windows.Forms.RadioButton();
@@ -52,8 +54,6 @@ namespace Cruzeiro
             this.btnAtras = new System.Windows.Forms.Button();
             this.labelFecha = new System.Windows.Forms.Label();
             this.dateTimePickerFechaPartida = new System.Windows.Forms.DateTimePicker();
-            this.labelFechaDisponible = new System.Windows.Forms.Label();
-            this.labelActulizarFechaDisponible = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCruceros)).BeginInit();
             this.panel1.SuspendLayout();
@@ -209,6 +209,28 @@ namespace Cruzeiro
             this.panel1.Size = new System.Drawing.Size(272, 363);
             this.panel1.TabIndex = 0;
             // 
+            // labelActulizarFechaDisponible
+            // 
+            this.labelActulizarFechaDisponible.AutoSize = true;
+            this.labelActulizarFechaDisponible.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelActulizarFechaDisponible.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelActulizarFechaDisponible.Location = new System.Drawing.Point(145, 23);
+            this.labelActulizarFechaDisponible.Name = "labelActulizarFechaDisponible";
+            this.labelActulizarFechaDisponible.Size = new System.Drawing.Size(101, 22);
+            this.labelActulizarFechaDisponible.TabIndex = 6;
+            this.labelActulizarFechaDisponible.Text = "11/12/2022";
+            // 
+            // labelFechaDisponible
+            // 
+            this.labelFechaDisponible.AutoSize = true;
+            this.labelFechaDisponible.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelFechaDisponible.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelFechaDisponible.Location = new System.Drawing.Point(3, 19);
+            this.labelFechaDisponible.Name = "labelFechaDisponible";
+            this.labelFechaDisponible.Size = new System.Drawing.Size(130, 26);
+            this.labelFechaDisponible.TabIndex = 5;
+            this.labelFechaDisponible.Text = "Fecha disponible:";
+            // 
             // btnCrearViaje
             // 
             this.btnCrearViaje.Location = new System.Drawing.Point(29, 239);
@@ -217,6 +239,7 @@ namespace Cruzeiro
             this.btnCrearViaje.TabIndex = 3;
             this.btnCrearViaje.Text = "Crear viaje";
             this.btnCrearViaje.UseVisualStyleBackColor = true;
+            this.btnCrearViaje.Click += new System.EventHandler(this.btnCrearViaje_Click);
             // 
             // groupBoxDestino
             // 
@@ -296,28 +319,6 @@ namespace Cruzeiro
             this.dateTimePickerFechaPartida.Name = "dateTimePickerFechaPartida";
             this.dateTimePickerFechaPartida.Size = new System.Drawing.Size(128, 27);
             this.dateTimePickerFechaPartida.TabIndex = 0;
-            // 
-            // labelFechaDisponible
-            // 
-            this.labelFechaDisponible.AutoSize = true;
-            this.labelFechaDisponible.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelFechaDisponible.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelFechaDisponible.Location = new System.Drawing.Point(3, 19);
-            this.labelFechaDisponible.Name = "labelFechaDisponible";
-            this.labelFechaDisponible.Size = new System.Drawing.Size(130, 26);
-            this.labelFechaDisponible.TabIndex = 5;
-            this.labelFechaDisponible.Text = "Fecha disponible:";
-            // 
-            // labelActulizarFechaDisponible
-            // 
-            this.labelActulizarFechaDisponible.AutoSize = true;
-            this.labelActulizarFechaDisponible.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelActulizarFechaDisponible.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelActulizarFechaDisponible.Location = new System.Drawing.Point(145, 23);
-            this.labelActulizarFechaDisponible.Name = "labelActulizarFechaDisponible";
-            this.labelActulizarFechaDisponible.Size = new System.Drawing.Size(101, 22);
-            this.labelActulizarFechaDisponible.TabIndex = 6;
-            this.labelActulizarFechaDisponible.Text = "11/12/2022";
             // 
             // FrmCrearViaje
             // 

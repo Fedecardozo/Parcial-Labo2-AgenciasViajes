@@ -45,6 +45,11 @@ namespace Cruzeiro
 
         }
 
+        private void btnCrearViaje_Click(object sender, EventArgs e)
+        {
+            base.MostrarFormularioModal(new FrmCrearViaje());
+        }
+
         #region Metodos
         private void MostrarViajesDisponibles()
         {
@@ -67,5 +72,6 @@ namespace Cruzeiro
 
         #endregion
 
+        
     }
 }

@@ -74,6 +74,7 @@ namespace Cruzeiro
             this.btnCrearViaje.TabIndex = 3;
             this.btnCrearViaje.Text = "CREAR NUEVO VIAJE";
             this.btnCrearViaje.UseVisualStyleBackColor = true;
+            this.btnCrearViaje.Click += new System.EventHandler(this.btnCrearViaje_Click);
             // 
             // FrmViajesDisponibles
             // 

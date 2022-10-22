@@ -60,6 +60,22 @@ namespace Cruzeiro
 
             this.IniciarCrucero(matricula);
         }
+        private void btnCrearViaje_Click(object sender, EventArgs e)
+        {
+            if(this.rBtnExtraRegional.Checked)
+            {
+                HistorialViajes.AgregarViaje(new ViajeExtraRegional(this.dateTimePickerFechaPartida.Value,
+                    this.crucero,(EextraRegional)this.comboBoxDestino.SelectedItem));
+            }
+            else if(this.rBtnRegional.Checked)
+            {
+                HistorialViajes.AgregarViaje(new ViajeRegional(this.dateTimePickerFechaPartida.Value,
+                   this.crucero, (Eregional)this.comboBoxDestino.SelectedItem));
+            }
+
+            MessageBox.Show("Carga exitosa!");
+
+        }
 
         #region Metodos 
         private void CargaExtraRegionalComboBox()
@@ -103,10 +119,10 @@ namespace Cruzeiro
             this.CargarFechaInicio();
         }
 
+
+
+
         #endregion
 
-        
-
-       
     }
 }

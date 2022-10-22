@@ -23,6 +23,12 @@ namespace Entidades
             
         }
 
+        public ViajeExtraRegional( DateTime fechaInicioViaje, Crucero crucero, EextraRegional destino) 
+            : base(fechaInicioViaje, crucero, Aleatorio.FechaLlegadaExtraRegional(fechaInicioViaje))
+        {
+            this.destino = destino;
+        }
+
         public override string TipoDestino { get { return this.destino.ToString(); } }
 
         public override string ToString()
