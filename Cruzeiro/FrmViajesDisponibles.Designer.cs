@@ -34,32 +34,32 @@ namespace Cruzeiro
             this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelContenedor
-            // 
-            this.panelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContenedor.Controls.Add(this.btnCrearViaje);
-            this.panelContenedor.Controls.Add(this.btnCargaPasajero);
-            this.panelContenedor.Size = new System.Drawing.Size(1404, 418);
-            this.panelContenedor.Controls.SetChildIndex(this.btnAtras, 0);
-            this.panelContenedor.Controls.SetChildIndex(this.btnCargaPasajero, 0);
-            this.panelContenedor.Controls.SetChildIndex(this.btnCrearViaje, 0);
-            this.panelContenedor.Controls.SetChildIndex(this.btnListaPasajeros, 0);
-            // 
             // btnListaPasajeros
             // 
-            this.btnListaPasajeros.Location = new System.Drawing.Point(412, 276);
+            this.btnListaPasajeros.Location = new System.Drawing.Point(375, 297);
+            this.btnListaPasajeros.Size = new System.Drawing.Size(246, 44);
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(107, 276);
+            this.btnAtras.Location = new System.Drawing.Point(74, 297);
+            this.btnAtras.Size = new System.Drawing.Size(246, 44);
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.Controls.Add(this.btnCrearViaje);
+            this.panelContenedor.Controls.Add(this.btnCargaPasajero);
+            this.panelContenedor.Size = new System.Drawing.Size(1300, 353);
+            this.panelContenedor.Controls.SetChildIndex(this.btnCargaPasajero, 0);
+            this.panelContenedor.Controls.SetChildIndex(this.btnCrearViaje, 0);
+            this.panelContenedor.Controls.SetChildIndex(this.btnAtras, 0);
+            this.panelContenedor.Controls.SetChildIndex(this.btnListaPasajeros, 0);
             // 
             // btnCargaPasajero
             // 
             this.btnCargaPasajero.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCargaPasajero.Location = new System.Drawing.Point(714, 276);
+            this.btnCargaPasajero.Location = new System.Drawing.Point(680, 297);
             this.btnCargaPasajero.Name = "btnCargaPasajero";
-            this.btnCargaPasajero.Size = new System.Drawing.Size(260, 44);
+            this.btnCargaPasajero.Size = new System.Drawing.Size(246, 44);
             this.btnCargaPasajero.TabIndex = 2;
             this.btnCargaPasajero.Text = "CARGAR PASAJERO";
             this.btnCargaPasajero.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@ namespace Cruzeiro
             // btnCrearViaje
             // 
             this.btnCrearViaje.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCrearViaje.Location = new System.Drawing.Point(1032, 276);
+            this.btnCrearViaje.Location = new System.Drawing.Point(984, 297);
             this.btnCrearViaje.Name = "btnCrearViaje";
-            this.btnCrearViaje.Size = new System.Drawing.Size(260, 44);
+            this.btnCrearViaje.Size = new System.Drawing.Size(246, 44);
             this.btnCrearViaje.TabIndex = 3;
             this.btnCrearViaje.Text = "CREAR NUEVO VIAJE";
             this.btnCrearViaje.UseVisualStyleBackColor = true;
@@ -80,10 +80,10 @@ namespace Cruzeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 326);
-            this.MinimumSize = new System.Drawing.Size(1422, 300);
+            this.ClientSize = new System.Drawing.Size(1301, 353);
             this.Name = "FrmViajesDisponibles";
             this.Text = "Viajes Disponibles";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmViajesDisponibles_Load);
             this.panelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);

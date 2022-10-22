@@ -28,15 +28,6 @@ namespace Cruzeiro
             IniciarCrucero(this.dataGridViewCruceros.Rows[0].Cells[1].Value.ToString());
         }
 
-        private void CargarCruceros()
-        {
-            foreach (Crucero item in Harcodeo.ListaCruceros())
-            {
-                this.dataGridViewCruceros.Rows.Add(item.Nombre,item.Matricula,item.Piscina,item.Gimnsaio,item.CantidadCasinos,item.CantidadCamarotes,
-                    item.CantidadSalones,item.CapacidadBodega.ToString("N3"));
-            }
-        }
-
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -134,6 +125,14 @@ namespace Cruzeiro
             }
         }
 
+        private void CargarCruceros()
+        {
+            foreach (Crucero item in Harcodeo.ListaCruceros())
+            {
+                this.dataGridViewCruceros.Rows.Add(item.Nombre, item.Matricula, item.Piscina, item.Gimnsaio, item.CantidadCasinos, item.CantidadCamarotes,
+                    item.CantidadSalones, item.CapacidadBodega.ToString("N3"));
+            }
+        }
 
         #endregion
 

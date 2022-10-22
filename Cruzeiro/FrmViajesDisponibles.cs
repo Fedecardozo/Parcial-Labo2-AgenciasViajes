@@ -21,11 +21,8 @@ namespace Cruzeiro
 
         private void FrmViajesDisponibles_Load(object sender, EventArgs e)
         {
-
             //Harcodeo.Global();
-
             this.MostrarViajesDisponibles();
-            
 
         }
 
@@ -74,8 +71,7 @@ namespace Cruzeiro
                 base.CargarDataGrid(viajeDisponibles);
             }
         }
-
-
+        
         #endregion
 
         

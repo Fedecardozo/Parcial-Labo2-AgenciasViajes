@@ -27,10 +27,14 @@ namespace Cruzeiro
 
         protected void CargarDataGrid(List<Viaje> listaViajes)
         {
+            Crucero crucero;
             foreach (Viaje viaje in listaViajes)
             {
-                this.dataGridViewViajes.Rows.Add(viaje.Id, viaje.CiudadPartida, viaje.TipoDestino, viaje.FechaInicioViaje, viaje.FechaLlegada, viaje.Crucero.Nombre,
-                    viaje.CantidadTurista, viaje.CantidadPremium, viaje.EstadoViaje.ToString(), viaje.DuracionViaje);
+                crucero = viaje.Crucero;
+
+                this.dataGridViewViajes.Rows.Add(viaje.Id, viaje.CiudadPartida, viaje.TipoDestino, viaje.FechaInicioViaje, viaje.FechaLlegada, viaje.DuracionViaje,
+                    crucero.Nombre,crucero.Gimnsaio,crucero.Piscina,viaje.CapacidadDisponibleBodega.ToString("N3"),crucero.CantidadCasinos,
+                    viaje.CamaroteDisponiblePremium, viaje.CamaroteDisponibleTurista, viaje.EstadoViaje.ToString());
             }
 
             this.idViaje = int.Parse(this.dataGridViewViajes.Rows[0].Cells[0].Value.ToString());

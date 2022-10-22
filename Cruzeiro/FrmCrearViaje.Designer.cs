@@ -36,6 +36,14 @@ namespace Cruzeiro
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.dataGridViewCruceros = new System.Windows.Forms.DataGridView();
+            this.nombreCrucero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.piscina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gym = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantCasino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantCamarotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantSalones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacidadBodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelActulizarFechaDisponible = new System.Windows.Forms.Label();
             this.labelFechaDisponible = new System.Windows.Forms.Label();
@@ -47,14 +55,6 @@ namespace Cruzeiro
             this.btnAtras = new System.Windows.Forms.Button();
             this.labelFecha = new System.Windows.Forms.Label();
             this.dateTimePickerFechaPartida = new System.Windows.Forms.DateTimePicker();
-            this.nombreCrucero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.piscina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gym = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantCasino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantCamarotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantSalones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.capacidadBodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCruceros)).BeginInit();
             this.panel1.SuspendLayout();
@@ -146,6 +146,62 @@ namespace Cruzeiro
             this.dataGridViewCruceros.TabIndex = 1;
             this.dataGridViewCruceros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCruceros_CellContentClick);
             // 
+            // nombreCrucero
+            // 
+            this.nombreCrucero.HeaderText = "Nombre del crucero";
+            this.nombreCrucero.MinimumWidth = 6;
+            this.nombreCrucero.Name = "nombreCrucero";
+            this.nombreCrucero.ReadOnly = true;
+            // 
+            // matricula
+            // 
+            this.matricula.HeaderText = "Matricula";
+            this.matricula.MinimumWidth = 6;
+            this.matricula.Name = "matricula";
+            this.matricula.ReadOnly = true;
+            // 
+            // piscina
+            // 
+            this.piscina.HeaderText = "Piscina";
+            this.piscina.MinimumWidth = 6;
+            this.piscina.Name = "piscina";
+            this.piscina.ReadOnly = true;
+            // 
+            // gym
+            // 
+            this.gym.HeaderText = "Gimnasio";
+            this.gym.MinimumWidth = 6;
+            this.gym.Name = "gym";
+            this.gym.ReadOnly = true;
+            // 
+            // cantCasino
+            // 
+            this.cantCasino.HeaderText = "Cantidad de casinos";
+            this.cantCasino.MinimumWidth = 6;
+            this.cantCasino.Name = "cantCasino";
+            this.cantCasino.ReadOnly = true;
+            // 
+            // cantCamarotes
+            // 
+            this.cantCamarotes.HeaderText = "Cantidad de camarotes";
+            this.cantCamarotes.MinimumWidth = 6;
+            this.cantCamarotes.Name = "cantCamarotes";
+            this.cantCamarotes.ReadOnly = true;
+            // 
+            // cantSalones
+            // 
+            this.cantSalones.HeaderText = "Cantidad de salones";
+            this.cantSalones.MinimumWidth = 6;
+            this.cantSalones.Name = "cantSalones";
+            this.cantSalones.ReadOnly = true;
+            // 
+            // capacidadBodega
+            // 
+            this.capacidadBodega.HeaderText = "Capacidad bodega (Kg)";
+            this.capacidadBodega.MinimumWidth = 6;
+            this.capacidadBodega.Name = "capacidadBodega";
+            this.capacidadBodega.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -167,7 +223,7 @@ namespace Cruzeiro
             this.labelActulizarFechaDisponible.AutoSize = true;
             this.labelActulizarFechaDisponible.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelActulizarFechaDisponible.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelActulizarFechaDisponible.Location = new System.Drawing.Point(145, 23);
+            this.labelActulizarFechaDisponible.Location = new System.Drawing.Point(171, 23);
             this.labelActulizarFechaDisponible.Name = "labelActulizarFechaDisponible";
             this.labelActulizarFechaDisponible.Size = new System.Drawing.Size(101, 22);
             this.labelActulizarFechaDisponible.TabIndex = 6;
@@ -180,9 +236,9 @@ namespace Cruzeiro
             this.labelFechaDisponible.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelFechaDisponible.Location = new System.Drawing.Point(3, 19);
             this.labelFechaDisponible.Name = "labelFechaDisponible";
-            this.labelFechaDisponible.Size = new System.Drawing.Size(130, 26);
+            this.labelFechaDisponible.Size = new System.Drawing.Size(173, 26);
             this.labelFechaDisponible.TabIndex = 5;
-            this.labelFechaDisponible.Text = "Fecha disponible:";
+            this.labelFechaDisponible.Text = "Fecha disponible desde:";
             // 
             // btnCrearViaje
             // 
@@ -272,62 +328,6 @@ namespace Cruzeiro
             this.dateTimePickerFechaPartida.Name = "dateTimePickerFechaPartida";
             this.dateTimePickerFechaPartida.Size = new System.Drawing.Size(128, 27);
             this.dateTimePickerFechaPartida.TabIndex = 0;
-            // 
-            // nombreCrucero
-            // 
-            this.nombreCrucero.HeaderText = "Nombre del crucero";
-            this.nombreCrucero.MinimumWidth = 6;
-            this.nombreCrucero.Name = "nombreCrucero";
-            this.nombreCrucero.ReadOnly = true;
-            // 
-            // matricula
-            // 
-            this.matricula.HeaderText = "Matricula";
-            this.matricula.MinimumWidth = 6;
-            this.matricula.Name = "matricula";
-            this.matricula.ReadOnly = true;
-            // 
-            // piscina
-            // 
-            this.piscina.HeaderText = "Piscina";
-            this.piscina.MinimumWidth = 6;
-            this.piscina.Name = "piscina";
-            this.piscina.ReadOnly = true;
-            // 
-            // gym
-            // 
-            this.gym.HeaderText = "Gimnasio";
-            this.gym.MinimumWidth = 6;
-            this.gym.Name = "gym";
-            this.gym.ReadOnly = true;
-            // 
-            // cantCasino
-            // 
-            this.cantCasino.HeaderText = "Cantidad de casinos";
-            this.cantCasino.MinimumWidth = 6;
-            this.cantCasino.Name = "cantCasino";
-            this.cantCasino.ReadOnly = true;
-            // 
-            // cantCamarotes
-            // 
-            this.cantCamarotes.HeaderText = "Cantidad de camarotes";
-            this.cantCamarotes.MinimumWidth = 6;
-            this.cantCamarotes.Name = "cantCamarotes";
-            this.cantCamarotes.ReadOnly = true;
-            // 
-            // cantSalones
-            // 
-            this.cantSalones.HeaderText = "Cantidad de salones";
-            this.cantSalones.MinimumWidth = 6;
-            this.cantSalones.Name = "cantSalones";
-            this.cantSalones.ReadOnly = true;
-            // 
-            // capacidadBodega
-            // 
-            this.capacidadBodega.HeaderText = "Capacidad bodega (Kg)";
-            this.capacidadBodega.MinimumWidth = 6;
-            this.capacidadBodega.Name = "capacidadBodega";
-            this.capacidadBodega.ReadOnly = true;
             // 
             // FrmCrearViaje
             // 

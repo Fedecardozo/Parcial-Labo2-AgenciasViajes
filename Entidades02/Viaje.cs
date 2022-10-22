@@ -56,8 +56,28 @@ namespace Entidades
 
         #region Propiedades
 
+        public double PesoBodega 
+        { 
+            get
+            {
+                double pesoTotalBodega = 0;
+
+                foreach (Pasajero item in this.listPasajeros)
+                {
+                    pesoTotalBodega += item.Equipaje.Kilosgramos;
+                }
+
+                return pesoTotalBodega;
+            }
+        }
+
+        public double CapacidadDisponibleBodega { get { return this.crucero.CapacidadBodega - this.PesoBodega; } }
+        public int CosteTurista { get { return Viaje.costoTurista; } }
+        public int CostePremium { get { return Viaje.costoPremium; } }
         public int CantidadTurista { get { return this.ContarClaseTurista(); } }
         public int CantidadPremium { get { return this.ContarClasePremium(); } }
+        public int CamaroteDisponibleTurista { get { return this.crucero.CamarotesDisponiblesTurista(this); } }
+        public int CamaroteDisponiblePremium { get { return this.crucero.CamarotesDisponiblesPremium(this); } }
         public DateTime FechaLlegada { get { return this.fechaDeLlegada.Date; } }
         public DateTime FechaInicioViajeDate { get { return this.fechaInicioViaje.Date; } }
         public string FechaInicioViaje { get { return this.FechaInicioViajeDate.ToString("d"); } }

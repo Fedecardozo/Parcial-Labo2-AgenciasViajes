@@ -8,6 +8,8 @@ namespace Entidades
 {
     public class Crucero
     {
+        private const int personaPorCamaratores = 4;
+
         #region Atributos
 
         private string matricula;
@@ -56,6 +58,10 @@ namespace Entidades
 
         public int CantidadCamarotes { get { return this.cantidadCamarotes; } }
 
+        public int  CantidadCamarotesPremium { get { return (this.cantidadCamarotes * 35) / 100; } }
+
+        public int CantidadCamarotesTurista { get { return this.cantidadCamarotes - this.CantidadCamarotesPremium; } }
+
         public int CantidadSalones { get { return this.cantidadSalones; } }
 
         public DateTime FechaDisponible { get { return this.CalcularFechaDisponible(); } }
@@ -93,21 +99,6 @@ namespace Entidades
         public string Nombre { get { return this.nombre; } }
 
         public string Matricula { get { return this.matricula; } }
-
-        /*public EestadoViaje EstadoViaje
-        {
-            get
-            {
-                return this.estadoViaje;
-            }
-
-            set
-            {
-                this.estadoViaje = value;
-            }
-        }*/
-
-        private int CapacidadMaximaPasajeros { get { return this.cantidadCamarotes * 4; } }
 
         #endregion
 
@@ -172,6 +163,16 @@ namespace Entidades
                 }
             }
             return crucero;
+        }
+
+        public int CamarotesDisponiblesTurista(Viaje viaje)
+        { 
+            return  ((this.CantidadCamarotesTurista * Crucero.personaPorCamaratores) - viaje.CantidadTurista)/4;
+        }
+        
+        public int CamarotesDisponiblesPremium(Viaje viaje)
+        {
+            return ((this.CantidadCamarotesPremium * Crucero.personaPorCamaratores) - viaje.CantidadPremium)/4;
         }
 
         #endregion

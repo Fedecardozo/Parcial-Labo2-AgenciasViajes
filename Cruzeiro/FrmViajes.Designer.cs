@@ -31,9 +31,10 @@ namespace Cruzeiro
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnListaPasajeros = new System.Windows.Forms.Button();
             this.dataGridViewViajes = new System.Windows.Forms.DataGridView();
@@ -42,11 +43,15 @@ namespace Cruzeiro
             this.ciudadDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaLlegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreCrucero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pasajerosTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pasajeroPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracionViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCrucero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gimnasio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.piscina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.espacioBodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.casinos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.camaroteDisponiblePremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.camaroteDisponibleTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAtras = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViajes)).BeginInit();
@@ -63,13 +68,13 @@ namespace Cruzeiro
             this.panelContenedor.Controls.Add(this.btnAtras);
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1404, 338);
+            this.panelContenedor.Size = new System.Drawing.Size(1304, 359);
             this.panelContenedor.TabIndex = 0;
             // 
             // btnListaPasajeros
             // 
             this.btnListaPasajeros.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnListaPasajeros.Location = new System.Drawing.Point(462, 282);
+            this.btnListaPasajeros.Location = new System.Drawing.Point(658, 303);
             this.btnListaPasajeros.Name = "btnListaPasajeros";
             this.btnListaPasajeros.Size = new System.Drawing.Size(260, 44);
             this.btnListaPasajeros.TabIndex = 6;
@@ -111,46 +116,50 @@ namespace Cruzeiro
             this.ciudadDestino,
             this.fechaInicio,
             this.fechaLlegada,
+            this.duracionViaje,
             this.nombreCrucero,
-            this.pasajerosTurista,
-            this.pasajeroPremium,
-            this.estadoViaje,
-            this.duracionViaje});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewViajes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gimnasio,
+            this.piscina,
+            this.espacioBodega,
+            this.casinos,
+            this.camaroteDisponiblePremium,
+            this.camaroteDisponibleTurista,
+            this.estadoViaje});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewViajes.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewViajes.EnableHeadersVisualStyles = false;
-            this.dataGridViewViajes.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewViajes.Location = new System.Drawing.Point(3, 0);
             this.dataGridViewViajes.MultiSelect = false;
             this.dataGridViewViajes.Name = "dataGridViewViajes";
             this.dataGridViewViajes.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewViajes.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewViajes.RowHeadersVisible = false;
             this.dataGridViewViajes.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.Format = "d";
-            dataGridViewCellStyle5.NullValue = null;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.dataGridViewViajes.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.Format = "d";
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.dataGridViewViajes.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewViajes.RowTemplate.Height = 29;
             this.dataGridViewViajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewViajes.Size = new System.Drawing.Size(1404, 262);
+            this.dataGridViewViajes.Size = new System.Drawing.Size(1298, 282);
             this.dataGridViewViajes.TabIndex = 0;
             this.dataGridViewViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViajes_CellClick);
             // 
@@ -190,6 +199,13 @@ namespace Cruzeiro
             this.fechaLlegada.Name = "fechaLlegada";
             this.fechaLlegada.ReadOnly = true;
             // 
+            // duracionViaje
+            // 
+            this.duracionViaje.HeaderText = "Duracion del viaje";
+            this.duracionViaje.MinimumWidth = 6;
+            this.duracionViaje.Name = "duracionViaje";
+            this.duracionViaje.ReadOnly = true;
+            // 
             // nombreCrucero
             // 
             this.nombreCrucero.HeaderText = "Nombre de crucero";
@@ -197,19 +213,49 @@ namespace Cruzeiro
             this.nombreCrucero.Name = "nombreCrucero";
             this.nombreCrucero.ReadOnly = true;
             // 
-            // pasajerosTurista
+            // gimnasio
             // 
-            this.pasajerosTurista.HeaderText = "Pasajeros turista";
-            this.pasajerosTurista.MinimumWidth = 6;
-            this.pasajerosTurista.Name = "pasajerosTurista";
-            this.pasajerosTurista.ReadOnly = true;
+            this.gimnasio.HeaderText = "Gimnasio";
+            this.gimnasio.MinimumWidth = 6;
+            this.gimnasio.Name = "gimnasio";
+            this.gimnasio.ReadOnly = true;
             // 
-            // pasajeroPremium
+            // piscina
             // 
-            this.pasajeroPremium.HeaderText = "Pasajero premium";
-            this.pasajeroPremium.MinimumWidth = 6;
-            this.pasajeroPremium.Name = "pasajeroPremium";
-            this.pasajeroPremium.ReadOnly = true;
+            this.piscina.HeaderText = "Piscina";
+            this.piscina.MinimumWidth = 6;
+            this.piscina.Name = "piscina";
+            this.piscina.ReadOnly = true;
+            // 
+            // espacioBodega
+            // 
+            this.espacioBodega.HeaderText = "Espacio disponible bodega";
+            this.espacioBodega.MinimumWidth = 6;
+            this.espacioBodega.Name = "espacioBodega";
+            this.espacioBodega.ReadOnly = true;
+            // 
+            // casinos
+            // 
+            this.casinos.HeaderText = "Casinos";
+            this.casinos.MinimumWidth = 6;
+            this.casinos.Name = "casinos";
+            this.casinos.ReadOnly = true;
+            // 
+            // camaroteDisponiblePremium
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.camaroteDisponiblePremium.DefaultCellStyle = dataGridViewCellStyle3;
+            this.camaroteDisponiblePremium.HeaderText = "Camarotes disponible premium";
+            this.camaroteDisponiblePremium.MinimumWidth = 6;
+            this.camaroteDisponiblePremium.Name = "camaroteDisponiblePremium";
+            this.camaroteDisponiblePremium.ReadOnly = true;
+            // 
+            // camaroteDisponibleTurista
+            // 
+            this.camaroteDisponibleTurista.HeaderText = "Camarotes disponible turista";
+            this.camaroteDisponibleTurista.MinimumWidth = 6;
+            this.camaroteDisponibleTurista.Name = "camaroteDisponibleTurista";
+            this.camaroteDisponibleTurista.ReadOnly = true;
             // 
             // estadoViaje
             // 
@@ -218,17 +264,10 @@ namespace Cruzeiro
             this.estadoViaje.Name = "estadoViaje";
             this.estadoViaje.ReadOnly = true;
             // 
-            // duracionViaje
-            // 
-            this.duracionViaje.HeaderText = "DuracionViaje";
-            this.duracionViaje.MinimumWidth = 6;
-            this.duracionViaje.Name = "duracionViaje";
-            this.duracionViaje.ReadOnly = true;
-            // 
             // btnAtras
             // 
             this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAtras.Location = new System.Drawing.Point(151, 282);
+            this.btnAtras.Location = new System.Drawing.Point(347, 303);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(260, 44);
             this.btnAtras.TabIndex = 5;
@@ -240,7 +279,7 @@ namespace Cruzeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 338);
+            this.ClientSize = new System.Drawing.Size(1304, 359);
             this.Controls.Add(this.panelContenedor);
             this.Name = "FrmViajes";
             this.Text = "FrmViajes";
@@ -251,6 +290,8 @@ namespace Cruzeiro
         }
 
         #endregion
+        protected System.Windows.Forms.Button btnListaPasajeros;
+        protected System.Windows.Forms.Button btnAtras;
         protected System.Windows.Forms.DataGridView dataGridViewViajes;
         protected System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
@@ -258,12 +299,14 @@ namespace Cruzeiro
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDestino;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaLlegada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCrucero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pasajerosTurista;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pasajeroPremium;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracionViaje;
-        protected System.Windows.Forms.Button btnListaPasajeros;
-        protected System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCrucero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gimnasio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn piscina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn espacioBodega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn casinos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn camaroteDisponiblePremium;
+        private System.Windows.Forms.DataGridViewTextBoxColumn camaroteDisponibleTurista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
     }
 }
