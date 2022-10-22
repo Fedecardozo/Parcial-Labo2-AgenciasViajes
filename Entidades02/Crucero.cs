@@ -50,16 +50,26 @@ namespace Entidades
 
         #region Propiedades
 
+        public double CapacidadBodega { get { return this.capacidadBodega; } }
+
+        public int CantidadCasinos { get { return this.cantidadCasino; } }
+
+        public int CantidadCamarotes { get { return this.cantidadCamarotes; } }
+
+        public int CantidadSalones { get { return this.cantidadSalones; } }
+
         public DateTime FechaDisponible { get { return this.CalcularFechaDisponible(); } }
+        
         public List<Viaje> ViajesRealizados { get { return HistorialViajes.ViajesRealizadosPorDeterminadoCrucero(this); } }
+        
         public string Gimnsaio
         {
             get
             {
-                string retorno = "no";
+                string retorno = "No";
 
                 if (this.gimnasio)
-                    retorno = "si";
+                    retorno = "Si";
 
                 return retorno;
             }
@@ -70,10 +80,10 @@ namespace Entidades
         {
             get
             {
-                string retorno = "no";
+                string retorno = "No";
 
                 if (this.piscina)
-                    retorno = "si";
+                    retorno = "Si";
 
                 return retorno;
             }

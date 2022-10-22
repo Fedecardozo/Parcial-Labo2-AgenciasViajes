@@ -36,13 +36,6 @@ namespace Cruzeiro
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.dataGridViewCruceros = new System.Windows.Forms.DataGridView();
-            this.nombreCrucero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.piscina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gym = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantCamarotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantSalones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.capacidadBodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelActulizarFechaDisponible = new System.Windows.Forms.Label();
             this.labelFechaDisponible = new System.Windows.Forms.Label();
@@ -54,6 +47,14 @@ namespace Cruzeiro
             this.btnAtras = new System.Windows.Forms.Button();
             this.labelFecha = new System.Windows.Forms.Label();
             this.dateTimePickerFechaPartida = new System.Windows.Forms.DateTimePicker();
+            this.nombreCrucero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.piscina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gym = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantCasino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantCamarotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantSalones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacidadBodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCruceros)).BeginInit();
             this.panel1.SuspendLayout();
@@ -68,7 +69,7 @@ namespace Cruzeiro
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1234, 363);
+            this.panelContenedor.Size = new System.Drawing.Size(1386, 363);
             this.panelContenedor.TabIndex = 0;
             // 
             // dataGridViewCruceros
@@ -103,6 +104,7 @@ namespace Cruzeiro
             this.matricula,
             this.piscina,
             this.gym,
+            this.cantCasino,
             this.cantCamarotes,
             this.cantSalones,
             this.capacidadBodega});
@@ -140,58 +142,9 @@ namespace Cruzeiro
             this.dataGridViewCruceros.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewCruceros.RowTemplate.Height = 29;
             this.dataGridViewCruceros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCruceros.Size = new System.Drawing.Size(963, 366);
+            this.dataGridViewCruceros.Size = new System.Drawing.Size(1115, 366);
             this.dataGridViewCruceros.TabIndex = 1;
             this.dataGridViewCruceros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCruceros_CellContentClick);
-            // 
-            // nombreCrucero
-            // 
-            this.nombreCrucero.HeaderText = "Nombre de crucero";
-            this.nombreCrucero.MinimumWidth = 6;
-            this.nombreCrucero.Name = "nombreCrucero";
-            this.nombreCrucero.ReadOnly = true;
-            // 
-            // matricula
-            // 
-            this.matricula.HeaderText = "Matricula";
-            this.matricula.MinimumWidth = 6;
-            this.matricula.Name = "matricula";
-            this.matricula.ReadOnly = true;
-            // 
-            // piscina
-            // 
-            this.piscina.HeaderText = "Piscina";
-            this.piscina.MinimumWidth = 6;
-            this.piscina.Name = "piscina";
-            this.piscina.ReadOnly = true;
-            // 
-            // gym
-            // 
-            this.gym.HeaderText = "Gimnasio";
-            this.gym.MinimumWidth = 6;
-            this.gym.Name = "gym";
-            this.gym.ReadOnly = true;
-            // 
-            // cantCamarotes
-            // 
-            this.cantCamarotes.HeaderText = "Cantidad camarotes";
-            this.cantCamarotes.MinimumWidth = 6;
-            this.cantCamarotes.Name = "cantCamarotes";
-            this.cantCamarotes.ReadOnly = true;
-            // 
-            // cantSalones
-            // 
-            this.cantSalones.HeaderText = "Cantidad salones";
-            this.cantSalones.MinimumWidth = 6;
-            this.cantSalones.Name = "cantSalones";
-            this.cantSalones.ReadOnly = true;
-            // 
-            // capacidadBodega
-            // 
-            this.capacidadBodega.HeaderText = "Capacidad bodega";
-            this.capacidadBodega.MinimumWidth = 6;
-            this.capacidadBodega.Name = "capacidadBodega";
-            this.capacidadBodega.ReadOnly = true;
             // 
             // panel1
             // 
@@ -320,11 +273,67 @@ namespace Cruzeiro
             this.dateTimePickerFechaPartida.Size = new System.Drawing.Size(128, 27);
             this.dateTimePickerFechaPartida.TabIndex = 0;
             // 
+            // nombreCrucero
+            // 
+            this.nombreCrucero.HeaderText = "Nombre del crucero";
+            this.nombreCrucero.MinimumWidth = 6;
+            this.nombreCrucero.Name = "nombreCrucero";
+            this.nombreCrucero.ReadOnly = true;
+            // 
+            // matricula
+            // 
+            this.matricula.HeaderText = "Matricula";
+            this.matricula.MinimumWidth = 6;
+            this.matricula.Name = "matricula";
+            this.matricula.ReadOnly = true;
+            // 
+            // piscina
+            // 
+            this.piscina.HeaderText = "Piscina";
+            this.piscina.MinimumWidth = 6;
+            this.piscina.Name = "piscina";
+            this.piscina.ReadOnly = true;
+            // 
+            // gym
+            // 
+            this.gym.HeaderText = "Gimnasio";
+            this.gym.MinimumWidth = 6;
+            this.gym.Name = "gym";
+            this.gym.ReadOnly = true;
+            // 
+            // cantCasino
+            // 
+            this.cantCasino.HeaderText = "Cantidad de casinos";
+            this.cantCasino.MinimumWidth = 6;
+            this.cantCasino.Name = "cantCasino";
+            this.cantCasino.ReadOnly = true;
+            // 
+            // cantCamarotes
+            // 
+            this.cantCamarotes.HeaderText = "Cantidad de camarotes";
+            this.cantCamarotes.MinimumWidth = 6;
+            this.cantCamarotes.Name = "cantCamarotes";
+            this.cantCamarotes.ReadOnly = true;
+            // 
+            // cantSalones
+            // 
+            this.cantSalones.HeaderText = "Cantidad de salones";
+            this.cantSalones.MinimumWidth = 6;
+            this.cantSalones.Name = "cantSalones";
+            this.cantSalones.ReadOnly = true;
+            // 
+            // capacidadBodega
+            // 
+            this.capacidadBodega.HeaderText = "Capacidad bodega (Kg)";
+            this.capacidadBodega.MinimumWidth = 6;
+            this.capacidadBodega.Name = "capacidadBodega";
+            this.capacidadBodega.ReadOnly = true;
+            // 
             // FrmCrearViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 363);
+            this.ClientSize = new System.Drawing.Size(1386, 363);
             this.Controls.Add(this.panelContenedor);
             this.MinimumSize = new System.Drawing.Size(1252, 410);
             this.Name = "FrmCrearViaje";
@@ -346,13 +355,6 @@ namespace Cruzeiro
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCrearViaje;
         private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCrucero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matricula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn piscina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gym;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantCamarotes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantSalones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capacidadBodega;
         private System.Windows.Forms.GroupBox groupBoxDestino;
         private System.Windows.Forms.RadioButton rBtnExtraRegional;
         private System.Windows.Forms.RadioButton rBtnRegional;
@@ -362,5 +364,13 @@ namespace Cruzeiro
         private System.Windows.Forms.DataGridView dataGridViewCruceros;
         private System.Windows.Forms.Label labelActulizarFechaDisponible;
         private System.Windows.Forms.Label labelFechaDisponible;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCrucero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn piscina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gym;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantCasino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantCamarotes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantSalones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capacidadBodega;
     }
 }

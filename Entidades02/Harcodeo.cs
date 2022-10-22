@@ -82,19 +82,19 @@ namespace Entidades
         private static void Cruceros()
         {
             //Crucero 1
-            cruceros.Add(new Crucero("ABC265", "Titanic", 5, 5, 2, 1000, false, true));
+            cruceros.Add(new Crucero("ABC265", "Titanic", 20, 5, 1, 1050, false, false));
             //Crucero 2
-            cruceros.Add(new Crucero("EWK264", "Corsa", 5, 5, 2, 1000, false, true));
+            cruceros.Add(new Crucero("EWK264", "Corsa", 30, 5, 0, 1300, false, true));
             //Crucero 3
-            cruceros.Add(new Crucero("ABC267", "Vento", 5, 5, 2, 1000, false, true));
+            cruceros.Add(new Crucero("ABC267", "Vento", 40, 5, 2, 1500, true, false));
             //Crucero 4
-            cruceros.Add(new Crucero("ABC266", "Sirocco", 5, 5, 2, 1000, false, true));
+            cruceros.Add(new Crucero("ABC266", "Sirocco", 25, 5, 0, 1100, false, true));
             //Crucero 5
-            cruceros.Add(new Crucero("ABC268", "Ferrari", 5, 5, 2, 1000, false, true));
+            cruceros.Add(new Crucero("ABC268", "Ferrari", 35, 5, 1, 1350, true, false));
             //Crucero 6
-            cruceros.Add(new Crucero("ABC269", "Lamborghini", 5, 5, 2, 1000, false, true));
+            cruceros.Add(new Crucero("ABC269", "Lamborghini", 45, 3, 2, 1700, true, true));
             //Crucero 7
-            cruceros.Add(new Crucero("ABC277", "Ataque77", 5, 5, 2, 1000, false, true));
+            cruceros.Add(new Crucero("ABC277", "Ataque77", 50, 5, 4, 2000, true, true));
         }
 
         public static List<Crucero> ListaCruceros()

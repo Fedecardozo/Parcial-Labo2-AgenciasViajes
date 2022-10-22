@@ -32,7 +32,8 @@ namespace Cruzeiro
         {
             foreach (Crucero item in Harcodeo.ListaCruceros())
             {
-                this.dataGridViewCruceros.Rows.Add(item.Nombre,item.Matricula,item.Piscina,item.Gimnsaio,1,1,20);
+                this.dataGridViewCruceros.Rows.Add(item.Nombre,item.Matricula,item.Piscina,item.Gimnsaio,item.CantidadCasinos,item.CantidadCamarotes,
+                    item.CantidadSalones,item.CapacidadBodega.ToString("N3"));
             }
         }
 
@@ -52,6 +53,7 @@ namespace Cruzeiro
             this.CargaRegionalComboBox();
             this.comboBoxDestino.SelectedIndex = 1;
         }
+      
         private void dataGridViewCruceros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int obtenerIndex = this.dataGridViewCruceros.CurrentRow.Index;
@@ -60,6 +62,7 @@ namespace Cruzeiro
 
             this.IniciarCrucero(matricula);
         }
+       
         private void btnCrearViaje_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
