@@ -18,7 +18,7 @@ namespace Entidades
         private double capacidadBodega;
         private bool piscina;
         private bool gimnasio;
-        //private EestadoViaje estadoViaje;
+       // private List<Viaje> viajesRealizados;
         //private Viaje viaje;
 
         #endregion
@@ -49,6 +49,9 @@ namespace Entidades
         #endregion
 
         #region Propiedades
+
+        public DateTime FechaDisponible { get { return this.CalcularFechaDisponible(); } }
+        public List<Viaje> ViajesRealizados { get { return HistorialViajes.ViajesRealizadosPorDeterminadoCrucero(this); } }
         public string Gimnsaio
         {
             get
@@ -112,7 +115,31 @@ namespace Entidades
         #endregion
 
         #region Metodos
+        private DateTime CalcularFechaDisponible()
+        {
+            DateTime fechaLlegadaMayor = DateTime.Now.AddDays(1);
+            DateTime fechaLlegada;
+            int contador = 0;
 
+            foreach (Viaje item in this.ViajesRealizados)
+            {
+                if (item.EstadoViaje == EestadoViaje.Disponible)
+                {
+                    fechaLlegada = item.FechaLlegada;
+
+                    if (contador == 0)
+                    {
+                        fechaLlegadaMayor = fechaLlegada;
+                    }
+                    else if (contador > 0 && fechaLlegada > fechaLlegadaMayor)
+                    {
+                        fechaLlegadaMayor = fechaLlegada;
+                    }
+                    contador++;
+                }
+            }
+            return fechaLlegadaMayor;
+        }
         #endregion
 
         #region Sobreescritura

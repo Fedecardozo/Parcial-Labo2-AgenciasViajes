@@ -9,33 +9,40 @@ namespace Testeer
         static void Main(string[] args)
         {
 
-            /* Harcodeo.Global();
+            Harcodeo.Global();
 
-             if (Validacion.ValidarUsuario(new Usuario("admin", "admin")))
-             {
-                 Console.WriteLine("Viajes disponibles");
+            Crucero crucero = new Crucero("ABC265", "Titanic", 5, 5, 2, 1000, false, true);
+            DateTime fechaLlegadaMayor = DateTime.Now;
+            DateTime fechaLlegada;
+            int contador = 0;
 
-                 #region Viajes Disponibles
-                 foreach (Viaje viaje in Harcodeo.ListaViajes())
-                 {
-                     foreach (Pasajero item in viaje.Pasajeros)
-                     {
-                         Console.WriteLine(item.ToString());
-                     }
+            foreach (Viaje item in crucero.ViajesRealizados)
+            {
+                if (item.EstadoViaje == EestadoViaje.Disponible)
+                {
 
-                     Console.WriteLine("Premium: " + viaje.CantidadPremium);
-                     Console.WriteLine("Turista: " + viaje.CantidadTurista);
+                    fechaLlegada = item.FechaLlegada;
 
-                     break;
+                    Console.WriteLine(item);
 
-                 }
-                 #endregion*/
+                    if(contador == 0)
+                    {
+                        fechaLlegadaMayor = fechaLlegada;
+                    }
+                    else if(contador > 0 && fechaLlegada > fechaLlegadaMayor)
+                    {
+                        fechaLlegadaMayor = fechaLlegada;
+                    }
 
-            string name = "federico cardozo";
+                    Console.WriteLine("Fecha Llegada: " + fechaLlegada.ToString("d"));
+                    Console.WriteLine("");
+                    //Console.WriteLine(fechaLlegada.AddDays(1).ToString("d"));
 
-            string aux = name.Substring(0,1).ToUpper() + name.Substring(1).ToLower();
+                    contador++;
+                }
+            }
 
-            Console.WriteLine(aux);
+            Console.WriteLine(fechaLlegadaMayor.ToString("d"));
 
 
         }

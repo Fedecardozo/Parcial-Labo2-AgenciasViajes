@@ -61,5 +61,21 @@ namespace Entidades
             return viaje;
         }
 
+        public static List<Viaje> ViajesRealizadosPorDeterminadoCrucero(Crucero crucero)
+        {
+            List<Viaje> historial = new List<Viaje>();
+
+            foreach (Viaje item in HistorialViajes.viajes)
+            {
+                if(item.Crucero == crucero)
+                {
+                    historial.Add(item);
+                }
+            }
+
+
+            return historial;
+        }
+
     }
 }
