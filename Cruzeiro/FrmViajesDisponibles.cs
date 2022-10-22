@@ -47,7 +47,14 @@ namespace Cruzeiro
 
         private void btnCrearViaje_Click(object sender, EventArgs e)
         {
+            List<Viaje> viajeDisponibles;
+
             base.MostrarFormularioModal(new FrmCrearViaje());
+
+            if(HistorialViajes.ViajesDiponibles(out viajeDisponibles))
+            {
+                base.ActualizarDataGrid(viajeDisponibles);
+            }
         }
 
         #region Metodos
@@ -65,7 +72,6 @@ namespace Cruzeiro
             else
             {
                 base.CargarDataGrid(viajeDisponibles);
-
             }
         }
 

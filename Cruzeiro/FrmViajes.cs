@@ -56,5 +56,12 @@ namespace Cruzeiro
             
             //dataGridViewViajes.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(209, 227, 254);
         }
+
+        protected void ActualizarDataGrid(List<Viaje> listaViajes)
+        {
+            this.dataGridViewViajes.Rows.Clear();
+            this.CargarDataGrid(listaViajes);
+        }
+
     }
 }

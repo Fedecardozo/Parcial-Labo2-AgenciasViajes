@@ -62,18 +62,15 @@ namespace Cruzeiro
         }
         private void btnCrearViaje_Click(object sender, EventArgs e)
         {
-            if(this.rBtnExtraRegional.Checked)
-            {
-                HistorialViajes.AgregarViaje(new ViajeExtraRegional(this.dateTimePickerFechaPartida.Value,
-                    this.crucero,(EextraRegional)this.comboBoxDestino.SelectedItem));
-            }
-            else if(this.rBtnRegional.Checked)
-            {
-                HistorialViajes.AgregarViaje(new ViajeRegional(this.dateTimePickerFechaPartida.Value,
-                   this.crucero, (Eregional)this.comboBoxDestino.SelectedItem));
-            }
+            DialogResult respuesta;
 
-            MessageBox.Show("Carga exitosa!");
+            this.CrearViaje();
+            respuesta = MessageBox.Show("¿Desea seguir creando viajes?" , "Continuar" , MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if(respuesta == DialogResult.No)
+            {
+                this.Close();
+            }
 
         }
 
@@ -112,6 +109,7 @@ namespace Cruzeiro
             //this.dateTimePickerFechaPartida.Value = this.crucero.FechaDisponible;
             this.dateTimePickerFechaPartida.MinDate = this.crucero.FechaDisponible;
         }
+        
         private void IniciarCrucero(string matricula)
         {
             this.crucero = Crucero.ObtenerCrucero(matricula);
@@ -119,7 +117,19 @@ namespace Cruzeiro
             this.CargarFechaInicio();
         }
 
-
+        private void CrearViaje()
+        {
+            if (this.rBtnExtraRegional.Checked)
+            {
+                HistorialViajes.AgregarViaje(new ViajeExtraRegional(this.dateTimePickerFechaPartida.Value,
+                    this.crucero, (EextraRegional)this.comboBoxDestino.SelectedItem));
+            }
+            else if (this.rBtnRegional.Checked)
+            {
+                HistorialViajes.AgregarViaje(new ViajeRegional(this.dateTimePickerFechaPartida.Value,
+                   this.crucero, (Eregional)this.comboBoxDestino.SelectedItem));
+            }
+        }
 
 
         #endregion
