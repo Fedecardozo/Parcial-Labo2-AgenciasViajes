@@ -34,24 +34,24 @@ namespace Cruzeiro
             // 
             // btnListaPasajeros
             // 
-            this.btnListaPasajeros.Location = new System.Drawing.Point(675, 299);
+            this.btnListaPasajeros.Location = new System.Drawing.Point(748, 304);
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(366, 299);
+            this.btnAtras.Location = new System.Drawing.Point(382, 304);
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Size = new System.Drawing.Size(1300, 360);
+            this.panelContenedor.Location = new System.Drawing.Point(-1, 2);
+            this.panelContenedor.Size = new System.Drawing.Size(1303, 368);
             // 
             // FrmHistorialViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1302, 355);
+            this.ClientSize = new System.Drawing.Size(1302, 371);
             this.Name = "FrmHistorialViajes";
             this.Text = "Historial de viajes";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmHistorialViajes_Load);
             this.panelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -137,6 +137,7 @@ namespace Cruzeiro
             this.dataGridViewViajes.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewViajes.EnableHeadersVisualStyles = false;
             this.dataGridViewViajes.Location = new System.Drawing.Point(3, 0);
+            this.dataGridViewViajes.MinimumSize = new System.Drawing.Size(1298, 282);
             this.dataGridViewViajes.MultiSelect = false;
             this.dataGridViewViajes.Name = "dataGridViewViajes";
             this.dataGridViewViajes.ReadOnly = true;
@@ -283,6 +284,7 @@ namespace Cruzeiro
             this.Controls.Add(this.panelContenedor);
             this.Name = "FrmViajes";
             this.Text = "FrmViajes";
+            this.Load += new System.EventHandler(this.FrmViajes_Load);
             this.panelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViajes)).EndInit();
             this.ResumeLayout(false);
@@ -292,7 +294,6 @@ namespace Cruzeiro
         #endregion
         protected System.Windows.Forms.Button btnListaPasajeros;
         protected System.Windows.Forms.Button btnAtras;
-        protected System.Windows.Forms.DataGridView dataGridViewViajes;
         protected System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadPartida;
@@ -308,5 +309,6 @@ namespace Cruzeiro
         private System.Windows.Forms.DataGridViewTextBoxColumn camaroteDisponiblePremium;
         private System.Windows.Forms.DataGridViewTextBoxColumn camaroteDisponibleTurista;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
+        public System.Windows.Forms.DataGridView dataGridViewViajes;
     }
 }

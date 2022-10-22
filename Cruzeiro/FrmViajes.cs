@@ -67,5 +67,9 @@ namespace Cruzeiro
             this.CargarDataGrid(listaViajes);
         }
 
+        private void FrmViajes_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
