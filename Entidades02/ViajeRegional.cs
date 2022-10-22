@@ -10,20 +10,14 @@ namespace Entidades
     {
         private Eregional destino;
 
-        public ViajeRegional(Eregional destino, DateTime fechaInicioViaje, Crucero crucero, DateTime fechaDeLlegada)
-            : base(fechaInicioViaje, crucero, fechaDeLlegada)
+        public ViajeRegional(Eregional destino, DateTime fechaInicioViaje, Crucero crucero, List<Pasajero> listPasajeros)
+            : this(fechaInicioViaje, crucero,destino)
         {
-            this.destino = destino;
-        }
-
-        public ViajeRegional(Eregional destino, DateTime fechaInicioViaje, Crucero crucero, DateTime fechaDeLlegada, List<Pasajero> listPasajeros)
-            : base(fechaInicioViaje, crucero, fechaDeLlegada, listPasajeros)
-        {
-
+            base.listPasajeros = listPasajeros;
         }
 
         public ViajeRegional(DateTime fechaInicioViaje, Crucero crucero, Eregional destino)
-           : base(fechaInicioViaje, crucero, Aleatorio.FechaLlegadaExtraRegional(fechaInicioViaje))
+           : base(fechaInicioViaje, crucero, Aleatorio.FechaLlegadaRegional(fechaInicioViaje))
         {
             this.destino = destino;
         }

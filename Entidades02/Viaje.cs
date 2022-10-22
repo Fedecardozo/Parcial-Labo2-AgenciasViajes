@@ -16,7 +16,7 @@ namespace Entidades
 
         #region Atributos
         private string ciudadPartida;
-        List<Pasajero> listPasajeros;
+        protected List<Pasajero> listPasajeros;
         private DateTime fechaInicioViaje;
         private DateTime fechaDeLlegada;
         private Crucero crucero;
@@ -50,12 +50,6 @@ namespace Entidades
             this.crucero = crucero;
             this.estadoViaje = this.EstadoViaje;
 
-        }
-
-        public Viaje(DateTime fechaInicioViaje, Crucero crucero, DateTime fechaDeLlegada,List<Pasajero> listPasajeros) 
-            : this(fechaInicioViaje, crucero, fechaDeLlegada)
-        {
-            this.listPasajeros = listPasajeros;
         }
 
         #endregion

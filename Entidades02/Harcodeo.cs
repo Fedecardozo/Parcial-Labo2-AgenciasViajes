@@ -208,12 +208,10 @@ namespace Entidades
                 }
 
                 //Viajes regionales
-                Harcodeo.viajes.Add(new ViajeRegional((Eregional)destinoRegion, fechaRegional,Harcodeo.cruceros[indexCrucero],
-                    Aleatorio.FechaLlegadaRegional(fechaRegional), azarPasajeros));
+                Harcodeo.viajes.Add(new ViajeRegional((Eregional)destinoRegion, fechaRegional,Harcodeo.cruceros[indexCrucero], azarPasajeros));
 
                 //Viajes extra regionales
-                Harcodeo.viajes.Add(new ViajeExtraRegional((EextraRegional)destinoExtra, fechaExtra, Harcodeo.cruceros[indexCruceroExtra],
-                    Aleatorio.FechaLlegadaExtraRegional(fechaExtra), azarPasajeros));
+                Harcodeo.viajes.Add(new ViajeExtraRegional((EextraRegional)destinoExtra, fechaExtra, Harcodeo.cruceros[indexCruceroExtra], azarPasajeros));
             }
 
         }
