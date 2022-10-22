@@ -104,7 +104,7 @@ namespace Entidades
         #region Sobrecarga operadores
         public static bool operator ==(Crucero c1, Crucero c2)
         {
-            return c1.matricula == c2.matricula;
+            return c1 == c2.matricula;
         }
 
         public static bool operator !=(Crucero c1, Crucero c2)
@@ -112,6 +112,15 @@ namespace Entidades
             return !(c1 == c2);
         }
 
+        public static bool operator ==(Crucero c1, string matricula)
+        {
+            return c1.matricula == matricula;
+        }
+
+        public static bool operator !=(Crucero c1, string matricula)
+        {
+            return !(c1 == matricula);
+        }
         #endregion
 
         #region Metodos
@@ -140,6 +149,21 @@ namespace Entidades
             }
             return fechaLlegadaMayor;
         }
+       
+        public static Crucero ObtenerCrucero(string matricula)
+        {
+            Crucero crucero = null;
+            foreach (Crucero item in Harcodeo.ListaCruceros())
+            {
+                if(item == matricula)
+                {
+                    crucero = item;
+                    break;
+                }
+            }
+            return crucero;
+        }
+
         #endregion
 
         #region Sobreescritura

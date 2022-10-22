@@ -52,6 +52,8 @@ namespace Cruzeiro
             this.btnAtras = new System.Windows.Forms.Button();
             this.labelFecha = new System.Windows.Forms.Label();
             this.dateTimePickerFechaPartida = new System.Windows.Forms.DateTimePicker();
+            this.labelFechaDisponible = new System.Windows.Forms.Label();
+            this.labelActulizarFechaDisponible = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCruceros)).BeginInit();
             this.panel1.SuspendLayout();
@@ -140,6 +142,7 @@ namespace Cruzeiro
             this.dataGridViewCruceros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCruceros.Size = new System.Drawing.Size(963, 366);
             this.dataGridViewCruceros.TabIndex = 1;
+            this.dataGridViewCruceros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCruceros_CellContentClick);
             // 
             // nombreCrucero
             // 
@@ -193,6 +196,8 @@ namespace Cruzeiro
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.labelActulizarFechaDisponible);
+            this.panel1.Controls.Add(this.labelFechaDisponible);
             this.panel1.Controls.Add(this.btnCrearViaje);
             this.panel1.Controls.Add(this.groupBoxDestino);
             this.panel1.Controls.Add(this.btnAtras);
@@ -206,7 +211,7 @@ namespace Cruzeiro
             // 
             // btnCrearViaje
             // 
-            this.btnCrearViaje.Location = new System.Drawing.Point(29, 227);
+            this.btnCrearViaje.Location = new System.Drawing.Point(29, 239);
             this.btnCrearViaje.Name = "btnCrearViaje";
             this.btnCrearViaje.Size = new System.Drawing.Size(204, 45);
             this.btnCrearViaje.TabIndex = 3;
@@ -218,7 +223,7 @@ namespace Cruzeiro
             this.groupBoxDestino.Controls.Add(this.rBtnExtraRegional);
             this.groupBoxDestino.Controls.Add(this.rBtnRegional);
             this.groupBoxDestino.Controls.Add(this.comboBoxDestino);
-            this.groupBoxDestino.Location = new System.Drawing.Point(12, 71);
+            this.groupBoxDestino.Location = new System.Drawing.Point(12, 96);
             this.groupBoxDestino.Name = "groupBoxDestino";
             this.groupBoxDestino.Size = new System.Drawing.Size(250, 125);
             this.groupBoxDestino.TabIndex = 4;
@@ -275,7 +280,7 @@ namespace Cruzeiro
             this.labelFecha.AutoSize = true;
             this.labelFecha.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelFecha.Location = new System.Drawing.Point(0, 23);
+            this.labelFecha.Location = new System.Drawing.Point(0, 56);
             this.labelFecha.Name = "labelFecha";
             this.labelFecha.Size = new System.Drawing.Size(130, 26);
             this.labelFecha.TabIndex = 1;
@@ -285,12 +290,34 @@ namespace Cruzeiro
             // 
             this.dateTimePickerFechaPartida.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePickerFechaPartida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFechaPartida.Location = new System.Drawing.Point(137, 23);
+            this.dateTimePickerFechaPartida.Location = new System.Drawing.Point(137, 56);
             this.dateTimePickerFechaPartida.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerFechaPartida.MinDate = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
             this.dateTimePickerFechaPartida.Name = "dateTimePickerFechaPartida";
             this.dateTimePickerFechaPartida.Size = new System.Drawing.Size(128, 27);
             this.dateTimePickerFechaPartida.TabIndex = 0;
+            // 
+            // labelFechaDisponible
+            // 
+            this.labelFechaDisponible.AutoSize = true;
+            this.labelFechaDisponible.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelFechaDisponible.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelFechaDisponible.Location = new System.Drawing.Point(3, 19);
+            this.labelFechaDisponible.Name = "labelFechaDisponible";
+            this.labelFechaDisponible.Size = new System.Drawing.Size(130, 26);
+            this.labelFechaDisponible.TabIndex = 5;
+            this.labelFechaDisponible.Text = "Fecha disponible:";
+            // 
+            // labelActulizarFechaDisponible
+            // 
+            this.labelActulizarFechaDisponible.AutoSize = true;
+            this.labelActulizarFechaDisponible.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelActulizarFechaDisponible.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelActulizarFechaDisponible.Location = new System.Drawing.Point(145, 23);
+            this.labelActulizarFechaDisponible.Name = "labelActulizarFechaDisponible";
+            this.labelActulizarFechaDisponible.Size = new System.Drawing.Size(101, 22);
+            this.labelActulizarFechaDisponible.TabIndex = 6;
+            this.labelActulizarFechaDisponible.Text = "11/12/2022";
             // 
             // FrmCrearViaje
             // 
@@ -332,5 +359,7 @@ namespace Cruzeiro
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaPartida;
         private System.Windows.Forms.DataGridView dataGridViewCruceros;
+        private System.Windows.Forms.Label labelActulizarFechaDisponible;
+        private System.Windows.Forms.Label labelFechaDisponible;
     }
 }

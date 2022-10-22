@@ -13,6 +13,8 @@ namespace Cruzeiro
 {
     public partial class FrmCrearViaje : FrmPadre
     {
+        private Crucero crucero;
+
         public FrmCrearViaje()
         {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace Cruzeiro
             this.CargarCruceros();
             this.CargaExtraRegionalComboBox();
             this.comboBoxDestino.SelectedIndex = 2;
+            IniciarCrucero(this.dataGridViewCruceros.Rows[0].Cells[1].Value.ToString());
         }
 
         private void CargarCruceros()
@@ -40,14 +43,22 @@ namespace Cruzeiro
 
         private void rBtnExtraRegional_CheckedChanged(object sender, EventArgs e)
         {
-            this.comboBoxDestino.SelectedIndex = 1;
             this.CargaExtraRegionalComboBox();
+            this.comboBoxDestino.SelectedIndex = 1;
         }
 
         private void rBtnRegional_CheckedChanged(object sender, EventArgs e)
         {
-            this.comboBoxDestino.SelectedIndex = 1;
             this.CargaRegionalComboBox();
+            this.comboBoxDestino.SelectedIndex = 1;
+        }
+        private void dataGridViewCruceros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int obtenerIndex = this.dataGridViewCruceros.CurrentRow.Index;
+
+            string matricula = this.dataGridViewCruceros.Rows[obtenerIndex].Cells[1].Value.ToString();
+
+            this.IniciarCrucero(matricula);
         }
 
         #region Metodos 
@@ -79,6 +90,23 @@ namespace Cruzeiro
             this.comboBoxDestino.Items.Add(Eregional.Ushuaia);
         }
 
+        private void CargarFechaInicio()
+        {
+            this.labelActulizarFechaDisponible.Text = this.crucero.FechaDisponible.ToString("d");
+            //this.dateTimePickerFechaPartida.Value = this.crucero.FechaDisponible;
+            this.dateTimePickerFechaPartida.MinDate = this.crucero.FechaDisponible;
+        }
+        private void IniciarCrucero(string matricula)
+        {
+            this.crucero = Crucero.ObtenerCrucero(matricula);
+
+            this.CargarFechaInicio();
+        }
+
         #endregion
+
+        
+
+       
     }
 }
