@@ -38,12 +38,15 @@ namespace Cruzeiro
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnListaPasajeros = new System.Windows.Forms.Button();
             this.dataGridViewViajes = new System.Windows.Forms.DataGridView();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaLlegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracionViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costePremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costeTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCrucero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gimnasio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.piscina = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +55,6 @@ namespace Cruzeiro
             this.camaroteDisponiblePremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.camaroteDisponibleTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViajes)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +119,8 @@ namespace Cruzeiro
             this.fechaInicio,
             this.fechaLlegada,
             this.duracionViaje,
+            this.costePremium,
+            this.costeTurista,
             this.nombreCrucero,
             this.gimnasio,
             this.piscina,
@@ -164,6 +168,17 @@ namespace Cruzeiro
             this.dataGridViewViajes.TabIndex = 0;
             this.dataGridViewViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViajes_CellClick);
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAtras.Location = new System.Drawing.Point(347, 303);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(260, 44);
+            this.btnAtras.TabIndex = 5;
+            this.btnAtras.Text = "ATRAS";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // id
             // 
             this.id.HeaderText = "Id";
@@ -206,6 +221,20 @@ namespace Cruzeiro
             this.duracionViaje.MinimumWidth = 6;
             this.duracionViaje.Name = "duracionViaje";
             this.duracionViaje.ReadOnly = true;
+            // 
+            // costePremium
+            // 
+            this.costePremium.HeaderText = "Coste premiun";
+            this.costePremium.MinimumWidth = 6;
+            this.costePremium.Name = "costePremium";
+            this.costePremium.ReadOnly = true;
+            // 
+            // costeTurista
+            // 
+            this.costeTurista.HeaderText = "Coste turista";
+            this.costeTurista.MinimumWidth = 6;
+            this.costeTurista.Name = "costeTurista";
+            this.costeTurista.ReadOnly = true;
             // 
             // nombreCrucero
             // 
@@ -265,17 +294,6 @@ namespace Cruzeiro
             this.estadoViaje.Name = "estadoViaje";
             this.estadoViaje.ReadOnly = true;
             // 
-            // btnAtras
-            // 
-            this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAtras.Location = new System.Drawing.Point(347, 303);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(260, 44);
-            this.btnAtras.TabIndex = 5;
-            this.btnAtras.Text = "ATRAS";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
             // FrmViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
@@ -295,12 +313,15 @@ namespace Cruzeiro
         protected System.Windows.Forms.Button btnListaPasajeros;
         protected System.Windows.Forms.Button btnAtras;
         protected System.Windows.Forms.Panel panelContenedor;
+        public System.Windows.Forms.DataGridView dataGridViewViajes;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDestino;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaLlegada;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracionViaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costePremium;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costeTurista;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCrucero;
         private System.Windows.Forms.DataGridViewTextBoxColumn gimnasio;
         private System.Windows.Forms.DataGridViewTextBoxColumn piscina;
@@ -309,6 +330,5 @@ namespace Cruzeiro
         private System.Windows.Forms.DataGridViewTextBoxColumn camaroteDisponiblePremium;
         private System.Windows.Forms.DataGridViewTextBoxColumn camaroteDisponibleTurista;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
-        public System.Windows.Forms.DataGridView dataGridViewViajes;
     }
 }

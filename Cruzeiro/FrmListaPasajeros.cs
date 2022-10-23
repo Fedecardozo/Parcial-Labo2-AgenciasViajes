@@ -39,5 +39,10 @@ namespace Cruzeiro
                     pasaporte.NumeroPasaporte,equipaje.Valijas,equipaje.BolsoMano,equipaje.Kilosgramos.ToString("N2"));
             }
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

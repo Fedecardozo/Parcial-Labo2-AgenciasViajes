@@ -9,12 +9,13 @@ namespace Entidades
     public abstract class Viaje
     {
         #region Atributos estaticos
-        private static int costoPremium;
-        private static int costoTurista;
         private static int contadorId;
         #endregion
 
         #region Atributos
+
+        protected int costoPremium;
+        protected int costoTurista;
         private string ciudadPartida;
         protected List<Pasajero> listPasajeros;
         private DateTime fechaInicioViaje;
@@ -29,8 +30,6 @@ namespace Entidades
         static Viaje()
         {
             Viaje.contadorId = 1000;
-            Viaje.costoTurista = 57;
-            Viaje.costoPremium = 120;
         }
 
         private Viaje()
@@ -56,6 +55,10 @@ namespace Entidades
 
         #region Propiedades
 
+        public  double CostoPremium { get { return this.costoPremium * this.DuracionViaje; } }
+
+        public  double CostoTurista { get { return this.costoTurista * this.DuracionViaje; } }
+
         public double PesoBodega 
         { 
             get
@@ -72,8 +75,6 @@ namespace Entidades
         }
 
         public double CapacidadDisponibleBodega { get { return this.crucero.CapacidadBodega - this.PesoBodega; } }
-        public int CosteTurista { get { return Viaje.costoTurista; } }
-        public int CostePremium { get { return Viaje.costoPremium; } }
         public int CantidadTurista { get { return this.ContarClaseTurista(); } }
         public int CantidadPremium { get { return this.ContarClasePremium(); } }
         public int CamaroteDisponibleTurista { get { return this.crucero.CamarotesDisponiblesTurista(this); } }
@@ -85,13 +86,13 @@ namespace Entidades
         public string CiudadPartida { get { return this.ciudadPartida; } }
         public List<Pasajero> Pasajeros { get { return this.listPasajeros; } }
         public virtual string TipoDestino { get { return ""; } }
-        public string DuracionViaje 
+        public double DuracionViaje 
         { 
             get 
             {              
                 double duracion = (this.fechaDeLlegada - this.fechaInicioViaje).TotalHours;
                 //return $"Inicio:{this.fechaInicioViaje} \nFin:{this.fechaDeLlegada} \nDuracion:{duracion}"; 
-                return $"{duracion}";
+                return duracion;
             } 
         }
         public int Id { get { return this.id; } }

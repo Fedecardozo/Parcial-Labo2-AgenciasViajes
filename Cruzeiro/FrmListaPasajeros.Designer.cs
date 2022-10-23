@@ -35,6 +35,7 @@ namespace Cruzeiro
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.dataGridViewPasajeros = new System.Windows.Forms.DataGridView();
             this.nombrePasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,12 +52,24 @@ namespace Cruzeiro
             // 
             // panelContenedor
             // 
+            this.panelContenedor.Controls.Add(this.btnAtras);
             this.panelContenedor.Controls.Add(this.dataGridViewPasajeros);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1398, 291);
+            this.panelContenedor.Size = new System.Drawing.Size(1398, 336);
             this.panelContenedor.TabIndex = 0;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAtras.Location = new System.Drawing.Point(571, 282);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(284, 42);
+            this.btnAtras.TabIndex = 2;
+            this.btnAtras.Text = "ATRAS";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // dataGridViewPasajeros
             // 
@@ -68,6 +81,9 @@ namespace Cruzeiro
             dataGridViewCellStyle1.Format = "d";
             dataGridViewCellStyle1.NullValue = null;
             this.dataGridViewPasajeros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewPasajeros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewPasajeros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPasajeros.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewPasajeros.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -103,7 +119,6 @@ namespace Cruzeiro
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewPasajeros.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewPasajeros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewPasajeros.EnableHeadersVisualStyles = false;
             this.dataGridViewPasajeros.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewPasajeros.MultiSelect = false;
@@ -128,7 +143,7 @@ namespace Cruzeiro
             this.dataGridViewPasajeros.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewPasajeros.RowTemplate.Height = 29;
             this.dataGridViewPasajeros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPasajeros.Size = new System.Drawing.Size(1398, 291);
+            this.dataGridViewPasajeros.Size = new System.Drawing.Size(1398, 262);
             this.dataGridViewPasajeros.TabIndex = 1;
             // 
             // nombrePasajero
@@ -198,12 +213,13 @@ namespace Cruzeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1398, 291);
+            this.ClientSize = new System.Drawing.Size(1398, 336);
             this.Controls.Add(this.panelContenedor);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MinimumSize = new System.Drawing.Size(1396, 338);
             this.Name = "FrmListaPasajeros";
             this.Text = "Lista de pasajeros";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmListaPasajeros_Load);
             this.panelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPasajeros)).EndInit();
@@ -224,5 +240,6 @@ namespace Cruzeiro
         private System.Windows.Forms.DataGridViewTextBoxColumn cantBolsos;
         private System.Windows.Forms.DataGridViewTextBoxColumn bolsoMano;
         private System.Windows.Forms.DataGridViewTextBoxColumn kgBolsos;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

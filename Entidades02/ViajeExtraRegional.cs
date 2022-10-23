@@ -20,6 +20,8 @@ namespace Entidades
             : base(fechaInicioViaje, crucero, Aleatorio.FechaLlegadaExtraRegional(fechaInicioViaje))
         {
             this.destino = destino;
+            base.costoTurista = 120;
+            base.costoPremium = base.costoTurista + (base.costoTurista * 20) / 100;
         }
 
         public override string TipoDestino { get { return this.destino.ToString(); } }

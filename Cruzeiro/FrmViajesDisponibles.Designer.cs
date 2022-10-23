@@ -36,12 +36,12 @@ namespace Cruzeiro
             // 
             // btnListaPasajeros
             // 
-            this.btnListaPasajeros.Location = new System.Drawing.Point(376, 297);
+            this.btnListaPasajeros.Location = new System.Drawing.Point(369, 291);
             this.btnListaPasajeros.Size = new System.Drawing.Size(246, 44);
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(75, 297);
+            this.btnAtras.Location = new System.Drawing.Point(68, 291);
             this.btnAtras.Size = new System.Drawing.Size(246, 44);
             // 
             // panelContenedor

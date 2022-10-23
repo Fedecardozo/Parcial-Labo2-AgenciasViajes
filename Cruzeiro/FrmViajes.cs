@@ -32,8 +32,8 @@ namespace Cruzeiro
             {
                 crucero = viaje.Crucero;
 
-                this.dataGridViewViajes.Rows.Add(viaje.Id, viaje.CiudadPartida, viaje.TipoDestino, viaje.FechaInicioViaje, viaje.FechaLlegada, viaje.DuracionViaje,
-                    crucero.Nombre,crucero.Gimnsaio,crucero.Piscina,viaje.CapacidadDisponibleBodega.ToString("N3"),crucero.CantidadCasinos,
+                this.dataGridViewViajes.Rows.Add(viaje.Id, viaje.CiudadPartida, viaje.TipoDestino, viaje.FechaInicioViaje, viaje.FechaLlegada, viaje.DuracionViaje.ToString(),
+                   viaje.CostoPremium.ToString("N2"),viaje.CostoTurista.ToString("N2"),crucero.Nombre,crucero.Gimnsaio,crucero.Piscina,viaje.CapacidadDisponibleBodega.ToString("N3"),crucero.CantidadCasinos,
                     viaje.CamaroteDisponiblePremium, viaje.CamaroteDisponibleTurista, viaje.EstadoViaje.ToString());
             }
 
