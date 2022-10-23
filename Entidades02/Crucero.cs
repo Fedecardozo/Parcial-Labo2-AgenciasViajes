@@ -175,6 +175,8 @@ namespace Entidades
             return ((this.CantidadCamarotesPremium * Crucero.personaPorCamaratores) - viaje.CantidadPremium)/4;
         }
 
+   
+
         #endregion
 
         #region Sobreescritura

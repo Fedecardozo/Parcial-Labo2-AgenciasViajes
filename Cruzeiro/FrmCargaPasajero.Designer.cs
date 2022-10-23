@@ -92,24 +92,26 @@ namespace Cruzeiro
             // rBtnClaseTurista
             // 
             this.rBtnClaseTurista.AutoSize = true;
-            this.rBtnClaseTurista.Checked = true;
             this.rBtnClaseTurista.Location = new System.Drawing.Point(133, 44);
             this.rBtnClaseTurista.Name = "rBtnClaseTurista";
             this.rBtnClaseTurista.Size = new System.Drawing.Size(76, 28);
             this.rBtnClaseTurista.TabIndex = 1;
-            this.rBtnClaseTurista.TabStop = true;
             this.rBtnClaseTurista.Text = "Turista";
             this.rBtnClaseTurista.UseVisualStyleBackColor = true;
+            this.rBtnClaseTurista.CheckedChanged += new System.EventHandler(this.rBtnClaseTurista_CheckedChanged);
             // 
             // rBtnClasePremium
             // 
             this.rBtnClasePremium.AutoSize = true;
+            this.rBtnClasePremium.Checked = true;
             this.rBtnClasePremium.Location = new System.Drawing.Point(6, 44);
             this.rBtnClasePremium.Name = "rBtnClasePremium";
             this.rBtnClasePremium.Size = new System.Drawing.Size(90, 28);
             this.rBtnClasePremium.TabIndex = 0;
+            this.rBtnClasePremium.TabStop = true;
             this.rBtnClasePremium.Text = "Premium";
             this.rBtnClasePremium.UseVisualStyleBackColor = true;
+            this.rBtnClasePremium.CheckedChanged += new System.EventHandler(this.rBtnClasePremium_CheckedChanged);
             // 
             // btnAtras
             // 

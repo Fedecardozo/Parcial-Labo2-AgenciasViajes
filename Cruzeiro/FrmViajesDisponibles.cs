@@ -31,13 +31,13 @@ namespace Cruzeiro
 
             Viaje viaje = HistorialViajes.BuscadorViaje(base.idViaje);
 
-            if (viaje is not null)
+            if (viaje is not null )
             {
                 base.MostrarFormularioModal(new FrmCargaPasajero(viaje));
             }
             else
             {
-                MessageBox.Show("No se puede cargar pasajeros a este viaje","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show($"No se puede cargar pasajeros a este viaje","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
@@ -72,6 +72,8 @@ namespace Cruzeiro
             }
         }
         
+
+
         #endregion
 
         

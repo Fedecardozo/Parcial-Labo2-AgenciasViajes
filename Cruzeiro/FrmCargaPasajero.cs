@@ -41,16 +41,25 @@ namespace Cruzeiro
         private void button1_Click(object sender, EventArgs e)
         {
             string mensaje;
+            DialogResult respuesta;
+            Pasajero pasajero;
 
-            if(this.CrearPasajero(out mensaje))
+            if(this.CrearPasajero(out mensaje, out pasajero))
             {
-                MessageBox.Show($"Le falto completar los siguientes datos: \n{mensaje}","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show($"Errores al intentar cargar el pasajero: \n{mensaje}","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show($"{this.InformacionCostoFinal()}¿Desea cargar pasajero?","Información costo final", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                respuesta = MessageBox.Show($"{this.InformacionCostoFinal()}¿Desea cargar pasajero?","Información costo final", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 //MessageBox.Show("¿Desea seguir cargando pasajeros?", "Carga exitosa!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 //Tengo que validar que se puedan seguir subiendo pasajeros 
+                if(respuesta == DialogResult.Yes)
+                {
+                    this.viaje.AgregarPasajero(pasajero);
+                    MessageBox.Show("Carga Exitosa!","Información carga",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    this.Close();
+                }
+
             }
         }
 
@@ -165,7 +174,7 @@ namespace Cruzeiro
         #endregion
 
         #region Metodos obtener datos 
-        private bool CrearPasajero(out string mensaje)
+        private bool CrearPasajero(out string mensaje, out Pasajero pasajero)
         {
             string nombre = this.textBoxNombre.Text;
             string apellido = this.textBoxApellido.Text;
@@ -186,7 +195,12 @@ namespace Cruzeiro
 
                 Equipaje equipaje = new Equipaje(bolsoMano,pesoValijas, cantValijas);
 
-                this.viaje.AgregarPasajero(new Pasajero(pasaporte,equipaje,this.TipoClase));
+                pasajero = new Pasajero(pasaporte, equipaje, this.TipoClase);
+                //this.viaje.AgregarPasajero(new Pasajero(pasaporte,equipaje,this.TipoClase));
+            }
+            else
+            {
+                pasajero = null;
             }
 
             return retorno;
@@ -237,16 +251,31 @@ namespace Cruzeiro
             bool retorno = false;
             StringBuilder sb = new StringBuilder();
 
+            #region Verificacion si hay lugar para clase turista o clase premium
+
+            if (this.TipoClase == EtipoClase.Premium && this.viaje.CamaroteDisponiblePremium <= 0)
+            {
+                sb.AppendLine("No hay lugar en la clase premium");
+                retorno = true;
+            }
+            else if(this.TipoClase == EtipoClase.Turistica && this.viaje.CamaroteDisponibleTurista <= 0)
+            {
+                sb.AppendLine("No hay lugar en la clase turista");
+                retorno = true;
+            }
+
+            #endregion
+
             #region Nombre y apellido
 
             if (string.IsNullOrWhiteSpace(nombre))
             {
-                sb.AppendLine("Nombre");
+                sb.AppendLine("Nombre (Campo sin completar)");
                 retorno = true;
             }
             if (string.IsNullOrWhiteSpace(apellido))
             {
-                sb.AppendLine("Apellido");
+                sb.AppendLine("Apellido (Campo sin completar)");
                 retorno = true;
             }
             #endregion
@@ -255,7 +284,7 @@ namespace Cruzeiro
 
             if (!(int.TryParse(this.textBoxNroPasaporte.Text, out numeroPasaporte)))
             {
-                sb.AppendLine("Numero Pasaporte (Solo numeros)");
+                sb.AppendLine("Numero Pasaporte (Campo sin completar)");
                 retorno = true;
             }
             else if (numeroPasaporte < 99999999)
@@ -270,7 +299,22 @@ namespace Cruzeiro
 
             if (!(float.TryParse(this.textBoxKg.Text, out pesoValijas)))
             {
-                sb.AppendLine("Peso de valijas");
+                sb.AppendLine("Peso de valijas (Campo sin completar)");
+                retorno = true;
+            }
+            else if(this.rBtnCantidad1.Checked && pesoValijas > 25)
+            {
+                sb.AppendLine("Peso permitido para una valija hasta 25 Kg ");
+                retorno = true;
+            }
+            else if(this.rBtnCantidad2.Checked && pesoValijas > 50)
+            {
+                sb.AppendLine("Peso permitido para dos valijas hasta 50 Kg ");
+                retorno = true;
+            }
+            else if(pesoValijas > viaje.CapacidadDisponibleBodega)
+            {
+                sb.AppendLine("Se sobre pasa el peso permitido de la bodega ");
                 retorno = true;
             }
 
@@ -280,7 +324,7 @@ namespace Cruzeiro
 
             if (!(int.TryParse(this.textBoxNroDni.Text, out numeroDni)))
             {
-                sb.AppendLine("Numero de documento");
+                sb.AppendLine("Numero de documento (Campo sin completar)");
             }
             else if (numeroDni < 999999)
             {
@@ -348,5 +392,19 @@ namespace Cruzeiro
 
         #endregion
 
+        private void rBtnClaseTurista_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.rBtnCantidad2.Checked)
+            {
+                this.rBtnCantidad1.Checked = true;
+            }
+
+            this.rBtnCantidad2.Enabled = false;
+        }
+
+        private void rBtnClasePremium_CheckedChanged(object sender, EventArgs e)
+        {
+            this.rBtnCantidad2.Enabled = true;
+        }
     }
 }

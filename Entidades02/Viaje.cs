@@ -101,6 +101,7 @@ namespace Entidades
         {
             get
             {
+                this.estadoViaje = EestadoViaje.Disponible;
                 //15/09/2022 - 19-10-2022
                 if (this.fechaInicioViaje <= DateTime.Now && this.fechaDeLlegada <= DateTime.Now)
                 {
@@ -110,9 +111,9 @@ namespace Entidades
                 {
                     this.estadoViaje = EestadoViaje.En_Viaje;
                 }
-                else
+                else if(this.CamaroteDisponiblePremium <= 0 && this.CamaroteDisponibleTurista <=0)
                 {
-                    this.estadoViaje = EestadoViaje.Disponible;
+                    this.estadoViaje = EestadoViaje.Completo;
                 }
 
                 return this.estadoViaje;
@@ -162,7 +163,7 @@ namespace Entidades
             }
 
         }
-        
+
         #endregion
 
         #region Sobrecarga operadores
