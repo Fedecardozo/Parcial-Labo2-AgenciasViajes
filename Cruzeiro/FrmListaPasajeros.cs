@@ -35,7 +35,7 @@ namespace Cruzeiro
                 pasaporte = item.Pasaporte;
                 equipaje = item.Equipaje;
 
-                this.dataGridViewPasajeros.Rows.Add(pasaporte.Nombre,pasaporte.Apellido,pasaporte.Dni,pasaporte.FechaNacimiento,pasaporte.Sexo,
+                this.dataGridViewPasajeros.Rows.Add(pasaporte.Nombre,pasaporte.Apellido,pasaporte.Dni,pasaporte.FechaNacimiento,pasaporte.Edad,pasaporte.Sexo,
                     pasaporte.NumeroPasaporte,equipaje.Valijas,equipaje.BolsoMano,equipaje.Kilosgramos.ToString("N2"));
             }
         }

@@ -47,6 +47,7 @@ namespace Entidades
         public long Dni { get { return this.dni; } }
         public DateTime FechaNacimientoDate { get { return this.fechaNacimiento.Date; } }
         public string FechaNacimiento { get { return this.FechaNacimientoDate.ToString("d"); } }
+        public int Edad { get { return DateTime.Today.AddTicks(-this.fechaNacimiento.Ticks).Year - 1; ; } }
 
         #endregion
 

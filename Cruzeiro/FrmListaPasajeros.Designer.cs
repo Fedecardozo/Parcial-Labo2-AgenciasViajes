@@ -41,6 +41,7 @@ namespace Cruzeiro
             this.apellidoPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dniPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaNaciemiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexoPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numPasaporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantBolsos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,6 +105,7 @@ namespace Cruzeiro
             this.apellidoPasajero,
             this.dniPasajero,
             this.fechaNaciemiento,
+            this.edad,
             this.sexoPasajero,
             this.numPasaporte,
             this.cantBolsos,
@@ -174,6 +176,13 @@ namespace Cruzeiro
             this.fechaNaciemiento.Name = "fechaNaciemiento";
             this.fechaNaciemiento.ReadOnly = true;
             // 
+            // edad
+            // 
+            this.edad.HeaderText = "Edad";
+            this.edad.MinimumWidth = 6;
+            this.edad.Name = "edad";
+            this.edad.ReadOnly = true;
+            // 
             // sexoPasajero
             // 
             this.sexoPasajero.HeaderText = "Sexo";
@@ -231,15 +240,16 @@ namespace Cruzeiro
 
         private System.Windows.Forms.Panel panelContenedor;
         protected System.Windows.Forms.DataGridView dataGridViewPasajeros;
+        private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePasajero;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPasajero;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniPasajero;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaNaciemiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexoPasajero;
         private System.Windows.Forms.DataGridViewTextBoxColumn numPasaporte;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantBolsos;
         private System.Windows.Forms.DataGridViewTextBoxColumn bolsoMano;
         private System.Windows.Forms.DataGridViewTextBoxColumn kgBolsos;
-        private System.Windows.Forms.Button btnAtras;
     }
 }
