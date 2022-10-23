@@ -48,7 +48,8 @@ namespace Cruzeiro
             }
             else
             {
-                MessageBox.Show("¿Desea seguir cargando pasajeros?", "Carga exitosa!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                MessageBox.Show($"{this.InformacionCostoFinal()} \n¿Cargar pasajero?","Informe costo final", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                //MessageBox.Show("¿Desea seguir cargando pasajeros?", "Carga exitosa!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 //Tengo que validar que se puedan seguir subiendo pasajeros 
             }
         }
@@ -89,6 +90,8 @@ namespace Cruzeiro
         #endregion
 
         #endregion
+
+        #region Metodos
 
         #region Validacion de textbox Eventos
 
@@ -313,5 +316,36 @@ namespace Cruzeiro
         }
 
         #endregion
+
+        private string InformacionCostoFinal()
+        {
+            StringBuilder sb = new StringBuilder();
+            double costoFinalConIva;
+
+            sb.AppendLine("***** FACTURACIÓN *****");
+            sb.AppendLine($"Nombre: {Persona.ConvertirMayusculaMinuscula(this.textBoxNombre.Text)}");
+            sb.AppendLine($"Apeliido: {Persona.ConvertirMayusculaMinuscula(this.textBoxApellido.Text)}");
+            sb.AppendLine($"Nro Documento: {this.textBoxNroDni.Text}");
+            sb.AppendLine($"Nro Pasaporte: {this.textBoxNroPasaporte.Text}");
+
+            if (this.rBtnClaseTurista.Checked)
+            {
+                costoFinalConIva = this.viaje.CostoTurista + (this.viaje.CostoTurista * 21) / 100;
+
+                sb.AppendLine($"Costo del viaje sin Iva: $ {this.viaje.CostoTurista.ToString("N2")}");
+                sb.AppendLine($"Costo final del viaje con iva: $ {costoFinalConIva.ToString("N2")}");
+            }
+            else if(this.rBtnClasePremium.Checked)
+            {
+                costoFinalConIva = this.viaje.CostoPremium + (this.viaje.CostoPremium * 21) / 100;
+                sb.AppendLine($"Costo del viaje sin Iva: $ {this.viaje.CostoTurista.ToString("N2")}");
+                sb.AppendLine($"Costo final del viaje con iva: $ {costoFinalConIva.ToString("N2")}");
+            }
+
+            return sb.ToString();
+        }
+
+        #endregion
+
     }
 }
