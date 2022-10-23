@@ -315,6 +315,7 @@ namespace Cruzeiro
             else if(pesoValijas > viaje.CapacidadDisponibleBodega)
             {
                 sb.AppendLine("Se sobre pasa el peso permitido de la bodega ");
+                sb.AppendLine($"Peso disponible en la bodega: {this.viaje.CapacidadDisponibleBodega.ToString("N3")}");
                 retorno = true;
             }
 
@@ -392,6 +393,8 @@ namespace Cruzeiro
 
         #endregion
 
+        #region Radio buttons seleccionados eventos
+
         private void rBtnClaseTurista_CheckedChanged(object sender, EventArgs e)
         {
             if(this.rBtnCantidad2.Checked)
@@ -406,5 +409,7 @@ namespace Cruzeiro
         {
             this.rBtnCantidad2.Enabled = true;
         }
+
+        #endregion
     }
 }
