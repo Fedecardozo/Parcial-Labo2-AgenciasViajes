@@ -235,7 +235,6 @@ namespace Cruzeiro
             // 
             // textBoxKg
             // 
-            this.textBoxKg.Enabled = false;
             this.textBoxKg.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxKg.Location = new System.Drawing.Point(13, 114);
             this.textBoxKg.Name = "textBoxKg";

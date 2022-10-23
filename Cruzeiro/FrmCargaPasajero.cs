@@ -48,7 +48,7 @@ namespace Cruzeiro
             }
             else
             {
-                MessageBox.Show($"{this.InformacionCostoFinal()} \n¿Cargar pasajero?","Informe costo final", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                MessageBox.Show($"{this.InformacionCostoFinal()}¿Desea cargar pasajero?","Información costo final", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 //MessageBox.Show("¿Desea seguir cargando pasajeros?", "Carga exitosa!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 //Tengo que validar que se puedan seguir subiendo pasajeros 
             }
@@ -331,14 +331,15 @@ namespace Cruzeiro
             if (this.rBtnClaseTurista.Checked)
             {
                 costoFinalConIva = this.viaje.CostoTurista + (this.viaje.CostoTurista * 21) / 100;
-
+                sb.AppendLine("Clase: TURISTA");
                 sb.AppendLine($"Costo del viaje sin Iva: $ {this.viaje.CostoTurista.ToString("N2")}");
                 sb.AppendLine($"Costo final del viaje con iva: $ {costoFinalConIva.ToString("N2")}");
             }
             else if(this.rBtnClasePremium.Checked)
             {
                 costoFinalConIva = this.viaje.CostoPremium + (this.viaje.CostoPremium * 21) / 100;
-                sb.AppendLine($"Costo del viaje sin Iva: $ {this.viaje.CostoTurista.ToString("N2")}");
+                sb.AppendLine("Clase: PREMIUM");
+                sb.AppendLine($"Costo del viaje sin Iva: $ {this.viaje.CostoPremium.ToString("N2")}");
                 sb.AppendLine($"Costo final del viaje con iva: $ {costoFinalConIva.ToString("N2")}");
             }
 
