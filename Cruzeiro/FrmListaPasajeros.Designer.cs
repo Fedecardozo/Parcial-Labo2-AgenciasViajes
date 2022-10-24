@@ -44,6 +44,7 @@ namespace Cruzeiro
             this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexoPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numPasaporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantBolsos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bolsoMano = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kgBolsos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,6 +109,7 @@ namespace Cruzeiro
             this.edad,
             this.sexoPasajero,
             this.numPasaporte,
+            this.clase,
             this.cantBolsos,
             this.bolsoMano,
             this.kgBolsos});
@@ -197,6 +199,13 @@ namespace Cruzeiro
             this.numPasaporte.Name = "numPasaporte";
             this.numPasaporte.ReadOnly = true;
             // 
+            // clase
+            // 
+            this.clase.HeaderText = "Clase";
+            this.clase.MinimumWidth = 6;
+            this.clase.Name = "clase";
+            this.clase.ReadOnly = true;
+            // 
             // cantBolsos
             // 
             this.cantBolsos.HeaderText = "Cantidad de bolsos";
@@ -248,6 +257,7 @@ namespace Cruzeiro
         private System.Windows.Forms.DataGridViewTextBoxColumn edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexoPasajero;
         private System.Windows.Forms.DataGridViewTextBoxColumn numPasaporte;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clase;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantBolsos;
         private System.Windows.Forms.DataGridViewTextBoxColumn bolsoMano;
         private System.Windows.Forms.DataGridViewTextBoxColumn kgBolsos;

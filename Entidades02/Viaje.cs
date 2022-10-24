@@ -37,6 +37,8 @@ namespace Entidades
             this.listPasajeros = new List<Pasajero>();
             this.ciudadPartida = "Buenos Aires";
             this.estadoViaje = EestadoViaje.Disponible;
+            this.costoTurista = 0;
+            this.costoPremium = 0;
             this.id = Viaje.contadorId;
             Viaje.contadorId++;
         }
@@ -98,13 +100,9 @@ namespace Entidades
         public int Id { get { return this.id; } }
         public double TotalFacturado 
         { 
-            get 
-            {
-                double facturacion = this.CantidadTurista * this.costoTurista;
-                
-                facturacion += this.CantidadPremium * this.costoPremium;
-
-                return facturacion;
+            get
+            { 
+                return this.CantidadTurista * this.CostoTurista + this.CantidadPremium * this.CostoPremium;
             } 
         }
 
