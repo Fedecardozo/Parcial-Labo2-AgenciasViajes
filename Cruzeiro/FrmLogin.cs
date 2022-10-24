@@ -62,7 +62,7 @@ namespace Cruzeiro
             Usuario user;
 
             //MessageBox.Show(Validacion.ValidarUsuario(user).ToString());
-            if (Validacion.ValidarUsuario(this.textBoxUser.Text, this.textBoxPassword.Text,out user) == true)
+            if (Validacion.ValidarUsuario(this.textBoxUser.Text, this.textBoxPassword.Text,out user))
             {
                 //Nuevo formulario con el menu de opciones 
                 this.AbrirMenuUsuario(user);

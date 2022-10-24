@@ -10,7 +10,7 @@ namespace Entidades
     public class Harcodeo
     {
         #region Atributos estaticos
-        private static List<Usuario> usuarios;
+        private static Dictionary<string,Usuario> usuarios;
         private static List<Crucero> cruceros;
         private static List<Viaje> viajes;
         private static List<Pasaporte> pasaportes;
@@ -23,7 +23,7 @@ namespace Entidades
         #region Constructor Estatico
         static Harcodeo()
         {
-            Harcodeo.usuarios = new List<Usuario>();
+            Harcodeo.usuarios = new Dictionary<string, Usuario>();
             Harcodeo.cruceros = new List<Crucero>();
             Harcodeo.viajes = new List<Viaje>();
             Harcodeo.pasaportes = new List<Pasaporte>();
@@ -52,23 +52,27 @@ namespace Entidades
 
         private static Usuario[] Usuarios()
         {
-            Usuario[] usuarios = {new Usuario("admin","admin","Federico","Cardozo"), new Usuario("admin2", "admin2","Gaston","Bizarrap"),
-                new Usuario("admin3","admin3","Nicolas", "Bertolo"),new Usuario("admin4","admin4","Lionel","Messi") };
+            /*Usuario[] usuarios = {new Usuario("admin","admin","Federico","Cardozo"), new Usuario("admin2", "admin2","Gaston","Bizarrap"),
+                new Usuario("admin3","admin3","Nicolas", "Bertolo"),new Usuario("admin4","admin4","Lionel","Messi") };*/
+
+            Usuario[] usuarios = {new Usuario("admin","Federico","Cardozo"), new Usuario("admin2","Gaston","Bizarrap"),
+                new Usuario("admin3","Nicolas", "Bertolo"),new Usuario("admin4","Lionel","Messi") };
 
             return usuarios;
         }
 
         private static void AgregarUsuarios(Usuario[] usuarios)
         {
+            string[] pass = {"admin", "admin2", "admin3", "admin4" };
 
             for (int i = 0; i < usuarios.Length; i++)
             {
-                Harcodeo.usuarios.Add(usuarios[i]);
+                Harcodeo.usuarios.Add(pass[i],usuarios[i]);
             }
 
         }
 
-        public static List<Usuario> ListaUsuarios()
+        public static Dictionary<string, Usuario> ListaUsuarios()
         {
 
             //Cargo los datos

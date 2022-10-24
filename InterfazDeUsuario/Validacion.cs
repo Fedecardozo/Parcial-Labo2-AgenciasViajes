@@ -9,6 +9,7 @@ namespace InterfazDeUsuario
 {
     public static class Validacion
     {
+        /*
         public static bool ValidarUsuario(Usuario user)
         {
             bool retorno = false;
@@ -22,22 +23,22 @@ namespace InterfazDeUsuario
             }
 
             return retorno;
-        }
+        }*/
 
+        /// <summary>
+        /// Valido que el usuario se encuentre en el sistema
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="pass"></param>
+        /// <param name="userAux"></param>
+        /// <returns></returns>
         public static bool ValidarUsuario(string user, string pass, out Usuario userAux)
         {
             bool retorno = false;
-            userAux = null;
 
-            foreach (Usuario item in Harcodeo.ListaUsuarios())
+            if(Harcodeo.ListaUsuarios().TryGetValue(pass, out userAux) && userAux == pass)
             {
-                retorno = item == new Usuario(user, pass);
-
-                if (retorno)
-                {
-                    userAux = item;
-                    break;
-                }
+                retorno = true;
             }
 
             return retorno;

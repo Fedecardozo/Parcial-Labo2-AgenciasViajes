@@ -7,7 +7,7 @@ namespace Entidades
         #region Atributos
 
         private string usuario;
-        private string password;
+        //private string password;
         private string nombre;
         private string apellido;
 
@@ -15,13 +15,13 @@ namespace Entidades
 
         #region Constructores
 
-        public Usuario(string usuario, string password)
+        public Usuario(string usuario)//, string password)
         {
             this.usuario = usuario;
-            this.password = password;
+            //this.password = password;
         }
 
-        public Usuario(string usuario, string password, string nombre,string apellido) :this(usuario,password)
+        public Usuario(string usuario, string nombre,string apellido) :this(usuario)//,password)
         {
             this.nombre = nombre;
             this.apellido = apellido;
@@ -38,16 +38,26 @@ namespace Entidades
         #endregion
 
         #region Sobrecarga operadores
+        public static bool operator ==(Usuario user, string usuario)
+        {
+            return user.usuario == usuario;
+        }
+        public static bool operator !=(Usuario user, string usuario)
+        {
+            return !(user.usuario == usuario);
+        }
+
         public static bool operator ==(Usuario user1, Usuario user2)
         {
-            bool retorno = false;
+            return user1 == user2.usuario;
+            //bool retorno = false;
 
-            if (user1.usuario.CompareTo(user2.usuario) == 0 && user1.password.CompareTo(user2.password) == 0)
+           /* if (user1.usuario.CompareTo(user2.usuario) == 0 )//&& user1.password.CompareTo(user2.password) == 0)
             {
                 retorno = true;
-            }
+            }*/
 
-            return retorno;
+            //return retorno;
             //return user1.usuario.Contains(user2.usuario) && user1.password.Contains(user2.password);
         }
 
