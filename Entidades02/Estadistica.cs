@@ -66,5 +66,33 @@ namespace Entidades
             return sb.ToString();
         }
 
+        public static string ListarGananciasTotalesClasificadas()
+        {
+            StringBuilder sb = new StringBuilder();
+            double gananciaTotalRegional = 0;
+            double gananciaTotalExtraRegional = 0;
+
+
+            foreach (Viaje item in HistorialViajes.HistorialdeViajes)
+            {
+                if(item is ViajeRegional)
+                {
+                    gananciaTotalRegional += item.TotalFacturado;
+                }
+                else if(item is ViajeExtraRegional)
+                {
+                    gananciaTotalExtraRegional += item.TotalFacturado;
+                }
+            }
+
+            sb.AppendLine($"Ganancias totales: ${(gananciaTotalRegional + gananciaTotalExtraRegional).ToString("N3")}");
+            sb.AppendLine("");
+            sb.AppendLine($"Ganancia regional: ${gananciaTotalRegional.ToString("N3")}");
+            sb.AppendLine("");
+            sb.AppendLine($"Ganancia Extra regional: ${gananciaTotalExtraRegional.ToString("N3")}");
+
+            return sb.ToString();
+        }
+
     }
 }

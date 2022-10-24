@@ -33,7 +33,10 @@ namespace Cruzeiro
 
         private void btnGananciasTotales_Click(object sender, EventArgs e)
         {
+            FrmInformacionEstadistica frmInfo = new FrmInformacionEstadistica("Ganancias totales clasificadas por servicio (region / extra regional)",
+                Estadistica.ListarGananciasTotalesClasificadas());
 
+            frmInfo.ShowDialog();
         }
 
         private void btnHorasCrucero_Click(object sender, EventArgs e)

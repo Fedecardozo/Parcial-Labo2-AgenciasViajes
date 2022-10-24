@@ -57,6 +57,7 @@ namespace Cruzeiro
             // 
             // textBoxInformacion
             // 
+            this.textBoxInformacion.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxInformacion.Location = new System.Drawing.Point(12, 12);
             this.textBoxInformacion.Multiline = true;
             this.textBoxInformacion.Name = "textBoxInformacion";
