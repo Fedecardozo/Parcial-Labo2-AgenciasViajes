@@ -13,11 +13,14 @@ namespace Cruzeiro
 {
     public partial class FrmHistorialViajes : FrmViajes
     {
-        public FrmHistorialViajes()
+        private FrmHistorialViajes()
         {
             InitializeComponent();
         }
-
+        public FrmHistorialViajes(Usuario usuario) : this()
+        {
+            base.usuario = usuario;
+        }
         private void FrmHistorialViajes_Load(object sender, EventArgs e)
         {
             base.CargarDataGrid(HistorialViajes.HistorialdeViajes);

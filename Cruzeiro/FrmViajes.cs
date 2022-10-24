@@ -15,11 +15,15 @@ namespace Cruzeiro
     {
 
         protected int idViaje;
+        protected Usuario usuario;
         public FrmViajes()
         {
             InitializeComponent();
         }
-
+        public FrmViajes(Usuario usuario) : this()
+        {
+            this.usuario = usuario;
+        }
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -69,7 +73,8 @@ namespace Cruzeiro
 
         private void FrmViajes_Load(object sender, EventArgs e)
         {
-            
+            this.labelNameOperador.Text = this.usuario.Nombre + " " + this.usuario.Apellido;
+            this.labelFechaActual.Text = DateTime.Now.ToString("D");
         }
     }
 }

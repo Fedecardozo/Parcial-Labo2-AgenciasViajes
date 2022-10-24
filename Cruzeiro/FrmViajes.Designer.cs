@@ -38,7 +38,6 @@ namespace Cruzeiro
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnListaPasajeros = new System.Windows.Forms.Button();
             this.dataGridViewViajes = new System.Windows.Forms.DataGridView();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,8 +54,15 @@ namespace Cruzeiro
             this.camaroteDisponiblePremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.camaroteDisponibleTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.panelInformacion = new System.Windows.Forms.Panel();
+            this.labelFechaActual = new System.Windows.Forms.Label();
+            this.labelFecha = new System.Windows.Forms.Label();
+            this.labelNameOperador = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViajes)).BeginInit();
+            this.panelInformacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenedor
@@ -70,13 +76,13 @@ namespace Cruzeiro
             this.panelContenedor.Controls.Add(this.btnAtras);
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1304, 359);
+            this.panelContenedor.Size = new System.Drawing.Size(1304, 389);
             this.panelContenedor.TabIndex = 0;
             // 
             // btnListaPasajeros
             // 
             this.btnListaPasajeros.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnListaPasajeros.Location = new System.Drawing.Point(658, 303);
+            this.btnListaPasajeros.Location = new System.Drawing.Point(654, 328);
             this.btnListaPasajeros.Name = "btnListaPasajeros";
             this.btnListaPasajeros.Size = new System.Drawing.Size(260, 44);
             this.btnListaPasajeros.TabIndex = 6;
@@ -164,20 +170,9 @@ namespace Cruzeiro
             this.dataGridViewViajes.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewViajes.RowTemplate.Height = 29;
             this.dataGridViewViajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewViajes.Size = new System.Drawing.Size(1298, 282);
+            this.dataGridViewViajes.Size = new System.Drawing.Size(1298, 312);
             this.dataGridViewViajes.TabIndex = 0;
             this.dataGridViewViajes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewViajes_CellClick);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAtras.Location = new System.Drawing.Point(347, 303);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(260, 44);
-            this.btnAtras.TabIndex = 5;
-            this.btnAtras.Text = "ATRAS";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // id
             // 
@@ -294,17 +289,88 @@ namespace Cruzeiro
             this.estadoViaje.Name = "estadoViaje";
             this.estadoViaje.ReadOnly = true;
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAtras.Location = new System.Drawing.Point(352, 328);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(260, 44);
+            this.btnAtras.TabIndex = 5;
+            this.btnAtras.Text = "ATRAS";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // panelInformacion
+            // 
+            this.panelInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panelInformacion.Controls.Add(this.labelFechaActual);
+            this.panelInformacion.Controls.Add(this.labelFecha);
+            this.panelInformacion.Controls.Add(this.labelNameOperador);
+            this.panelInformacion.Controls.Add(this.labelNombre);
+            this.panelInformacion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelInformacion.Location = new System.Drawing.Point(0, 392);
+            this.panelInformacion.Name = "panelInformacion";
+            this.panelInformacion.Size = new System.Drawing.Size(1304, 29);
+            this.panelInformacion.TabIndex = 1;
+            // 
+            // labelFechaActual
+            // 
+            this.labelFechaActual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFechaActual.AutoSize = true;
+            this.labelFechaActual.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.labelFechaActual.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelFechaActual.Location = new System.Drawing.Point(1152, 0);
+            this.labelFechaActual.Name = "labelFechaActual";
+            this.labelFechaActual.Size = new System.Drawing.Size(88, 24);
+            this.labelFechaActual.TabIndex = 3;
+            this.labelFechaActual.Text = "23/10/2022";
+            // 
+            // labelFecha
+            // 
+            this.labelFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFecha.AutoSize = true;
+            this.labelFecha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelFecha.Location = new System.Drawing.Point(1055, 0);
+            this.labelFecha.Name = "labelFecha";
+            this.labelFecha.Size = new System.Drawing.Size(91, 24);
+            this.labelFecha.TabIndex = 2;
+            this.labelFecha.Text = "Fecha actual:";
+            // 
+            // labelNameOperador
+            // 
+            this.labelNameOperador.AutoSize = true;
+            this.labelNameOperador.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.labelNameOperador.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelNameOperador.Location = new System.Drawing.Point(147, 0);
+            this.labelNameOperador.Name = "labelNameOperador";
+            this.labelNameOperador.Size = new System.Drawing.Size(125, 24);
+            this.labelNameOperador.TabIndex = 1;
+            this.labelNameOperador.Text = "Federico Cardozo";
+            // 
+            // labelNombre
+            // 
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelNombre.Location = new System.Drawing.Point(12, 0);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(129, 24);
+            this.labelNombre.TabIndex = 0;
+            this.labelNombre.Text = "Nombre operador:";
+            // 
             // FrmViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1304, 359);
+            this.ClientSize = new System.Drawing.Size(1304, 421);
+            this.Controls.Add(this.panelInformacion);
             this.Controls.Add(this.panelContenedor);
             this.Name = "FrmViajes";
             this.Text = "FrmViajes";
             this.Load += new System.EventHandler(this.FrmViajes_Load);
             this.panelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewViajes)).EndInit();
+            this.panelInformacion.ResumeLayout(false);
+            this.panelInformacion.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -330,5 +396,10 @@ namespace Cruzeiro
         private System.Windows.Forms.DataGridViewTextBoxColumn camaroteDisponiblePremium;
         private System.Windows.Forms.DataGridViewTextBoxColumn camaroteDisponibleTurista;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoViaje;
+        private System.Windows.Forms.Panel panelInformacion;
+        private System.Windows.Forms.Label labelFechaActual;
+        private System.Windows.Forms.Label labelFecha;
+        private System.Windows.Forms.Label labelNameOperador;
+        private System.Windows.Forms.Label labelNombre;
     }
 }
