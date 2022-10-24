@@ -39,17 +39,13 @@ namespace Cruzeiro
             // 
             // btnListaPasajeros
             // 
-            this.btnListaPasajeros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnListaPasajeros.Location = new System.Drawing.Point(208, 357);
-            this.btnListaPasajeros.Size = new System.Drawing.Size(190, 44);
+            this.btnListaPasajeros.Location = new System.Drawing.Point(193, 357);
+            this.btnListaPasajeros.Size = new System.Drawing.Size(205, 44);
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Location = new System.Drawing.Point(3, 357);
-            this.btnAtras.Size = new System.Drawing.Size(190, 44);
+            this.btnAtras.Size = new System.Drawing.Size(184, 44);
             // 
             // panelContenedor
             // 
@@ -72,58 +68,58 @@ namespace Cruzeiro
             // 
             // btnDestinos
             // 
-            this.btnDestinos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDestinos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDestinos.Location = new System.Drawing.Point(611, 357);
             this.btnDestinos.Name = "btnDestinos";
             this.btnDestinos.Size = new System.Drawing.Size(190, 44);
             this.btnDestinos.TabIndex = 7;
             this.btnDestinos.Text = "DESTINOS ORDENADOS";
             this.btnDestinos.UseVisualStyleBackColor = true;
+            this.btnDestinos.Click += new System.EventHandler(this.btnDestinos_Click);
             // 
             // btnPasajeroFrecuentes
             // 
-            this.btnPasajeroFrecuentes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPasajeroFrecuentes.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnPasajeroFrecuentes.Location = new System.Drawing.Point(1199, 357);
             this.btnPasajeroFrecuentes.Name = "btnPasajeroFrecuentes";
             this.btnPasajeroFrecuentes.Size = new System.Drawing.Size(190, 44);
             this.btnPasajeroFrecuentes.TabIndex = 8;
             this.btnPasajeroFrecuentes.Text = "PASAJEROS FRECUENTES";
             this.btnPasajeroFrecuentes.UseVisualStyleBackColor = true;
+            this.btnPasajeroFrecuentes.Click += new System.EventHandler(this.btnPasajeroFrecuentes_Click);
             // 
             // btnHorasCrucero
             // 
-            this.btnHorasCrucero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHorasCrucero.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnHorasCrucero.Location = new System.Drawing.Point(1003, 357);
             this.btnHorasCrucero.Name = "btnHorasCrucero";
             this.btnHorasCrucero.Size = new System.Drawing.Size(190, 44);
             this.btnHorasCrucero.TabIndex = 9;
             this.btnHorasCrucero.Text = "HORAS CRUCEROS";
             this.btnHorasCrucero.UseVisualStyleBackColor = true;
+            this.btnHorasCrucero.Click += new System.EventHandler(this.btnHorasCrucero_Click);
             // 
             // btnDestinoMasPedido
             // 
-            this.btnDestinoMasPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDestinoMasPedido.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDestinoMasPedido.Location = new System.Drawing.Point(404, 357);
             this.btnDestinoMasPedido.Name = "btnDestinoMasPedido";
             this.btnDestinoMasPedido.Size = new System.Drawing.Size(190, 44);
             this.btnDestinoMasPedido.TabIndex = 10;
             this.btnDestinoMasPedido.Text = "DESTINO MÁS PEDIDO";
             this.btnDestinoMasPedido.UseVisualStyleBackColor = true;
+            this.btnDestinoMasPedido.Click += new System.EventHandler(this.btnDestinoMasPedido_Click);
             // 
             // btnGananciasTotales
             // 
-            this.btnGananciasTotales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGananciasTotales.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGananciasTotales.Location = new System.Drawing.Point(807, 357);
             this.btnGananciasTotales.Name = "btnGananciasTotales";
             this.btnGananciasTotales.Size = new System.Drawing.Size(190, 44);
             this.btnGananciasTotales.TabIndex = 11;
             this.btnGananciasTotales.Text = "GANANCIAS TOTALES";
             this.btnGananciasTotales.UseVisualStyleBackColor = true;
+            this.btnGananciasTotales.Click += new System.EventHandler(this.btnGananciasTotales_Click);
             // 
             // FrmEstadisticaHistoricas
             // 
@@ -132,7 +128,7 @@ namespace Cruzeiro
             this.ClientSize = new System.Drawing.Size(1401, 450);
             this.MinimumSize = new System.Drawing.Size(1419, 497);
             this.Name = "FrmEstadisticaHistoricas";
-            this.Text = "FrmEstadisticaHistoricas";
+            this.Text = "Estadisticas Historicas";
             this.panelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
