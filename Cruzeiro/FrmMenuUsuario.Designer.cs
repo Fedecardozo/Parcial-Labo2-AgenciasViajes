@@ -198,6 +198,7 @@ namespace Cruzeiro
             this.btnDatosHistoricos.TabIndex = 2;
             this.btnDatosHistoricos.Text = "DATOS HISTORICOS";
             this.btnDatosHistoricos.UseVisualStyleBackColor = true;
+            this.btnDatosHistoricos.Click += new System.EventHandler(this.btnDatosHistoricos_Click);
             // 
             // btnListaViajes
             // 

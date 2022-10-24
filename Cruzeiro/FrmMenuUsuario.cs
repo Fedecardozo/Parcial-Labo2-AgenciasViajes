@@ -99,5 +99,10 @@ namespace Cruzeiro
         }
 
         #endregion
+
+        private void btnDatosHistoricos_Click(object sender, EventArgs e)
+        {
+            base.MostrarFormularioModal(new FrmEstadisticaHistoricas());
+        }
     }
 }

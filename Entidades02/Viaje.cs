@@ -96,6 +96,17 @@ namespace Entidades
             } 
         }
         public int Id { get { return this.id; } }
+        public double TotalFacturado 
+        { 
+            get 
+            {
+                double facturacion = this.CantidadTurista * this.costoTurista;
+                
+                facturacion += this.CantidadPremium * this.costoPremium;
+
+                return facturacion;
+            } 
+        }
 
         public EestadoViaje EstadoViaje
         {
