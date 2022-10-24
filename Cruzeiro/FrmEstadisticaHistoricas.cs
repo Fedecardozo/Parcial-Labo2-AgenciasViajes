@@ -20,37 +20,36 @@ namespace Cruzeiro
 
         private void btnDestinoMasPedido_Click(object sender, EventArgs e)
         {
-
+            this.InstanciarFormInfoEstadistica("Destino más pedido",Estadistica.MostrarDestinosMasPedido());
         }
 
         private void btnDestinos_Click(object sender, EventArgs e)
         {
-            FrmInformacionEstadistica frmInfo = new FrmInformacionEstadistica("Destinos ordenador por facturación de forma descendente",
+            this.InstanciarFormInfoEstadistica("Destinos ordenador por facturación de forma descendente",
                 Estadistica.ListarDestinosPorFacturacion(HistorialViajes.HistorialdeViajes));
-
-            frmInfo.ShowDialog();
         }
 
         private void btnGananciasTotales_Click(object sender, EventArgs e)
         {
-            FrmInformacionEstadistica frmInfo = new FrmInformacionEstadistica("Ganancias totales clasificadas por servicio (region / extra regional)",
+            this.InstanciarFormInfoEstadistica("Ganancias totales clasificadas por servicio (region / extra regional)",
                 Estadistica.ListarGananciasTotalesClasificadas());
-
-            frmInfo.ShowDialog();
         }
 
         private void btnHorasCrucero_Click(object sender, EventArgs e)
         {
-            FrmInformacionEstadistica frmInfo = new FrmInformacionEstadistica("Horas de viaje de cada crucero",
+            this.InstanciarFormInfoEstadistica("Horas de viaje de cada crucero",
                 Estadistica.HorasViajesCruceros());
-
-            frmInfo.ShowDialog();
         }
 
         private void btnPasajeroFrecuentes_Click(object sender, EventArgs e)
         {
-            FrmInformacionEstadistica frmInfo = new FrmInformacionEstadistica("Pasajeros más frecuentes ordenados por cantidad de viajes",
+            this.InstanciarFormInfoEstadistica("Pasajeros más frecuentes ordenados por cantidad de viajes",
                 Estadistica.ListarPasajeroFrecuentes());
+        }
+
+        private void InstanciarFormInfoEstadistica(string titulo, string info)
+        {
+            FrmInformacionEstadistica frmInfo = new FrmInformacionEstadistica(titulo,info);
 
             frmInfo.ShowDialog();
         }

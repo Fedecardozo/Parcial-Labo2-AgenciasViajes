@@ -82,19 +82,19 @@ namespace Entidades
         private static void Cruceros()
         {
             //Crucero 1
-            cruceros.Add(new Crucero("ABC265", "Titanic", 20, 5, 1, 1050, false, false));
+            cruceros.Add(new Crucero("ABC265FF", "Titanic", 20, 5, 1, 1050, false, false));
             //Crucero 2
-            cruceros.Add(new Crucero("EWK264", "Corsa", 30, 5, 0, 1300, false, true));
+            cruceros.Add(new Crucero("EWK264AA", "Corsa", 30, 5, 0, 1300, false, true));
             //Crucero 3
-            cruceros.Add(new Crucero("ABC267", "Vento", 40, 5, 2, 1500, true, false));
+            cruceros.Add(new Crucero("ABC267HH", "Vento", 40, 5, 2, 1500, true, false));
             //Crucero 4
-            cruceros.Add(new Crucero("ABC266", "Sirocco", 25, 5, 0, 1100, false, true));
+            cruceros.Add(new Crucero("ABC266JJ", "Sirocco", 25, 5, 0, 1100, false, true));
             //Crucero 5
-            cruceros.Add(new Crucero("ABC268", "Ferrari", 35, 5, 1, 1350, true, false));
+            cruceros.Add(new Crucero("ABC268SD", "Ferrari", 35, 5, 1, 1350, true, false));
             //Crucero 6
-            cruceros.Add(new Crucero("ABC269", "Lamborghini", 45, 3, 2, 1700, true, true));
+            cruceros.Add(new Crucero("ABC269AF", "Lamborghini", 45, 3, 2, 1700, true, true));
             //Crucero 7
-            cruceros.Add(new Crucero("ABC277", "Ataque77", 50, 5, 4, 2000, true, true));
+            cruceros.Add(new Crucero("ABC277SW", "Ataque77", 50, 5, 4, 2000, true, true));
         }
 
         public static List<Crucero> ListaCruceros()
@@ -194,7 +194,7 @@ namespace Entidades
             {
                 fechaRegional = Aleatorio.FechaInicio();
                 fechaExtra = Aleatorio.FechaInicio();
-                indexCrucero = Aleatorio.Azar(0,6);
+                indexCrucero = Aleatorio.Azar(0,7);
                 indexCruceroExtra = Aleatorio.Azar(0, 6);
                 destinoRegion = Aleatorio.Azar(0,9);
                 destinoExtra = Aleatorio.Azar(0, 7);

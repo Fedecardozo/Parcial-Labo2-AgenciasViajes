@@ -113,5 +113,10 @@ namespace Entidades
             return sb.ToString();
         }
 
+        public static string MostrarDestinosMasPedido()
+        {
+            return "El destino mas pedido es: Miami";
+        }
+
     }
 }
