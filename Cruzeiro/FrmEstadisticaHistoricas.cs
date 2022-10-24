@@ -43,7 +43,10 @@ namespace Cruzeiro
 
         private void btnPasajeroFrecuentes_Click(object sender, EventArgs e)
         {
+            FrmInformacionEstadistica frmInfo = new FrmInformacionEstadistica("Pasajeros más frecuentes ordenados por cantidad de viajes",
+                Estadistica.ListarPasajeroFrecuentes());
 
+            frmInfo.ShowDialog();
         }
     }
 }

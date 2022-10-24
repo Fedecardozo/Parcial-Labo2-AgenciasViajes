@@ -60,6 +60,7 @@ namespace Cruzeiro
             this.textBoxInformacion.Location = new System.Drawing.Point(12, 12);
             this.textBoxInformacion.Multiline = true;
             this.textBoxInformacion.Name = "textBoxInformacion";
+            this.textBoxInformacion.ReadOnly = true;
             this.textBoxInformacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxInformacion.Size = new System.Drawing.Size(690, 347);
             this.textBoxInformacion.TabIndex = 0;

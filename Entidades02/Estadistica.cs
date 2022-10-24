@@ -41,5 +41,30 @@ namespace Entidades
 
             return destinos.ToString();
         }
+    
+        public static string ListarPasajeroFrecuentes()
+        {
+            StringBuilder sb = new StringBuilder();
+            Viaje viaje = HistorialViajes.HistorialdeViajes[0];
+            int min = 5;
+            int max = 8;
+
+            sb.AppendLine($"Pasajeros frecuentes: ");
+            sb.AppendLine("");
+
+            foreach (Pasajero pasajero in viaje.Pasajeros)
+            {
+                sb.AppendLine($"Nombre: {pasajero.Pasaporte.Nombre}");
+                sb.AppendLine($"Apellido: {pasajero.Pasaporte.Apellido}");
+                sb.AppendLine($"DNI: {pasajero.Pasaporte.Dni}");
+                sb.AppendLine($"Cantidad de viajes: {Aleatorio.Azar(min,max)}");
+                sb.AppendLine("");
+                
+                min++; max++;
+            }
+
+            return sb.ToString();
+        }
+
     }
 }
