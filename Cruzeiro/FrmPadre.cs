@@ -43,7 +43,9 @@ namespace Cruzeiro
             form.ShowDialog();
 
             this.Show();
+            
         }
+
 
     }
 

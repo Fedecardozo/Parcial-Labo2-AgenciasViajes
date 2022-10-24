@@ -364,6 +364,7 @@ namespace Cruzeiro
             this.ClientSize = new System.Drawing.Size(1304, 421);
             this.Controls.Add(this.panelInformacion);
             this.Controls.Add(this.panelContenedor);
+            this.MinimumSize = new System.Drawing.Size(1322, 468);
             this.Name = "FrmViajes";
             this.Text = "FrmViajes";
             this.Load += new System.EventHandler(this.FrmViajes_Load);

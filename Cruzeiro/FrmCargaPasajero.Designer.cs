@@ -589,7 +589,7 @@ namespace Cruzeiro
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 510);
             this.Controls.Add(this.panelContenedor);
-            this.MinimumSize = new System.Drawing.Size(642, 500);
+            this.MinimumSize = new System.Drawing.Size(644, 557);
             this.Name = "FrmCargaPasajero";
             this.Text = "Carga de pasajero";
             this.Load += new System.EventHandler(this.FrmCargaPasajero_Load);

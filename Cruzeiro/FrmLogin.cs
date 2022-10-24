@@ -79,9 +79,15 @@ namespace Cruzeiro
             this.Hide();
 
             FrmMenuUsuario frmMenuUsuario = new FrmMenuUsuario(user);
+            //frmMenuUsuario.Show();
+
             frmMenuUsuario.ShowDialog();
 
+            this.textBoxPassword.Clear();
+            this.textBoxUser.Clear();
+            
             this.Show();
+
         }
 
         #endregion

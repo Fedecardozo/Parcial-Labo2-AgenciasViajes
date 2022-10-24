@@ -79,7 +79,7 @@ namespace Cruzeiro
         #region Botones
 
         private void btnSalir_Click(object sender, EventArgs e)
-        {
+        {   
             this.Close();
         }
 
