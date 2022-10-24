@@ -44,6 +44,7 @@ namespace Entidades
             Harcodeo.Pasaportes();
             Harcodeo.Equipaje();
             Harcodeo.Pasajeros();
+            Harcodeo.AgregarUsuarios();
         }
 
         #endregion
@@ -61,13 +62,15 @@ namespace Entidades
             return usuarios;
         }
 
-        private static void AgregarUsuarios(Usuario[] usuarios)
+        private static void AgregarUsuarios()
         {
             string[] pass = {"admin", "admin2", "admin3", "admin4" };
+            Usuario[] usuarios = Harcodeo.Usuarios();
 
             for (int i = 0; i < usuarios.Length; i++)
             {
                 Harcodeo.usuarios.Add(pass[i],usuarios[i]);
+                Console.WriteLine(pass[i]);
             }
 
         }
@@ -76,7 +79,7 @@ namespace Entidades
         {
 
             //Cargo los datos
-            Harcodeo.AgregarUsuarios(Harcodeo.Usuarios());
+            //Harcodeo.AgregarUsuarios(Harcodeo.Usuarios());
 
             return Harcodeo.usuarios;
 

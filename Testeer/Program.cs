@@ -8,6 +8,7 @@ namespace Testeer
     {
         static void Main(string[] args)
         {
+            Harcodeo.Global();
 
            /* Usuario user = new Usuario("admin","fede","cardozo");
             Usuario user2 = new Usuario("admin2", "fede", "cardozo2");
