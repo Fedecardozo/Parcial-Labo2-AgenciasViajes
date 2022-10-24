@@ -17,6 +17,11 @@ namespace Cruzeiro
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Centra un panel dentro del marco del formulario a medida que se agranda
+        /// </summary>
+        /// <param name="panel1"></param>
+        /// <param name="form1"></param>
         protected static void Centrar(Panel panel1, Form form1)
         {
             int altura_forma = form1.Height;

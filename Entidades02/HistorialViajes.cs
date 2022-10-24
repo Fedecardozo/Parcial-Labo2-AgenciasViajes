@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
 namespace Entidades
 {
@@ -15,8 +16,14 @@ namespace Entidades
         {
             HistorialViajes.viajes = Harcodeo.ListaViajes();
         }
+        
         public static List<Viaje> HistorialdeViajes { get { return HistorialViajes.viajes; } }
 
+        /// <summary>
+        /// Devuelve solo los viajes que estan disponibles
+        /// </summary>
+        /// <param name="viajes1"></param>
+        /// <returns></returns>
         public static bool ViajesDiponibles(out List<Viaje> viajes1)
         {
             bool retorno = false;
@@ -37,6 +44,11 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Devuelve lista de pasajeros de un Viaje en especifico por su Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static List<Pasajero> Pasajeros(int id)
         {
             List<Pasajero> pasajeros = new List<Pasajero>();
@@ -46,6 +58,11 @@ namespace Entidades
             return pasajeros;
         }
 
+        /// <summary>
+        /// Busca un por su Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Viaje BuscadorViaje(int id)
         {
             Viaje viaje = null;
@@ -61,6 +78,11 @@ namespace Entidades
             return viaje;
         }
 
+        /// <summary>
+        /// Devuelve lista de viajes realizados por un crucero en especifico
+        /// </summary>
+        /// <param name="crucero"></param>
+        /// <returns></returns>
         public static List<Viaje> ViajesRealizadosPorDeterminadoCrucero(Crucero crucero)
         {
             List<Viaje> historial = new List<Viaje>();
@@ -77,6 +99,10 @@ namespace Entidades
             return historial;
         }
 
+        /// <summary>
+        /// Agregar un viaje al historial
+        /// </summary>
+        /// <param name="viaje"></param>
         public static void AgregarViaje(Viaje viaje)
         {
             HistorialViajes.viajes.Add(viaje);

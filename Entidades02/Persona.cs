@@ -34,12 +34,6 @@ namespace Entidades
 
         #endregion
 
-        public override string ToString()
-        {
-            return $"\nNombre: {this.nombre} \nApellido: {this.apellido} \nDNI: {this.dni}" +
-                $" \nFecha Nacimiento: {this.fechaNacimiento.Date.ToString("d")}";
-        }
-
         #region Propiedades
 
         public string Nombre { get { return this.nombre; } set { this.nombre = Persona.ConvertirMayusculaMinuscula(value); } }
@@ -53,9 +47,23 @@ namespace Entidades
 
         #region Metodos
 
+        /// <summary>
+        /// Convierte la pimera letra en Mayuscula y el ressto en Minuscula
+        /// </summary>
+        /// <param name="cadena"></param>
+        /// <returns></returns>
         public static string ConvertirMayusculaMinuscula(string cadena)
         {
             return cadena.Substring(0, 1).ToUpper() + cadena.Substring(1).ToLower();
+        }
+
+        #endregion
+
+        #region Sobreescritura
+        public override string ToString()
+        {
+            return $"\nNombre: {this.nombre} \nApellido: {this.apellido} \nDNI: {this.dni}" +
+                $" \nFecha Nacimiento: {this.fechaNacimiento.Date.ToString("d")}";
         }
 
         #endregion

@@ -20,8 +20,6 @@ namespace Entidades
         private double capacidadBodega;
         private bool piscina;
         private bool gimnasio;
-       // private List<Viaje> viajesRealizados;
-        //private Viaje viaje;
 
         #endregion
 
@@ -38,15 +36,6 @@ namespace Entidades
             this.piscina = piscina;
             this.gimnasio = gimnasio;
         }
-
-        /*public Crucero(string matricula, string nombre, int cantidadCamarotes,
-            int cantidadSalones, int cantidadCasino, float capacidadBodega, bool piscina, bool gimnasio)
-            : this(matricula, nombre, cantidadCamarotes,
-             cantidadSalones, cantidadCasino, capacidadBodega, piscina, gimnasio)
-        {
-            //this.viaje = viaje;
-            //this.estadoViaje = estadoViaje;
-        }*/
 
         #endregion
 
@@ -191,8 +180,7 @@ namespace Entidades
             return ((this.CantidadCamarotesPremium * Crucero.personaPorCamaratores) - viaje.CantidadPremium)/4;
         }
 
-   
-
+  
         #endregion
 
         #region Sobreescritura

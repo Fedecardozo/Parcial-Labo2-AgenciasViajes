@@ -15,6 +15,7 @@ namespace Cruzeiro
     {
         private List<Pasajero> pasajeros;
 
+        #region Constructores
         private FrmListaPasajeros()
         {
             InitializeComponent();
@@ -25,6 +26,10 @@ namespace Cruzeiro
             this.pasajeros = pasajeros;
         }
 
+        #endregion
+
+        #region Load
+        
         private void FrmListaPasajeros_Load(object sender, EventArgs e)
         {
             Pasaporte pasaporte;
@@ -40,9 +45,13 @@ namespace Cruzeiro
             }
         }
 
+        #endregion
+
+        #region Boton
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
     }
 }

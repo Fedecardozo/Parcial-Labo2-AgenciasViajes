@@ -15,6 +15,7 @@ namespace Cruzeiro
     {
         private Crucero crucero;
 
+        #region Inicio Form
         public FrmCrearViaje()
         {
             InitializeComponent();
@@ -28,32 +29,13 @@ namespace Cruzeiro
             IniciarCrucero(this.dataGridViewCruceros.Rows[0].Cells[1].Value.ToString());
         }
 
+        #endregion
+
+        #region Botones
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void rBtnExtraRegional_CheckedChanged(object sender, EventArgs e)
-        {
-            this.CargaExtraRegionalComboBox();
-            this.comboBoxDestino.SelectedIndex = 1;
-        }
-
-        private void rBtnRegional_CheckedChanged(object sender, EventArgs e)
-        {
-            this.CargaRegionalComboBox();
-            this.comboBoxDestino.SelectedIndex = 1;
-        }
-      
-        private void dataGridViewCruceros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int obtenerIndex = this.dataGridViewCruceros.CurrentRow.Index;
-
-            string matricula = this.dataGridViewCruceros.Rows[obtenerIndex].Cells[1].Value.ToString();
-
-            this.IniciarCrucero(matricula);
-        }
-       
         private void btnCrearViaje_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
@@ -67,6 +49,34 @@ namespace Cruzeiro
             }
 
         }
+
+        #endregion
+
+        #region Radio buttons
+        private void rBtnExtraRegional_CheckedChanged(object sender, EventArgs e)
+        {
+            this.CargaExtraRegionalComboBox();
+            this.comboBoxDestino.SelectedIndex = 1;
+        }
+
+        private void rBtnRegional_CheckedChanged(object sender, EventArgs e)
+        {
+            this.CargaRegionalComboBox();
+            this.comboBoxDestino.SelectedIndex = 1;
+        }
+        
+        #endregion
+
+        #region Data Grid
+        private void dataGridViewCruceros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int obtenerIndex = this.dataGridViewCruceros.CurrentRow.Index;
+
+            string matricula = this.dataGridViewCruceros.Rows[obtenerIndex].Cells[1].Value.ToString();
+
+            this.IniciarCrucero(matricula);
+        }
+        #endregion
 
         #region Metodos 
         private void CargaExtraRegionalComboBox()

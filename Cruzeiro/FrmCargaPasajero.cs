@@ -15,6 +15,7 @@ namespace Cruzeiro
     {
         private Viaje viaje;
 
+        #region Inicio Form
         public FrmCargaPasajero()
         {
             InitializeComponent();
@@ -34,6 +35,8 @@ namespace Cruzeiro
             this.comboBoxNacionalidad.SelectedIndex = 10;
             this.comboBoxSexo.SelectedIndex = 0;
         }
+
+        #endregion
 
         #region Botones 
 
@@ -362,6 +365,7 @@ namespace Cruzeiro
 
         #endregion
 
+        #region Mostrar informacion
         private string InformacionCostoFinal()
         {
             StringBuilder sb = new StringBuilder();
@@ -390,6 +394,7 @@ namespace Cruzeiro
 
             return sb.ToString();
         }
+        #endregion
 
         #endregion
 

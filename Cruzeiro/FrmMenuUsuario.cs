@@ -27,16 +27,17 @@ namespace Cruzeiro
         }
         #endregion
 
+        #region Load
         private void FrmMenuUsuario_Load(object sender, EventArgs e)
         {
             this.CargarUsuario();
             FrmPadre.Centrar(this.panelContenedor,this);
             FrmViajes.Usuario = this.usuario;
         }
-
+        #endregion
 
         #region Metodos
-        
+
         private void CargarUsuario()
         {
             this.UsuarioCargaImagen();
@@ -98,11 +99,11 @@ namespace Cruzeiro
 
         }
 
-        #endregion
-
         private void btnDatosHistoricos_Click(object sender, EventArgs e)
         {
             base.MostrarFormularioModal(new FrmEstadisticaHistoricas());
         }
+
+        #endregion
     }
 }

@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using InterfazDeUsuario;
 
 namespace Cruzeiro
 {
     public partial class FrmLogin : FrmPadre
     {
+
+        #region Inicio de formulario
         public FrmLogin()
         {
             InitializeComponent();
@@ -23,10 +26,16 @@ namespace Cruzeiro
             FrmPadre.Centrar(this.panelContenedor,this);
         }
 
+        #endregion
+
+        #region Boton
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.InicioSesion();
         }
+        #endregion
+
+        #region TextBox
 
         private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -37,6 +46,9 @@ namespace Cruzeiro
             this.TeclaEnterAbreMenu(e);
         }
 
+        #endregion
+
+        #region Metodos
         private void TeclaEnterAbreMenu(KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -72,6 +84,7 @@ namespace Cruzeiro
             this.Show();
         }
 
-        
+        #endregion
+
     }
 }

@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades
+namespace Adicional
 {
-    public class Aleatorio
+    public static class Aleatorio
     {
-
-        #region Constructor
-
-        #endregion
 
         #region Generador Fecha Aleatorios
 

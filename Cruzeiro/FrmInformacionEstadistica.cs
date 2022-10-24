@@ -12,9 +12,12 @@ namespace Cruzeiro
 {
     public partial class FrmInformacionEstadistica : FrmPadre
     {
+        #region Atributos
         private string titulo;
         private string informacion;
+        #endregion
 
+        #region Constructores
         public FrmInformacionEstadistica()
         {
             InitializeComponent();
@@ -26,6 +29,9 @@ namespace Cruzeiro
             this.informacion = informacion;
         }
 
+        #endregion
+
+        #region Load
         private void FrmInformacionEstadistica_Load(object sender, EventArgs e)
         {
             FrmPadre.Centrar(this.panelContenedor,this);
@@ -41,10 +47,13 @@ namespace Cruzeiro
             }
 
         }
+        #endregion
 
+        #region Boton
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
     }
 }

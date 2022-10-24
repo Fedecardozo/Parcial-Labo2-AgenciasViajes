@@ -8,15 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using InterfazDeUsuario;
 
 namespace Cruzeiro
 {
     public partial class FrmEstadisticaHistoricas : FrmHistorialViajes
     {
+        #region Constructor
         public FrmEstadisticaHistoricas()
         {
             InitializeComponent();
         }
+        #endregion
+
+        #region Botones
 
         private void btnDestinoMasPedido_Click(object sender, EventArgs e)
         {
@@ -47,11 +52,15 @@ namespace Cruzeiro
                 Estadistica.ListarPasajeroFrecuentes());
         }
 
+        #endregion
+
+        #region Metodos
         private void InstanciarFormInfoEstadistica(string titulo, string info)
         {
             FrmInformacionEstadistica frmInfo = new FrmInformacionEstadistica(titulo,info);
 
             frmInfo.ShowDialog();
         }
+        #endregion
     }
 }

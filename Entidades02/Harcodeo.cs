@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Adicional;
 
 namespace Entidades
 {
     public class Harcodeo
     {
+        #region Atributos estaticos
         private static List<Usuario> usuarios;
         private static List<Crucero> cruceros;
         private static List<Viaje> viajes;
@@ -16,6 +18,7 @@ namespace Entidades
         private static List<Pasajero> pasajeros1;
         private static List<Pasajero> pasajeros2;
         private static List<Pasajero> pasajeros3;
+        #endregion
 
         #region Constructor Estatico
         static Harcodeo()

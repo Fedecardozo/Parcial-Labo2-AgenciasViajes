@@ -23,6 +23,7 @@ namespace Entidades
         private Crucero crucero;
         private EestadoViaje estadoViaje;
         private int id;
+
         #endregion
 
         #region Constructores
@@ -133,6 +134,11 @@ namespace Entidades
         #endregion
 
         #region Metodos
+
+        /// <summary>
+        /// Cuenta en este viaje cuantos Pasajeros de clase premium hay en total
+        /// </summary>
+        /// <returns></returns>
         private int ContarClasePremium()
         {
             int cantidadClasePremium = 0;
@@ -147,6 +153,11 @@ namespace Entidades
 
             return cantidadClasePremium;
         }
+
+        /// <summary>
+        /// Cuenta en este viaje cuantos Pasajeros de clase turista hay en total
+        /// </summary>
+        /// <returns></returns>
         private int ContarClaseTurista()
         {
             int cantidadClaseTurista = 0;

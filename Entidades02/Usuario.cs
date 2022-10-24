@@ -4,18 +4,18 @@ namespace Entidades
 {
     public class Usuario
     {
+        #region Atributos
+
         private string usuario;
         private string password;
         private string nombre;
         private string apellido;
 
-        public Usuario()
-        {
-            this.nombre = "";
-            this.apellido = "";
-        }
+        #endregion
 
-        public Usuario(string usuario, string password) : this()
+        #region Constructores
+
+        public Usuario(string usuario, string password)
         {
             this.usuario = usuario;
             this.password = password;
@@ -27,11 +27,17 @@ namespace Entidades
             this.apellido = apellido;
         }
 
+        #endregion
+
+        #region Propiedades
+
         public string User { get { return this.usuario; } }
         public string Nombre { get { return this.nombre; } }
         public string Apellido { get { return this.apellido; } }
 
+        #endregion
 
+        #region Sobrecarga operadores
         public static bool operator ==(Usuario user1, Usuario user2)
         {
             bool retorno = false;
@@ -50,6 +56,10 @@ namespace Entidades
             return !(user1 == user2);
         }
 
+        #endregion
+
+        #region Sobreescritura
+       
         public override string ToString()
         {
             return $"Usuario: {this.usuario}";
@@ -71,7 +81,8 @@ namespace Entidades
         {
             return base.GetHashCode();
         }
-
+        
+        #endregion
     }
 }
 

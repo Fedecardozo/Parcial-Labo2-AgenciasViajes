@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
+using Adicional;
 
-namespace Entidades
+namespace InterfazDeUsuario
 {
     public static class Estadistica
     {
+        /// <summary>
+        /// Funcion para ordenar de manera Descendente en sort de List<Viaje>
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         private static int OrdenarPorFacturacion(Viaje v1, Viaje v2)
         {
             int retorno = 0;
@@ -24,6 +32,11 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Arma un string con la informacion del destino por facturacion ordenados de forma descendente
+        /// </summary>
+        /// <param name="viajes"></param>
+        /// <returns></returns>       
         public static string ListarDestinosPorFacturacion(List<Viaje> viajes)
         {
             //List<string> destinos = new List<string>();
@@ -42,6 +55,10 @@ namespace Entidades
             return destinos.ToString();
         }
     
+        /// <summary>
+        /// Muestra de forma harcodeada los pasajeros mas frecuentes
+        /// </summary>
+        /// <returns></returns>
         public static string ListarPasajeroFrecuentes()
         {
             StringBuilder sb = new StringBuilder();
@@ -66,6 +83,10 @@ namespace Entidades
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Muestra Ganancias totales y clasificadas por regional y extra regional
+        /// </summary>
+        /// <returns></returns>
         public static string ListarGananciasTotalesClasificadas()
         {
             StringBuilder sb = new StringBuilder();
@@ -94,6 +115,10 @@ namespace Entidades
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Muestra las horas de viaje de cada crucero
+        /// </summary>
+        /// <returns></returns>
         public static string HorasViajesCruceros()
         {
             StringBuilder sb = new StringBuilder();
@@ -113,6 +138,10 @@ namespace Entidades
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Harcodeo el destino mas pedido
+        /// </summary>
+        /// <returns></returns>
         public static string MostrarDestinosMasPedido()
         {
             return "El destino mas pedido es: Miami";

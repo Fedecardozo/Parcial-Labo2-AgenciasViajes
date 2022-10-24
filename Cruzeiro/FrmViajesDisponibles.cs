@@ -13,6 +13,7 @@ namespace Cruzeiro
 {
     public partial class FrmViajesDisponibles : FrmViajes
     {
+        #region Inicio Formulario
         public FrmViajesDisponibles()
         {
             InitializeComponent();
@@ -25,6 +26,9 @@ namespace Cruzeiro
 
         }
 
+        #endregion
+
+        #region Botones
         private void btnCargaPasajero_Click(object sender, EventArgs e)
         {
 
@@ -53,6 +57,8 @@ namespace Cruzeiro
             }
         }
 
+        #endregion
+
         #region Metodos
         private void MostrarViajesDisponibles()
         {
@@ -70,11 +76,8 @@ namespace Cruzeiro
                 base.CargarDataGrid(viajeDisponibles);
             }
         }
-        
-
 
         #endregion
-
-        
+       
     }
 }
