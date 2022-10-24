@@ -31,6 +31,7 @@ namespace Cruzeiro
         {
             this.CargarUsuario();
             FrmPadre.Centrar(this.panelContenedor,this);
+            FrmViajes.Usuario = this.usuario;
         }
 
 
@@ -83,7 +84,7 @@ namespace Cruzeiro
 
         private void btnListaViajes_Click(object sender, EventArgs e)
         {
-            FrmViajesDisponibles viajesDisponibles = new FrmViajesDisponibles(this.usuario);
+            FrmViajesDisponibles viajesDisponibles = new FrmViajesDisponibles();
 
             base.MostrarFormularioModal(viajesDisponibles);
 
@@ -91,7 +92,7 @@ namespace Cruzeiro
 
         private void btnHistorialViajes_Click(object sender, EventArgs e)
         {
-            FrmHistorialViajes frmHistorialViajes = new FrmHistorialViajes(this.usuario);
+            FrmHistorialViajes frmHistorialViajes = new FrmHistorialViajes();
 
             base.MostrarFormularioModal(frmHistorialViajes);
 

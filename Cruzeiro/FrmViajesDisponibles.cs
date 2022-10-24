@@ -13,14 +13,11 @@ namespace Cruzeiro
 {
     public partial class FrmViajesDisponibles : FrmViajes
     {
-        private FrmViajesDisponibles()
+        public FrmViajesDisponibles()
         {
             InitializeComponent();
         }
-        public FrmViajesDisponibles(Usuario usuario) : this()
-        {
-            base.usuario = usuario;
-        }
+     
         private void FrmViajesDisponibles_Load(object sender, EventArgs e)
         {
             //Harcodeo.Global();

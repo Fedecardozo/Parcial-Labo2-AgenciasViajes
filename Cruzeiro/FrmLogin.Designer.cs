@@ -94,6 +94,7 @@ namespace Cruzeiro
             this.textBoxPassword.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxPassword.Location = new System.Drawing.Point(307, 177);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.PlaceholderText = "CONTRASEÑA";
             this.textBoxPassword.Size = new System.Drawing.Size(398, 33);
             this.textBoxPassword.TabIndex = 7;
