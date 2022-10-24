@@ -94,5 +94,24 @@ namespace Entidades
             return sb.ToString();
         }
 
+        public static string HorasViajesCruceros()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            int len = Harcodeo.ListaCruceros().Count;
+
+            sb.AppendLine("Cruceros: ");
+            sb.AppendLine("");
+            foreach (Crucero item in Harcodeo.ListaCruceros())
+            {
+                sb.AppendLine($"Nombre: {item.Nombre}");
+                sb.AppendLine($"Matricula: {item.Matricula}");
+                sb.AppendLine($"Total de horas en viaje: {item.TotalHorasDeViaje}");
+                sb.AppendLine("");
+            }
+
+            return sb.ToString();
+        }
+
     }
 }

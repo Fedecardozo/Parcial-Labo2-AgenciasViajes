@@ -41,7 +41,10 @@ namespace Cruzeiro
 
         private void btnHorasCrucero_Click(object sender, EventArgs e)
         {
+            FrmInformacionEstadistica frmInfo = new FrmInformacionEstadistica("Horas de viaje de cada crucero",
+                Estadistica.HorasViajesCruceros());
 
+            frmInfo.ShowDialog();
         }
 
         private void btnPasajeroFrecuentes_Click(object sender, EventArgs e)

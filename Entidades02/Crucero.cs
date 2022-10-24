@@ -52,6 +52,22 @@ namespace Entidades
 
         #region Propiedades
 
+        public double TotalHorasDeViaje 
+        {
+            get
+            {
+                double horasViaje = 0;
+                foreach (Viaje item in HistorialViajes.HistorialdeViajes)
+                {
+                    if(item.EstadoViaje != EestadoViaje.Disponible && item.Crucero == this)
+                    {
+                        horasViaje += item.DuracionViaje;
+                    }
+                }
+                return horasViaje;
+            }    
+        }
+
         public double CapacidadBodega { get { return this.capacidadBodega; } }
 
         public int CantidadCasinos { get { return this.cantidadCasino; } }
