@@ -12,7 +12,8 @@ profesionalmente, fue un desafio que me llevo bastante tiempo desarrollar pero e
 ##### La aplicación hace que un vendedor de la empresa de viajes de cruceros pueda realizar las siguientes acciones:
 * Se pueda loguear con su usuario y contraseña
 * Ver el historial de viajes
-* Ver los viajes disponibles                          
+* Ver los viajes disponibles 
+* Cargar pasajeros (validando que haya lugar en el crucero)                         
 * De cada viaje poder ver la lista de pasajeros
 * Poder crear nuevos viajes
 * Consultar datos estadisticos. Como por ejemplo el destino mas elegido.
