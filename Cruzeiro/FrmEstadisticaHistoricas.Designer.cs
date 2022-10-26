@@ -40,11 +40,13 @@ namespace Cruzeiro
             // btnListaPasajeros
             // 
             this.btnListaPasajeros.Location = new System.Drawing.Point(162, 325);
+            this.btnListaPasajeros.MaximumSize = new System.Drawing.Size(260, 44);
             this.btnListaPasajeros.Size = new System.Drawing.Size(161, 44);
             // 
             // btnAtras
             // 
             this.btnAtras.Location = new System.Drawing.Point(12, 326);
+            this.btnAtras.MaximumSize = new System.Drawing.Size(260, 44);
             this.btnAtras.Size = new System.Drawing.Size(144, 44);
             // 
             // panelContenedor
@@ -68,6 +70,7 @@ namespace Cruzeiro
             // 
             this.btnDestinos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDestinos.Location = new System.Drawing.Point(525, 326);
+            this.btnDestinos.MaximumSize = new System.Drawing.Size(260, 44);
             this.btnDestinos.Name = "btnDestinos";
             this.btnDestinos.Size = new System.Drawing.Size(190, 44);
             this.btnDestinos.TabIndex = 7;
@@ -79,6 +82,7 @@ namespace Cruzeiro
             // 
             this.btnPasajeroFrecuentes.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnPasajeroFrecuentes.Location = new System.Drawing.Point(1086, 326);
+            this.btnPasajeroFrecuentes.MaximumSize = new System.Drawing.Size(210, 44);
             this.btnPasajeroFrecuentes.Name = "btnPasajeroFrecuentes";
             this.btnPasajeroFrecuentes.Size = new System.Drawing.Size(190, 44);
             this.btnPasajeroFrecuentes.TabIndex = 8;
@@ -90,6 +94,7 @@ namespace Cruzeiro
             // 
             this.btnHorasCrucero.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnHorasCrucero.Location = new System.Drawing.Point(917, 326);
+            this.btnHorasCrucero.MaximumSize = new System.Drawing.Size(260, 44);
             this.btnHorasCrucero.Name = "btnHorasCrucero";
             this.btnHorasCrucero.Size = new System.Drawing.Size(163, 44);
             this.btnHorasCrucero.TabIndex = 9;
@@ -101,6 +106,7 @@ namespace Cruzeiro
             // 
             this.btnDestinoMasPedido.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDestinoMasPedido.Location = new System.Drawing.Point(329, 326);
+            this.btnDestinoMasPedido.MaximumSize = new System.Drawing.Size(260, 44);
             this.btnDestinoMasPedido.Name = "btnDestinoMasPedido";
             this.btnDestinoMasPedido.Size = new System.Drawing.Size(190, 44);
             this.btnDestinoMasPedido.TabIndex = 10;
@@ -112,6 +118,7 @@ namespace Cruzeiro
             // 
             this.btnGananciasTotales.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGananciasTotales.Location = new System.Drawing.Point(721, 326);
+            this.btnGananciasTotales.MaximumSize = new System.Drawing.Size(260, 44);
             this.btnGananciasTotales.Name = "btnGananciasTotales";
             this.btnGananciasTotales.Size = new System.Drawing.Size(190, 44);
             this.btnGananciasTotales.TabIndex = 11;

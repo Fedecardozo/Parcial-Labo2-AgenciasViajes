@@ -68,8 +68,17 @@ namespace Entidades
 
         #endregion
 
+        #region Implicit
+
+        public static implicit operator string(Usuario usuario)
+        {
+            return usuario.usuario;
+        }
+
+        #endregion
+
         #region Sobreescritura
-       
+
         public override string ToString()
         {
             return $"Usuario: {this.usuario}";

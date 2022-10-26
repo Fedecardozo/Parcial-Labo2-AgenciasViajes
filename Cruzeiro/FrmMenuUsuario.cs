@@ -70,7 +70,7 @@ namespace Cruzeiro
         {
             this.labelnNombreVendedor.Text = this.usuario.Nombre;
             this.labelApellidoVendedor.Text = this.usuario.Apellido;
-            this.labelUsuarioVendedor.Text = this.usuario.User;
+            this.labelUsuarioVendedor.Text = this.usuario;
             this.labelFecha.Text = DateTime.Now.ToString("d");
         }
 
